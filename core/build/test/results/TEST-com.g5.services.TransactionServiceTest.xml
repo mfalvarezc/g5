@@ -1,0 +1,1100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="ion" name="com.g5.services.TransactionServiceTest" skipped="0" tests="8" time="66.269" timestamp="2014-01-03T21:32:37">
+  <properties>
+    <property name="libs.jsp-compiler.javadoc" value="" />
+    <property name="netbeans.autoupdate.country" value="ES" />
+    <property name="nb.wait.for.caches" value="true" />
+    <property name="javac.test.classpath" value="../core-remote/dist/core-remote.jar:../common/dist/common.jar:/home/healarconr/netbeans/java/modules/ext/eclipselink/eclipselink.jar:/home/healarconr/netbeans/java/modules/ext/eclipselink/javax.persistence_2.1.0.v201304241213.jar:/home/healarconr/netbeans/java/modules/ext/eclipselink/org.eclipse.persistence.jpa.jpql_2.5.1.v20130918-f2b9fc5.jar:build/classes:/home/healarconr/netbeans/platform/modules/ext/junit-4.10.jar:/home/healarconr/netbeans/ide/modules/ext/mysql-connector-java-5.1.23-bin.jar" />
+    <property name="libs.jsf20.maven-pom" value="" />
+    <property name="source.root" value="src" />
+    <property name="libs.junit.javadoc" value="/home/healarconr/netbeans/java/docs/junit-3.8.2-api.zip" />
+    <property name="ant.core.lib" value="/home/healarconr/netbeans/extide/ant/lib/ant.jar" />
+    <property name="javadoc.windowtitle" value="" />
+    <property name="libs.jsp-compilation.javadoc" value="" />
+    <property name="user.dir" value="/home/healarconr/netbeans-projects/g5/core" />
+    <property name="libs.javaee-api-7.0.src" value="" />
+    <property name="libs.hibernate-persistence.javadoc" value="" />
+    <property name="java.vm.version" value="24.45-b08" />
+    <property name="libs.MySQLDriver.classpath" value="/home/healarconr/netbeans/ide/modules/ext/mysql-connector-java-5.1.23-bin.jar" />
+    <property name="libs.eclipselinkmodelgen.src" value="" />
+    <property name="javadoc.notree" value="false" />
+    <property name="netbeans.autoupdate.version" value="1.23" />
+    <property name="libs.EclipseLink-GlassFish-v3.classpath" value="/home/healarconr/glassfish4/glassfish/modules/org.eclipse.persistence.moxy.jar:/home/healarconr/glassfish4/glassfish/modules/org.eclipse.persistence.dbws.jar:/home/healarconr/glassfish4/glassfish/modules/org.eclipse.persistence.jpa.modelgen.processor.jar:/home/healarconr/glassfish4/glassfish/modules/org.eclipse.persistence.jpa.jar:/home/healarconr/glassfish4/glassfish/modules/org.eclipse.persistence.asm.jar:/home/healarconr/glassfish4/glassfish/modules/org.eclipse.persistence.jpa.jpql.jar:/home/healarconr/glassfish4/glassfish/modules/org.eclipse.persistence.antlr.jar:/home/healarconr/glassfish4/glassfish/modules/org.eclipse.persistence.oracle.jar:/home/healarconr/glassfish4/glassfish/modules/org.eclipse.persistence.core.jar:/home/healarconr/glassfish4/glassfish/modules/javax.persistence.jar" />
+    <property name="netbeans.running.environment" value="gnome" />
+    <property name="libs.javaee-web-api-6.0.classpath" value="/home/healarconr/netbeans/enterprise/modules/ext/javaee-web-api-6.0.jar" />
+    <property name="libs.hibernate-support.maven-pom" value="" />
+    <property name="libs.hibernate-support.javadoc" value="" />
+    <property name="libs.Java-EE-GlassFish-v3-Prelude.javadoc" value="/home/healarconr/netbeans/enterprise/docs/javaee-doc-api.jar" />
+    <property name="jdk.home" value="/usr/lib/jvm/java-7-oracle" />
+    <property name="ant.file.type.core" value="file" />
+    <property name="libs.javac-api.src" value="" />
+    <property name="javadoc.noindex" value="false" />
+    <property name="ant.file.core-impl" value="/home/healarconr/netbeans-projects/g5/core/nbproject/build-impl.xml" />
+    <property name="sun.os.patch.level" value="unknown" />
+    <property name="libs.Java-EE-GlassFish-v3-Prelude.src" value="" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="nb.show.statistics.ui" value="usageStatisticsEnabled" />
+    <property name="netbeans.autoupdate.variant" value="" />
+    <property name="have.tests" value="true" />
+    <property name="org.xml.sax.driver" value="com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser" />
+    <property name="j2ee.server.instance" value="[/home/healarconr/glassfish4/glassfish:/home/healarconr/glassfish4/glassfish/domains/domain1]deployer:gfv3ee6wc:localhost:4848" />
+    <property name="libs.javac-api.javadoc" value="" />
+    <property name="os.name" value="Linux" />
+    <property name="libs.beans-binding.classpath" value="/home/healarconr/netbeans/java/modules/ext/beansbinding-1.2.1.jar" />
+    <property name="libs.javaee-endorsed-api-7.0.maven-pom" value="" />
+    <property name="ap.proc.none.internal" value="" />
+    <property name="libs.restapi.javadoc" value="" />
+    <property name="libs.JWSAntTasks.maven-pom" value="" />
+    <property name="libs.jstl.classpath" value="/home/healarconr/netbeans/enterprise/modules/ext/jstl-impl.jar:/home/healarconr/netbeans/enterprise/modules/ext/jstl-api.jar" />
+    <property name="libs.testng.src" value="" />
+    <property name="libs.spring-webmvc3.0.src" value="" />
+    <property name="libs.restapi.classpath" value="/home/healarconr/netbeans/enterprise/modules/ext/jaxrs-2.0/javax.ws.rs-api-2.0.jar" />
+    <property name="runmain.jvmargs" value="-XX:MaxPermSize=256m" />
+    <property name="project.common" value="../common" />
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+    <property name="libs.jaxb.maven-pom" value="" />
+    <property name="os.arch" value="amd64" />
+    <property name="libs.eclipselink.src" value="" />
+    <property name="user.name" value="healarconr" />
+    <property name="j2ee.compile.on.save" value="true" />
+    <property name="libs.jsf12.javadoc" value="/home/healarconr/netbeans/enterprise/docs/javaee-doc-api.jar" />
+    <property name="libs.Comet-GlassFish-v3.javadoc" value="" />
+    <property name="libs.spring-webmvc3.0.maven-pom" value="" />
+    <property name="libs.swing-layout.maven-pom" value="" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.g5.services.TransactionServiceTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/healarconr/netbeans-projects/g5/core/build/test/results/TEST-com.g5.services.TransactionServiceTest.xml crashfile=/home/healarconr/netbeans-projects/g5/core/build/junitvmwatcher8948861092832035455.properties propsfile=/home/healarconr/netbeans-projects/g5/core/build/junit7636399660365139276.properties" />
+    <property name="build.classes.dir" value="build/classes" />
+    <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
+    <property name="ap.supported.internal" value="true" />
+    <property name="libs.javaee-endorsed-api-7.0.javadoc" value="/home/healarconr/netbeans/enterprise/docs/javaee-doc-api.jar" />
+    <property name="libs.jaxws21.javadoc" value="/home/healarconr/netbeans/java/docs/jaxws-api-doc.zip" />
+    <property name="includes" value="**" />
+    <property name="j2ee.platform.wsimport.classpath" value="/home/healarconr/glassfish4/glassfish/modules/webservices-osgi.jar:/home/healarconr/glassfish4/glassfish/modules/endorsed/webservices-api-osgi.jar:/home/healarconr/glassfish4/glassfish/modules/jaxb-osgi.jar:/home/healarconr/glassfish4/glassfish/modules/endorsed/jaxb-api-osgi.jar" />
+    <property name="user.country" value="ES" />
+    <property name="javadoc.encoding" value="UTF-8" />
+    <property name="javac.classpath" value="../core-remote/dist/core-remote.jar:../common/dist/common.jar:/home/healarconr/netbeans/java/modules/ext/eclipselink/eclipselink.jar:/home/healarconr/netbeans/java/modules/ext/eclipselink/javax.persistence_2.1.0.v201304241213.jar:/home/healarconr/netbeans/java/modules/ext/eclipselink/org.eclipse.persistence.jpa.jpql_2.5.1.v20130918-f2b9fc5.jar" />
+    <property name="libs.jsp-compilation-syscp.src" value="" />
+    <property name="libs.JAVADB_DRIVER_LABEL.src" value="" />
+    <property name="debug-transport" value="dt_socket" />
+    <property name="meta.inf" value="src/conf" />
+    <property name="netbeans.home" value="/home/healarconr/netbeans/platform" />
+    <property name="build.compiler.emacs" value="true" />
+    <property name="libs.javaee-web-api-6.0.src" value="" />
+    <property name="libs.ejb3-persistence.src" value="" />
+    <property name="do.package.with.custom.manifest.not.directory.deploy" value="true" />
+    <property name="libs.jsp-compilation-syscp.classpath" value="/home/healarconr/netbeans/extide/ant/lib/ant.jar:/home/healarconr/netbeans/enterprise/modules/ext/servlet3.1-jsp2.3-api.jar:/home/healarconr/netbeans/enterprise/modules/ext/glassfish-jspparser-4.0.jar:/home/healarconr/netbeans/enterprise/modules/ext/jstl-impl.jar:/home/healarconr/netbeans/enterprise/modules/ext/jsf-2_2/javax.faces.jar" />
+    <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-7-oracle/jre/lib/endorsed" />
+    <property name="libs.hibernate-persistencemodelgen.classpath" value="/home/healarconr/netbeans/java/modules/ext/hibernate/hibernate-jpamodelgen-1.1.1.Final.jar" />
+    <property name="libs.Comet-GlassFish-v3.maven-pom" value="" />
+    <property name="netbeans.dynamic.classpath" value="/home/healarconr/netbeans/platform/core/core.jar:/home/healarconr/netbeans/platform/core/org-openide-filesystems.jar:/home/healarconr/netbeans/platform/core/locale/core_ru.jar:/home/healarconr/netbeans/platform/core/locale/core_ja.jar:/home/healarconr/netbeans/platform/core/locale/org-openide-filesystems_ru.jar:/home/healarconr/netbeans/platform/core/locale/org-openide-filesystems_zh_CN.jar:/home/healarconr/netbeans/platform/core/locale/org-openide-filesystems_ja.jar:/home/healarconr/netbeans/platform/core/locale/core_zh_CN.jar:/home/healarconr/netbeans/platform/core/locale/org-openide-filesystems_pt_BR.jar:/home/healarconr/netbeans/platform/core/locale/core_pt_BR.jar:/home/healarconr/netbeans/nb/core/org-netbeans-upgrader.jar:/home/healarconr/netbeans/nb/core/locale/core_nb_ja.jar:/home/healarconr/netbeans/nb/core/locale/core_nb_pt_BR.jar:/home/healarconr/netbeans/nb/core/locale/org-netbeans-upgrader_ru.jar:/home/healarconr/netbeans/nb/core/locale/core_nb_ru.jar:/home/healarconr/netbeans/nb/core/locale/core_nb.jar:/home/healarconr/netbeans/nb/core/locale/org-netbeans-upgrader_zh_CN.jar:/home/healarconr/netbeans/nb/core/locale/org-netbeans-upgrader_pt_BR.jar:/home/healarconr/netbeans/nb/core/locale/core_nb_zh_CN.jar:/home/healarconr/netbeans/nb/core/locale/org-netbeans-upgrader_ja.jar" />
+    <property name="java.vm.specification.version" value="1.7" />
+    <property name="libs.primefaces.classpath" value="/home/healarconr/netbeans/enterprise/modules/ext/primefaces/primefaces-3.5.jar:/home/healarconr/netbeans/enterprise/modules/ext/commons-fileupload-1.3.jar" />
+    <property name="libs.javaee-api-6.0.classpath" value="/home/healarconr/netbeans/enterprise/modules/ext/javaee-api-6.0.jar" />
+    <property name="netbeans.productversion" value="NetBeans IDE 7.4 (Build 201310111528)" />
+    <property name="libs.hibernate-persistence.classpath" value="/home/healarconr/netbeans/java/modules/ext/hibernate/antlr-2.7.6.jar:/home/healarconr/netbeans/java/modules/ext/hibernate/cglib-2.2.jar:/home/healarconr/netbeans/java/modules/ext/hibernate/commons-collections-3.1.jar:/home/healarconr/netbeans/java/modules/ext/hibernate/dom4j-1.6.1.jar:/home/healarconr/netbeans/java/modules/ext/hibernate/jta-1.1.jar:/home/healarconr/netbeans/java/modules/ext/hibernate/hibernate-core-3.6.10.Final.jar:/home/healarconr/netbeans/java/modules/ext/hibernate/hibernate-commons-annotations-3.2.0.Final.jar:/home/healarconr/netbeans/java/modules/ext/hibernate/hibernate-entitymanager-3.6.10.Final.jar:/home/healarconr/netbeans/java/modules/ext/hibernate/hibernate-tools-3.6.0.CR1.jar:/home/healarconr/netbeans/java/modules/ext/hibernate/javassist-3.12.0.GA.jar:/home/healarconr/netbeans/java/modules/ext/hibernate/c3p0-0.9.1.jar:/home/healarconr/netbeans/java/modules/ext/hibernate/oscache-2.1.jar:/home/healarconr/netbeans/java/modules/ext/hibernate/slf4j-api-1.6.1.jar:/home/healarconr/netbeans/java/modules/ext/hibernate/slf4j-simple-1.6.1.jar:/home/healarconr/netbeans/java/modules/ext/hibernate/hibernate-jpa-2.0-api-1.0.1.Final.jar" />
+    <property name="libs.jaxws21.src" value="" />
+    <property name="meta.inf.excludes" value="sun-cmp-mappings.xml" />
+    <property name="netbeans.autoupdate.language" value="es" />
+    <property name="java.vendor" value="Oracle Corporation" />
+    <property name="libs.javaee-api-6.0.javadoc" value="/home/healarconr/netbeans/enterprise/docs/javaee-doc-api.jar" />
+    <property name="sun.font.fontmanager" value="sun.awt.X11FontManager" />
+    <property name="javac.debug" value="true" />
+    <property name="javadoc.splitindex" value="true" />
+    <property name="file.separator" value="/" />
+    <property name="libs.Java-EE-GlassFish-v3-Prelude.maven-pom" value="" />
+    <property name="libs.junit_4.maven-pom" value="" />
+    <property name="resource.dir" value="setup" />
+    <property name="javac.test.processorpath" value="../core-remote/dist/core-remote.jar:../common/dist/common.jar:/home/healarconr/netbeans/java/modules/ext/eclipselink/eclipselink.jar:/home/healarconr/netbeans/java/modules/ext/eclipselink/javax.persistence_2.1.0.v201304241213.jar:/home/healarconr/netbeans/java/modules/ext/eclipselink/org.eclipse.persistence.jpa.jpql_2.5.1.v20130918-f2b9fc5.jar:build/classes:/home/healarconr/netbeans/platform/modules/ext/junit-4.10.jar:/home/healarconr/netbeans/ide/modules/ext/mysql-connector-java-5.1.23-bin.jar" />
+    <property name="netbeans.buildnumber" value="201310111528" />
+    <property name="libs.JWSAntTasks.javadoc" value="" />
+    <property name="build.generated.sources.dir" value="build/generated-sources" />
+    <property name="ant.file.type.core-impl" value="file" />
+    <property name="libs.eclipselinkmodelgen.classpath" value="/home/healarconr/netbeans/java/modules/ext/eclipselink/org.eclipse.persistence.jpa.modelgen_2.5.1.v20130918-f2b9fc5.jar" />
+    <property name="libs.javaee-endorsed-api-7.0.src" value="" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="libs.junit.classpath" value="/home/healarconr/netbeans/java/modules/ext/junit-3.8.2.jar" />
+    <property name="libs.jaxb.javadoc" value="/home/healarconr/netbeans/ide/docs/jaxb-api-doc.zip" />
+    <property name="libs.struts.classpath" value="/home/healarconr/netbeans/enterprise/modules/ext/struts/antlr-2.7.2.jar:/home/healarconr/netbeans/enterprise/modules/ext/struts/bsf-2.3.0.jar:/home/healarconr/netbeans/enterprise/modules/ext/struts/commons-beanutils-1.8.0.jar:/home/healarconr/netbeans/enterprise/modules/ext/struts/commons-chain-1.2.jar:/home/healarconr/netbeans/enterprise/modules/ext/struts/commons-digester-1.8.jar:/home/healarconr/netbeans/enterprise/modules/ext/struts/commons-fileupload-1.1.1.jar:/home/healarconr/netbeans/enterprise/modules/ext/struts/commons-io-1.1.jar:/home/healarconr/netbeans/enterprise/modules/ext/struts/commons-logging-1.0.4.jar:/home/healarconr/netbeans/enterprise/modules/ext/struts/commons-validator-1.3.1.jar:/home/healarconr/netbeans/enterprise/modules/ext/struts/jstl-1.0.2.jar:/home/healarconr/netbeans/enterprise/modules/ext/struts/oro-2.0.8.jar:/home/healarconr/netbeans/enterprise/modules/ext/struts/standard-1.0.6.jar:/home/healarconr/netbeans/enterprise/modules/ext/struts/struts-core-1.3.10.jar:/home/healarconr/netbeans/enterprise/modules/ext/struts/struts-el-1.3.10.jar:/home/healarconr/netbeans/enterprise/modules/ext/struts/struts-extras-1.3.10.jar:/home/healarconr/netbeans/enterprise/modules/ext/struts/struts-faces-1.3.10.jar:/home/healarconr/netbeans/enterprise/modules/ext/struts/struts-mailreader-dao-1.3.10.jar:/home/healarconr/netbeans/enterprise/modules/ext/struts/struts-scripting-1.3.10.jar:/home/healarconr/netbeans/enterprise/modules/ext/struts/struts-taglib-1.3.10.jar:/home/healarconr/netbeans/enterprise/modules/ext/struts/struts-tiles-1.3.10.jar" />
+    <property name="ant.home" value="/home/healarconr/netbeans/extide/ant" />
+    <property name="libs.junit_4.src" value="/home/healarconr/netbeans/java/docs/junit-4.10-sources.jar" />
+    <property name="libs.testng.classpath" value="/home/healarconr/netbeans/platform/modules/ext/testng-6.8.1-dist.jar" />
+    <property name="libs.absolutelayout.maven-pom" value="" />
+    <property name="ant.java.version" value="1.7" />
+    <property name="java.library.path" value="/usr/lib/jvm/java-7-oracle/bin/../jre/lib/amd64:/usr/lib/jvm/java-7-oracle/bin/../jre/lib/i386::/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib" />
+    <property name="javadoc.author" value="false" />
+    <property name="libs.metro.maven-pom" value="" />
+    <property name="libs.EclipseLink-GlassFish-v3.src" value="" />
+    <property name="java.util.logging.config.class" value="org.netbeans.core.startup.TopLogging" />
+    <property name="libs.PostgreSQLDriver.src" value="" />
+    <property name="sun.arch.data.model" value="64" />
+    <property name="basedir" value="/home/healarconr/netbeans-projects/g5/core" />
+    <property name="libs.jpa20-persistence.maven-pom" value="" />
+    <property name="build.ear.classes.dir" value="build/classes" />
+    <property name="jar.compress" value="false" />
+    <property name="libs.javaee-web-api-7.0.classpath" value="/home/healarconr/netbeans/enterprise/modules/ext/javaee-web-api-7.0.jar" />
+    <property name="path.separator" value=":" />
+    <property name="libs.javaee-web-api-6.0.javadoc" value="/home/healarconr/netbeans/enterprise/docs/javaee-doc-api.jar" />
+    <property name="ant.junit.enabletestlistenerevents" value="true" />
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+    <property name="libs.jaxws21.classpath" value="/home/healarconr/netbeans/ide/modules/ext/jaxb/jaxb-impl.jar:/home/healarconr/netbeans/ide/modules/ext/jaxb/jaxb-xjc.jar:/home/healarconr/netbeans/java/modules/ext/jaxws22/FastInfoset.jar:/home/healarconr/netbeans/java/modules/ext/jaxws22/gmbal-api-only.jar:/home/healarconr/netbeans/java/modules/ext/jaxws22/ha-api.jar:/home/healarconr/netbeans/java/modules/ext/jaxws22/javax.mail_1.4.jar:/home/healarconr/netbeans/java/modules/ext/jaxws22/jaxws-rt.jar:/home/healarconr/netbeans/java/modules/ext/jaxws22/jaxws-tools.jar:/home/healarconr/netbeans/java/modules/ext/jaxws22/management-api.jar:/home/healarconr/netbeans/java/modules/ext/jaxws22/mimepull.jar:/home/healarconr/netbeans/java/modules/ext/jaxws22/policy.jar:/home/healarconr/netbeans/java/modules/ext/jaxws22/saaj-impl.jar:/home/healarconr/netbeans/java/modules/ext/jaxws22/stax-ex.jar:/home/healarconr/netbeans/java/modules/ext/jaxws22/stax2-api.jar:/home/healarconr/netbeans/java/modules/ext/jaxws22/streambuffer.jar:/home/healarconr/netbeans/java/modules/ext/jaxws22/woodstox-core-asl.jar:/home/healarconr/netbeans/java/modules/ext/jaxws22/api/jaxws-api.jar:/home/healarconr/netbeans/java/modules/ext/jaxws22/api/jsr181-api.jar:/home/healarconr/netbeans/java/modules/ext/jaxws22/api/javax.annotation.jar:/home/healarconr/netbeans/java/modules/ext/jaxws22/api/saaj-api.jar:/home/healarconr/netbeans/ide/modules/ext/jaxb/activation.jar:/home/healarconr/netbeans/ide/modules/ext/jaxb/api/jaxb-api.jar:/home/healarconr/netbeans/ide/modules/ext/jaxb/api/jsr173_1.0_api.jar" />
+    <property name="libs.struts.src" value="" />
+    <property name="apple.awt.graphics.UseQuartz" value="true" />
+    <property name="user.language" value="es" />
+    <property name="j2ee.platform.classpath" value="/home/healarconr/glassfish4/mq/lib/jaxm-api.jar:/home/healarconr/glassfish4/glassfish/modules/endorsed/javax.annotation-api.jar:/home/healarconr/glassfish4/glassfish/modules/endorsed/jaxb-api-osgi.jar:/home/healarconr/glassfish4/glassfish/modules/endorsed/webservices-api-osgi.jar:/home/healarconr/glassfish4/glassfish/modules/javax.management.j2ee-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.websocket-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.persistence.jar:/home/healarconr/glassfish4/glassfish/modules/javax.jms-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.servlet.jsp.jar:/home/healarconr/glassfish4/glassfish/modules/javax.enterprise.concurrent-api.jar:/home/healarconr/glassfish4/glassfish/modules/webservices-osgi.jar:/home/healarconr/glassfish4/glassfish/modules/javax.el.jar:/home/healarconr/glassfish4/glassfish/modules/javax.security.jacc-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.xml.registry-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.interceptor-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.json.jar:/home/healarconr/glassfish4/glassfish/modules/javax.mail.jar:/home/healarconr/glassfish4/glassfish/modules/javax.servlet-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.enterprise.deploy-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.ws.rs-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.xml.rpc-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.enterprise.concurrent.jar:/home/healarconr/glassfish4/glassfish/modules/jaxb-osgi.jar:/home/healarconr/glassfish4/glassfish/modules/javax.faces.jar:/home/healarconr/glassfish4/glassfish/modules/javax.batch-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.resource-api.jar:/home/healarconr/glassfish4/glassfish/modules/weld-osgi-bundle.jar:/home/healarconr/glassfish4/glassfish/modules/javax.security.auth.message-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.servlet.jsp.jstl-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.inject.jar:/home/healarconr/glassfish4/glassfish/modules/javax.transaction-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.servlet.jsp.jstl.jar:/home/healarconr/glassfish4/glassfish/modules/javax.ejb-api.jar:/home/healarconr/glassfish4/glassfish/modules/bean-validator.jar:/home/healarconr/glassfish4/glassfish/modules/javax.servlet.jsp-api.jar" />
+    <property name="testng.mode" value="testng" />
+    <property name="libs.JAXB-ENDORSED.maven-pom" value="" />
+    <property name="libs.spring-framework.classpath" value="/home/healarconr/netbeans/ide/modules/org-apache-commons-logging.jar:/home/healarconr/netbeans/java/modules/ext/cglib-2.2.jar:/home/healarconr/netbeans/java/modules/ext/spring/spring-2.5.6.SEC03.jar" />
+    <property name="libs.eclipselink.maven-pom" value="" />
+    <property name="test.binaryincludes" value="&lt;nothing&gt;" />
+    <property name="libs.primefaces.javadoc" value="" />
+    <property name="libs.spring-framework300.maven-pom" value="" />
+    <property name="run.test.classpath" value="../core-remote/dist/core-remote.jar:../common/dist/common.jar:/home/healarconr/netbeans/java/modules/ext/eclipselink/eclipselink.jar:/home/healarconr/netbeans/java/modules/ext/eclipselink/javax.persistence_2.1.0.v201304241213.jar:/home/healarconr/netbeans/java/modules/ext/eclipselink/org.eclipse.persistence.jpa.jpql_2.5.1.v20130918-f2b9fc5.jar:build/classes:/home/healarconr/netbeans/platform/modules/ext/junit-4.10.jar:/home/healarconr/netbeans/ide/modules/ext/mysql-connector-java-5.1.23-bin.jar:build/test/classes" />
+    <property name="ant.project.invoked-targets" value="test" />
+    <property name="test.binaryexcludes" value="" />
+    <property name="libs.swing-layout.javadoc" value="/home/healarconr/netbeans/platform/docs/swing-layout-1.0.4-doc.zip" />
+    <property name="sun.java2d.dpiaware" value="true" />
+    <property name="libs.ejb3-persistence.maven-pom" value="" />
+    <property name="https.nonProxyHosts" value="localhost|127.0.0.1|ion" />
+    <property name="libs.PostgreSQLDriver.maven-pom" value="" />
+    <property name="java.class.version" value="51.0" />
+    <property name="libs.JAVADB_DRIVER_LABEL.classpath" value="/usr/lib/jvm/java-7-oracle/db/lib/derby.jar:/usr/lib/jvm/java-7-oracle/db/lib/derbyclient.jar:/usr/lib/jvm/java-7-oracle/db/lib/derbynet.jar" />
+    <property name="libs.javaee-endorsed-api-6.0.src" value="" />
+    <property name="libs.eclipselink.javadoc" value="" />
+    <property name="libs.jsp-compilation.maven-pom" value="" />
+    <property name="user.properties.file" value="/home/healarconr/.netbeans/7.4/build.properties" />
+    <property name="libs.spring-framework.src" value="" />
+    <property name="libs.javac-api.maven-pom" value="" />
+    <property name="file.encoding.pkg" value="sun.io" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="libs.JAXB-ENDORSED.javadoc" value="" />
+    <property name="j2ee.server.middleware" value="/home/healarconr/glassfish4" />
+    <property name="libs.JWSAntTasks.classpath" value="/home/healarconr/netbeans/java/ant/extra/org-netbeans-modules-javawebstart-anttasks.jar" />
+    <property name="libs.spring-framework300.src" value="" />
+    <property name="libs.jstl.src" value="" />
+    <property name="empty.dir" value="/home/healarconr/netbeans-projects/g5/core/build/empty" />
+    <property name="version-output" value="java version &quot;1.7" />
+    <property name="test.binarytestincludes" value="" />
+    <property name="javadoc.preview" value="true" />
+    <property name="libs.jpa20-persistence.javadoc" value="" />
+    <property name="java.home" value="/usr/lib/jvm/java-7-oracle/jre" />
+    <property name="libs.jsp-compilation.src" value="" />
+    <property name="libs.spring-webmvc.src" value="" />
+    <property name="debug.test.classpath" value="../core-remote/dist/core-remote.jar:../common/dist/common.jar:/home/healarconr/netbeans/java/modules/ext/eclipselink/eclipselink.jar:/home/healarconr/netbeans/java/modules/ext/eclipselink/javax.persistence_2.1.0.v201304241213.jar:/home/healarconr/netbeans/java/modules/ext/eclipselink/org.eclipse.persistence.jpa.jpql_2.5.1.v20130918-f2b9fc5.jar:build/classes:/home/healarconr/netbeans/platform/modules/ext/junit-4.10.jar:/home/healarconr/netbeans/ide/modules/ext/mysql-connector-java-5.1.23-bin.jar:build/test/classes" />
+    <property name="libs.javaee-endorsed-api-6.0.classpath" value="/home/healarconr/netbeans/enterprise/modules/ext/javaee6-endorsed/javax.annotation.jar:/home/healarconr/netbeans/enterprise/modules/ext/javaee6-endorsed/jaxb-api-osgi.jar:/home/healarconr/netbeans/enterprise/modules/ext/javaee6-endorsed/webservices-api-osgi.jar" />
+    <property name="libs.javaee-api-6.0.src" value="" />
+    <property name="netbeans.importclass" value="org.netbeans.upgrade.AutoUpgrade" />
+    <property name="ant.project.default-target" value="default" />
+    <property name="annotation.processing.run.all.processors" value="true" />
+    <property name="libs.PostgreSQLDriver.javadoc" value="" />
+    <property name="libs.restlib.classpath" value="/home/healarconr/netbeans/enterprise/modules/ext/jersey2/ext/asm-all-repackaged-2.1.88.jar:/home/healarconr/netbeans/enterprise/modules/ext/jersey2/ext/cglib-2.1.88.jar:/home/healarconr/netbeans/enterprise/modules/ext/jersey2/ext/guava-14.0.1.jar:/home/healarconr/netbeans/enterprise/modules/ext/jersey2/ext/hk2-api-2.1.88.jar:/home/healarconr/netbeans/enterprise/modules/ext/jersey2/ext/hk2-locator-2.1.88.jar:/home/healarconr/netbeans/enterprise/modules/ext/jersey2/ext/hk2-utils-2.1.88.jar:/home/healarconr/netbeans/enterprise/modules/ext/jersey2/ext/javax.annotation-api-1.2.jar:/home/healarconr/netbeans/enterprise/modules/ext/jersey2/ext/javax.inject-2.1.88.jar:/home/healarconr/netbeans/enterprise/modules/ext/jersey2/ext/javax.servlet-api-3.1.0.jar:/home/healarconr/netbeans/enterprise/modules/ext/jersey2/ext/jaxb-api-2.2.7.jar:/home/healarconr/netbeans/enterprise/modules/ext/jersey2/ext/org.osgi.core-4.2.0.jar:/home/healarconr/netbeans/enterprise/modules/ext/jersey2/ext/osgi-resource-locator-1.0.1.jar:/home/healarconr/netbeans/enterprise/modules/ext/jersey2/ext/persistence-api-1.0.jar:/home/healarconr/netbeans/enterprise/modules/ext/jersey2/ext/validation-api-1.1.0.jar:/home/healarconr/netbeans/enterprise/modules/ext/jersey2/jersey-client.jar:/home/healarconr/netbeans/enterprise/modules/ext/jersey2/jersey-common.jar:/home/healarconr/netbeans/enterprise/modules/ext/jersey2/jersey-container-servlet.jar:/home/healarconr/netbeans/enterprise/modules/ext/jersey2/jersey-container-servlet-core.jar:/home/healarconr/netbeans/enterprise/modules/ext/jersey2/jersey-server.jar:/home/healarconr/netbeans/enterprise/modules/ext/jersey2/extensions/jackson-core-asl-1.9.11.jar:/home/healarconr/netbeans/enterprise/modules/ext/jersey2/extensions/jackson-jaxrs-1.9.11.jar:/home/healarconr/netbeans/enterprise/modules/ext/jersey2/extensions/jackson-mapper-asl-1.9.11.jar:/home/healarconr/netbeans/enterprise/modules/ext/jersey2/extensions/jackson-xc-1.9.11.jar:/home/healarconr/netbeans/enterprise/modules/ext/jersey2/extensions/jersey-media-json-jackson-2.0.jar:/home/healarconr/netbeans/enterprise/modules/ext/jersey2/extensions/jersey-media-json-jettison-2.0.jar:/home/healarconr/netbeans/enterprise/modules/ext/jersey2/extensions/jettison-1.3.3.jar" />
+    <property name="libs.MySQLDriver.maven-pom" value="" />
+    <property name="j2ee.platform.wsgen.classpath" value="/home/healarconr/glassfish4/glassfish/modules/webservices-osgi.jar:/home/healarconr/glassfish4/glassfish/modules/endorsed/webservices-api-osgi.jar:/home/healarconr/glassfish4/glassfish/modules/jaxb-osgi.jar:/home/healarconr/glassfish4/glassfish/modules/endorsed/jaxb-api-osgi.jar" />
+    <property name="http.nonProxyHosts" value="localhost|127.0.0.1|ion" />
+    <property name="libs.junit_4.javadoc" value="/home/healarconr/netbeans/java/docs/junit-4.10-javadoc.jar" />
+    <property name="libs.spring-webmvc.javadoc" value="" />
+    <property name="libs.EclipseLink-GlassFish-v3.maven-pom" value="" />
+    <property name="libs.javaee-web-api-6.0.maven-pom" value="" />
+    <property name="j2ee.deploy.on.save" value="true" />
+    <property name="jar.name" value="core.jar" />
+    <property name="libs.hibernate-support.src" value="" />
+    <property name="jna.boot.library.name" value="jnidispatch-340" />
+    <property name="libs.javaee-endorsed-api-6.0.javadoc" value="/home/healarconr/netbeans/enterprise/docs/javaee-doc-api.jar" />
+    <property name="libs.javaee-api-7.0.classpath" value="/home/healarconr/netbeans/enterprise/modules/ext/javaee-api-7.0.jar" />
+    <property name="sun.awt.datatransfer.timeout" value="1000" />
+    <property name="libs.spring-webmvc3.0.javadoc" value="" />
+    <property name="annotation.processing.enabled.in.editor" value="true" />
+    <property name="nb.native.filechooser" value="false" />
+    <property name="libs.restapi.src" value="" />
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+    <property name="javac.deprecation" value="false" />
+    <property name="javadoc.use" value="true" />
+    <property name="sun.java2d.noddraw" value="true" />
+    <property name="libs.jsp-compiler.classpath" value="/home/healarconr/netbeans/enterprise/ant/extra/jspcompile.jar" />
+    <property name="javac.processorpath" value="../core-remote/dist/core-remote.jar:../common/dist/common.jar:/home/healarconr/netbeans/java/modules/ext/eclipselink/eclipselink.jar:/home/healarconr/netbeans/java/modules/ext/eclipselink/javax.persistence_2.1.0.v201304241213.jar:/home/healarconr/netbeans/java/modules/ext/eclipselink/org.eclipse.persistence.jpa.jpql_2.5.1.v20130918-f2b9fc5.jar" />
+    <property name="libs.spring-webmvc.classpath" value="/home/healarconr/netbeans/enterprise/modules/ext/spring/spring-webmvc-2.5.6.SEC03.jar" />
+    <property name="javac.compilerargs" value="" />
+    <property name="ant.file" value="/home/healarconr/netbeans-projects/g5/core/build.xml" />
+    <property name="jars.in.ejbjar" value="false" />
+    <property name="libs.beans-binding.maven-pom" value="" />
+    <property name="libs.jsf12.classpath" value="/home/healarconr/netbeans/enterprise/modules/ext/jsf-1_2/commons-beanutils.jar:/home/healarconr/netbeans/enterprise/modules/ext/jsf-1_2/commons-collections.jar:/home/healarconr/netbeans/enterprise/modules/ext/jsf-1_2/commons-digester.jar:/home/healarconr/netbeans/enterprise/modules/ext/jsf-1_2/commons-logging.jar:/home/healarconr/netbeans/enterprise/modules/ext/jsf-1_2/jsf-api.jar:/home/healarconr/netbeans/enterprise/modules/ext/jsf-1_2/jsf-impl.jar" />
+    <property name="libs.Java-EE-GlassFish-v3-Prelude.classpath" value="/home/healarconr/glassfish4/mq/lib/jaxm-api.jar:/home/healarconr/glassfish4/glassfish/modules/endorsed/javax.annotation-api.jar:/home/healarconr/glassfish4/glassfish/modules/endorsed/jaxb-api-osgi.jar:/home/healarconr/glassfish4/glassfish/modules/endorsed/webservices-api-osgi.jar:/home/healarconr/glassfish4/glassfish/modules/javax.management.j2ee-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.websocket-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.persistence.jar:/home/healarconr/glassfish4/glassfish/modules/javax.jms-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.servlet.jsp.jar:/home/healarconr/glassfish4/glassfish/modules/javax.enterprise.concurrent-api.jar:/home/healarconr/glassfish4/glassfish/modules/webservices-osgi.jar:/home/healarconr/glassfish4/glassfish/modules/javax.el.jar:/home/healarconr/glassfish4/glassfish/modules/javax.security.jacc-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.xml.registry-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.interceptor-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.json.jar:/home/healarconr/glassfish4/glassfish/modules/javax.mail.jar:/home/healarconr/glassfish4/glassfish/modules/javax.servlet-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.enterprise.deploy-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.ws.rs-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.xml.rpc-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.enterprise.concurrent.jar:/home/healarconr/glassfish4/glassfish/modules/jaxb-osgi.jar:/home/healarconr/glassfish4/glassfish/modules/javax.faces.jar:/home/healarconr/glassfish4/glassfish/modules/javax.batch-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.resource-api.jar:/home/healarconr/glassfish4/glassfish/modules/weld-osgi-bundle.jar:/home/healarconr/glassfish4/glassfish/modules/javax.security.auth.message-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.servlet.jsp.jstl-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.inject.jar:/home/healarconr/glassfish4/glassfish/modules/javax.transaction-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.servlet.jsp.jstl.jar:/home/healarconr/glassfish4/glassfish/modules/javax.ejb-api.jar:/home/healarconr/glassfish4/glassfish/modules/bean-validator.jar:/home/healarconr/glassfish4/glassfish/modules/javax.servlet.jsp-api.jar" />
+    <property name="has.custom.manifest" value="true" />
+    <property name="libs.jstl.maven-pom" value="" />
+    <property name="libs.restapi.maven-pom" value="" />
+    <property name="libs.beans-binding.src" value="" />
+    <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+    <property name="libs.swing-layout.src" value="/home/healarconr/netbeans/platform/docs/swing-layout-1.0.4-src.zip" />
+    <property name="org.openide.major.version" value="IDE/1" />
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+    <property name="netbeans.user" value="/home/healarconr/.netbeans/7.4" />
+    <property name="javadoc.additionalparam" value="" />
+    <property name="java.io.tmpdir" value="/tmp" />
+    <property name="java.vendor.url" value="http://java.oracle.com/" />
+    <property name="endorsed.classpath.cmd.line.arg" value="-Xbootclasspath/p:&apos;/home/healarconr/netbeans/enterprise/modules/ext/javaee6-endorsed/javax.annotation.jar:/home/healarconr/netbeans/enterprise/modules/ext/javaee6-endorsed/jaxb-api-osgi.jar:/home/healarconr/netbeans/enterprise/modules/ext/javaee6-endorsed/webservices-api-osgi.jar&apos;" />
+    <property name="junit.available" value="true" />
+    <property name="j2ee.platform.wsit.classpath" value="" />
+    <property name="libs.jsp-compiler.src" value="" />
+    <property name="deploy.ant.properties.file" value="/home/healarconr/.netbeans/7.4/config/GlassFishEE6/Properties/gfv31229052524.properties" />
+    <property name="j2ee.platform.wscompile.classpath" value="/home/healarconr/glassfish4/glassfish/modules/webservices-osgi.jar" />
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-7-oracle/jre/lib/amd64" />
+    <property name="have.sources" value="true" />
+    <property name="debug.classpath" value="../core-remote/dist/core-remote.jar:../common/dist/common.jar:/home/healarconr/netbeans/java/modules/ext/eclipselink/eclipselink.jar:/home/healarconr/netbeans/java/modules/ext/eclipselink/javax.persistence_2.1.0.v201304241213.jar:/home/healarconr/netbeans/java/modules/ext/eclipselink/org.eclipse.persistence.jpa.jpql_2.5.1.v20130918-f2b9fc5.jar:build/classes" />
+    <property name="project.core-remote" value="../core-remote" />
+    <property name="javadoc.private" value="false" />
+    <property name="test.src.dir" value="test" />
+    <property name="libs.jsf20.classpath" value="/home/healarconr/netbeans/enterprise/modules/ext/jsf-2_2/javax.faces.jar" />
+    <property name="ap.processors.internal" value="" />
+    <property name="javadoc.encoding.used" value="UTF-8" />
+    <property name="dist.jar" value="dist/core.jar" />
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="ant.project.name" value="core" />
+    <property name="reference.core-remote.jar" value="../core-remote/dist/core-remote.jar" />
+    <property name="netbeans.hash.code" value="unique=02e82e9bb-84c5-495a-a430-abf0f4a7a049_54152536-7b86-4fcc-a621-df4c75724255" />
+    <property name="netbeans.default_userdir_root" value="/home/healarconr/.netbeans" />
+    <property name="libs.jsp-compilation-syscp.maven-pom" value="" />
+    <property name="sun.cpu.isalist" value="" />
+    <property name="libs.CopyLibs.javadoc" value="" />
+    <property name="libs.hibernate-persistencemodelgen.maven-pom" value="" />
+    <property name="j2ee.server.domain" value="/home/healarconr/glassfish4/glassfish/domains/domain1" />
+    <property name="org.openide.specification.version" value="6.2" />
+    <property name="j2ee.server.home" value="/home/healarconr/glassfish4/glassfish" />
+    <property name="libs.hibernate-support.classpath" value="/home/healarconr/netbeans/java/modules/ext/hibernate/dom4j-1.6.1.jar:/home/healarconr/netbeans/java/modules/ext/hibernate/antlr-2.7.6.jar:/home/healarconr/netbeans/java/modules/ext/hibernate/cglib-2.2.jar:/home/healarconr/netbeans/java/modules/ext/hibernate/commons-collections-3.1.jar:/home/healarconr/netbeans/java/modules/ext/hibernate/jta-1.1.jar:/home/healarconr/netbeans/java/modules/ext/hibernate/hibernate-core-3.6.10.Final.jar:/home/healarconr/netbeans/java/modules/ext/hibernate/hibernate-commons-annotations-3.2.0.Final.jar:/home/healarconr/netbeans/java/modules/ext/hibernate/hibernate-entitymanager-3.6.10.Final.jar:/home/healarconr/netbeans/java/modules/ext/hibernate/hibernate-tools-3.6.0.CR1.jar:/home/healarconr/netbeans/java/modules/ext/hibernate/javassist-3.12.0.GA.jar:/home/healarconr/netbeans/java/modules/ext/hibernate/c3p0-0.9.1.jar:/home/healarconr/netbeans/java/modules/ext/hibernate/oscache-2.1.jar:/home/healarconr/netbeans/java/modules/ext/hibernate/slf4j-api-1.6.1.jar:/home/healarconr/netbeans/java/modules/ext/hibernate/slf4j-simple-1.6.1.jar" />
+    <property name="user.home" value="/home/healarconr" />
+    <property name="annotation.processing.processors.list" value="" />
+    <property name="libs.primefaces.maven-pom" value="" />
+    <property name="debug-args-line" value="-Xdebug" />
+    <property name="libs.javaee-api-6.0.maven-pom" value="" />
+    <property name="libs.JWSAntTasks.src" value="" />
+    <property name="libs.CopyLibs.maven-pom" value="" />
+    <property name="libs.spring-framework300.javadoc" value="" />
+    <property name="libs.hibernate-persistence.maven-pom" value="" />
+    <property name="libs.absolutelayout.javadoc" value="" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="no.dist.ear.dir" value="true" />
+    <property name="java.specification.vendor" value="Oracle Corporation" />
+    <property name="libs.javac-api.classpath" value="/home/healarconr/netbeans/java/modules/ext/nb-javac-api.jar" />
+    <property name="java.version" value="1.7.0_45" />
+    <property name="run.jvmargs.ide" value="" />
+    <property name="javadoc.version" value="false" />
+    <property name="libs.MySQLDriver.javadoc" value="" />
+    <property name="org.openide.version" value="deprecated" />
+    <property name="source.encoding" value="UTF-8" />
+    <property name="ap.cmd.line.internal" value="" />
+    <property name="libs.eclipselinkmodelgen.maven-pom" value="" />
+    <property name="libs.jsp-compilation-syscp.javadoc" value="" />
+    <property name="ant.file.core" value="/home/healarconr/netbeans-projects/g5/core/build.xml" />
+    <property name="libs.junit.maven-pom" value="" />
+    <property name="libs.eclipselinkmodelgen.javadoc" value="" />
+    <property name="libs.javaee-endorsed-api-7.0.classpath" value="/home/healarconr/netbeans/enterprise/modules/ext/javaee7-endorsed/javax.annotation-api.jar:/home/healarconr/netbeans/enterprise/modules/ext/javaee7-endorsed/javax.xml.soap-api.jar:/home/healarconr/netbeans/enterprise/modules/ext/javaee7-endorsed/jaxb-api-osgi.jar:/home/healarconr/netbeans/enterprise/modules/ext/javaee7-endorsed/jaxws-api.jar:/home/healarconr/netbeans/enterprise/modules/ext/javaee7-endorsed/jsr181-api.jar" />
+    <property name="libs.metro.javadoc" value="/home/healarconr/netbeans/enterprise/docs/metro-1.4-doc.zip" />
+    <property name="libs.struts.maven-pom" value="" />
+    <property name="netbeans.home+have.tests" value="true" />
+    <property name="annotation.processing.processor.options" value="-Aeclipselink.canonicalmodel.use_static_factory=false" />
+    <property name="libs.testng.maven-pom" value="" />
+    <property name="libs.jaxb.src" value="" />
+    <property name="libs.jaxb.classpath" value="/home/healarconr/netbeans/ide/modules/ext/jaxb/jaxb-impl.jar:/home/healarconr/netbeans/ide/modules/ext/jaxb/jaxb-xjc.jar:/home/healarconr/netbeans/ide/modules/ext/jaxb/jaxb1-impl.jar:/home/healarconr/netbeans/ide/modules/ext/jaxb/activation.jar:/home/healarconr/netbeans/ide/modules/ext/jaxb/api/jaxb-api.jar:/home/healarconr/netbeans/ide/modules/ext/jaxb/api/jsr173_1.0_api.jar" />
+    <property name="dist.javadoc.dir" value="dist/javadoc" />
+    <property name="classes.dir" value="build/classes" />
+    <property name="libs.spring-webmvc3.0.classpath" value="/home/healarconr/netbeans/java/modules/ext/spring-3.0/spring-webmvc-3.2.3.RELEASE.jar" />
+    <property name="libs.swing-layout.classpath" value="/home/healarconr/netbeans/platform/modules/ext/swing-layout-1.0.4.jar" />
+    <property name="libs.javaee-web-api-7.0.maven-pom" value="" />
+    <property name="libs.restlib.src" value="" />
+    <property name="build.generated.dir" value="build/generated" />
+    <property name="javac.source" value="1.7" />
+    <property name="line.separator" value="&#xa;" />
+    <property name="libs.hibernate-persistence.src" value="" />
+    <property name="java.specification.version" value="1.7" />
+    <property name="java.vm.info" value="mixed mode" />
+    <property name="libs.jaxws21.maven-pom" value="" />
+    <property name="nb.junit.batch" value="true" />
+    <property name="libs.spring-framework.maven-pom" value="" />
+    <property name="sun.boot.class.path" value="/home/healarconr/netbeans/enterprise/modules/ext/javaee6-endorsed/javax.annotation.jar:/home/healarconr/netbeans/enterprise/modules/ext/javaee6-endorsed/jaxb-api-osgi.jar:/home/healarconr/netbeans/enterprise/modules/ext/javaee6-endorsed/webservices-api-osgi.jar:/usr/lib/jvm/java-7-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-7-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-7-oracle/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-7-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-7-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-7-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-7-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-7-oracle/jre/classes" />
+    <property name="javac.target" value="1.7" />
+    <property name="build.test.classes.dir" value="build/test/classes" />
+    <property name="src.dir" value="src/java" />
+    <property name="annotation.processing.enabled" value="true" />
+    <property name="libs.jsf20.src" value="" />
+    <property name="libs.jpa20-persistence.src" value="" />
+    <property name="libs.jsf12.src" value="" />
+    <property name="j2ee.platform" value="1.7" />
+    <property name="libs.JAVADB_DRIVER_LABEL.maven-pom" value="" />
+    <property name="libs.struts.javadoc" value="/home/healarconr/netbeans/enterprise/docs/struts-1.3.10-javadoc.zip" />
+    <property name="ignore.failing.tests" value="true" />
+    <property name="libs.Comet-GlassFish-v3.classpath" value="" />
+    <property name="libs.javaee-web-api-7.0.src" value="" />
+    <property name="libs.primefaces.src" value="" />
+    <property name="dist.dir" value="dist" />
+    <property name="dist.ear.jar" value="dist/core.jar" />
+    <property name="testng.debug.mode" value="" />
+    <property name="javac.fork" value="false" />
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob" />
+    <property name="default.javac.source" value="1.7" />
+    <property name="debug-transport-by-os" value="dt_socket" />
+    <property name="libs.MySQLDriver.src" value="" />
+    <property name="sun.jnu.encoding" value="UTF-8" />
+    <property name="java.runtime.version" value="1.7.0_45-b18" />
+    <property name="build.test.results.dir" value="build/test/results" />
+    <property name="libs.ejb3-persistence.javadoc" value="" />
+    <property name="jna.platform.library.path" value="/usr/lib/x86_64-linux-gnu:/lib/x86_64-linux-gnu:/lib64:/usr/lib:/lib" />
+    <property name="default.javac.target" value="1.7" />
+    <property name="libs.junit_4.classpath" value="/home/healarconr/netbeans/platform/modules/ext/junit-4.10.jar" />
+    <property name="user.timezone" value="" />
+    <property name="nb.junit.single" value="false" />
+    <property name="libs.javaee-endorsed-api-6.0.maven-pom" value="" />
+    <property name="libs.JAVADB_DRIVER_LABEL.javadoc" value="" />
+    <property name="netbeans.dirs" value="/home/healarconr/netbeans/nb:/home/healarconr/netbeans/ergonomics:/home/healarconr/netbeans/ide:/home/healarconr/netbeans/extide:/home/healarconr/netbeans/java:/home/healarconr/netbeans/apisupport:/home/healarconr/netbeans/webcommon:/home/healarconr/netbeans/websvccommon:/home/healarconr/netbeans/enterprise:/home/healarconr/netbeans/mobility:/home/healarconr/netbeans/profiler:/home/healarconr/netbeans/python:/home/healarconr/netbeans/php:/home/healarconr/netbeans/identity:/home/healarconr/netbeans/harness:/home/healarconr/netbeans/cnd:/home/healarconr/netbeans/dlight:/home/healarconr/netbeans/groovy:/home/healarconr/netbeans/extra:/home/healarconr/netbeans/javacard:/home/healarconr/netbeans/javafx:" />
+    <property name="libs.jsf20.javadoc" value="/home/healarconr/netbeans/enterprise/docs/javaee-doc-api.jar" />
+    <property name="libs.jstl.javadoc" value="/home/healarconr/netbeans/enterprise/docs/javaee-doc-api.jar" />
+    <property name="java.ext.dirs" value="/usr/lib/jvm/java-7-oracle/jre/lib/ext:/usr/java/packages/lib/ext" />
+    <property name="libs.metro.src" value="" />
+    <property name="endorsed.classpath" value="/home/healarconr/netbeans/enterprise/modules/ext/javaee6-endorsed/javax.annotation.jar:/home/healarconr/netbeans/enterprise/modules/ext/javaee6-endorsed/jaxb-api-osgi.jar:/home/healarconr/netbeans/enterprise/modules/ext/javaee6-endorsed/webservices-api-osgi.jar" />
+    <property name="libs.absolutelayout.classpath" value="/home/healarconr/netbeans/java/modules/ext/AbsoluteLayout.jar" />
+    <property name="excludes" value="" />
+    <property name="libs.restlib.maven-pom" value="" />
+    <property name="libs.metro.classpath" value="/home/healarconr/netbeans/ide/modules/ext/jaxb/activation.jar:/home/healarconr/netbeans/enterprise/modules/ext/metro/webservices-api.jar:/home/healarconr/netbeans/enterprise/modules/ext/metro/webservices-extra-api.jar:/home/healarconr/netbeans/enterprise/modules/ext/metro/webservices-extra.jar:/home/healarconr/netbeans/enterprise/modules/ext/metro/webservices-rt.jar:/home/healarconr/netbeans/enterprise/modules/ext/metro/webservices-tools.jar" />
+    <property name="apple.laf.useScreenMenuBar" value="true" />
+    <property name="java.class.path" value="/home/healarconr/netbeans-projects/g5/core-remote/dist/core-remote.jar:/home/healarconr/netbeans-projects/g5/common/dist/common.jar:/home/healarconr/netbeans/java/modules/ext/eclipselink/eclipselink.jar:/home/healarconr/netbeans/java/modules/ext/eclipselink/javax.persistence_2.1.0.v201304241213.jar:/home/healarconr/netbeans/java/modules/ext/eclipselink/org.eclipse.persistence.jpa.jpql_2.5.1.v20130918-f2b9fc5.jar:/home/healarconr/netbeans-projects/g5/core/build/classes:/home/healarconr/netbeans/platform/modules/ext/junit-4.10.jar:/home/healarconr/netbeans/ide/modules/ext/mysql-connector-java-5.1.23-bin.jar:/home/healarconr/netbeans-projects/g5/core/build/test/classes:/home/healarconr/glassfish4/mq/lib/jaxm-api.jar:/home/healarconr/glassfish4/glassfish/modules/endorsed/javax.annotation-api.jar:/home/healarconr/glassfish4/glassfish/modules/endorsed/jaxb-api-osgi.jar:/home/healarconr/glassfish4/glassfish/modules/endorsed/webservices-api-osgi.jar:/home/healarconr/glassfish4/glassfish/modules/javax.management.j2ee-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.websocket-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.persistence.jar:/home/healarconr/glassfish4/glassfish/modules/javax.jms-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.servlet.jsp.jar:/home/healarconr/glassfish4/glassfish/modules/javax.enterprise.concurrent-api.jar:/home/healarconr/glassfish4/glassfish/modules/webservices-osgi.jar:/home/healarconr/glassfish4/glassfish/modules/javax.el.jar:/home/healarconr/glassfish4/glassfish/modules/javax.security.jacc-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.xml.registry-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.interceptor-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.json.jar:/home/healarconr/glassfish4/glassfish/modules/javax.mail.jar:/home/healarconr/glassfish4/glassfish/modules/javax.servlet-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.enterprise.deploy-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.ws.rs-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.xml.rpc-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.enterprise.concurrent.jar:/home/healarconr/glassfish4/glassfish/modules/jaxb-osgi.jar:/home/healarconr/glassfish4/glassfish/modules/javax.faces.jar:/home/healarconr/glassfish4/glassfish/modules/javax.batch-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.resource-api.jar:/home/healarconr/glassfish4/glassfish/modules/weld-osgi-bundle.jar:/home/healarconr/glassfish4/glassfish/modules/javax.security.auth.message-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.servlet.jsp.jstl-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.inject.jar:/home/healarconr/glassfish4/glassfish/modules/javax.transaction-api.jar:/home/healarconr/glassfish4/glassfish/modules/javax.servlet.jsp.jstl.jar:/home/healarconr/glassfish4/glassfish/modules/javax.ejb-api.jar:/home/healarconr/glassfish4/glassfish/modules/bean-validator.jar:/home/healarconr/glassfish4/glassfish/modules/javax.servlet.jsp-api.jar:/home/healarconr/glassfish4/glassfish/lib/embedded/glassfish-embedded-static-shell.jar:/home/healarconr/netbeans/extide/ant/lib/ant-launcher.jar:/home/healarconr/netbeans/extide/ant/lib/ant.jar:/home/healarconr/netbeans/extide/ant/lib/ant-junit.jar:/home/healarconr/netbeans/extide/ant/lib/ant-junit4.jar" />
+    <property name="libs.absolutelayout.src" value="" />
+    <property name="libs.jpa20-persistence.classpath" value="/home/healarconr/netbeans/java/modules/ext/eclipselink/javax.persistence_2.1.0.v201304241213.jar" />
+    <property name="j2ee.server.type" value="gfv3ee6" />
+    <property name="os.version" value="3.11.0-14-generic" />
+    <property name="libs.hibernate-persistencemodelgen.src" value="" />
+    <property name="libs.EclipseLink-GlassFish-v3.javadoc" value="/home/healarconr/netbeans/enterprise/docs/javaee-doc-api.jar" />
+    <property name="libs.javaee-api-7.0.maven-pom" value="" />
+    <property name="sun.awt.enableExtraMouseButtons" value="true" />
+    <property name="sun.desktop" value="gnome" />
+    <property name="libs.Comet-GlassFish-v3.src" value="" />
+    <property name="libs.restlib.javadoc" value="" />
+    <property name="libs.JAXB-ENDORSED.classpath" value="/home/healarconr/netbeans/ide/modules/ext/jaxb/api/jaxb-api.jar" />
+    <property name="nb.internal.action.name" value="test" />
+    <property name="j2ee.platform.embeddableejb.classpath" value="/home/healarconr/glassfish4/glassfish/lib/embedded/glassfish-embedded-static-shell.jar" />
+    <property name="libs.eclipselink.classpath" value="/home/healarconr/netbeans/java/modules/ext/eclipselink/eclipselink.jar:/home/healarconr/netbeans/java/modules/ext/eclipselink/javax.persistence_2.1.0.v201304241213.jar:/home/healarconr/netbeans/java/modules/ext/eclipselink/org.eclipse.persistence.jpa.jpql_2.5.1.v20130918-f2b9fc5.jar" />
+    <property name="libs.javaee-api-7.0.javadoc" value="/home/healarconr/netbeans/enterprise/docs/javaee-doc-api.jar" />
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment" />
+    <property name="libs.beans-binding.javadoc" value="/home/healarconr/netbeans/java/docs/beansbinding-1.2.1-doc.zip" />
+    <property name="java.vm.vendor" value="Oracle Corporation" />
+    <property name="libs.CopyLibs.classpath" value="/home/healarconr/netbeans/java/ant/extra/org-netbeans-modules-java-j2seproject-copylibstask.jar" />
+    <property name="libs.spring-framework300.classpath" value="/home/healarconr/netbeans/ide/modules/org-apache-commons-logging.jar:/home/healarconr/netbeans/java/modules/ext/cglib-2.2.jar:/home/healarconr/netbeans/java/modules/ext/spring-3.0/spring-aop-3.2.3.RELEASE.jar:/home/healarconr/netbeans/java/modules/ext/spring-3.0/spring-aspects-3.2.3.RELEASE.jar:/home/healarconr/netbeans/java/modules/ext/spring-3.0/spring-beans-3.2.3.RELEASE.jar:/home/healarconr/netbeans/java/modules/ext/spring-3.0/spring-build-src-3.2.3.RELEASE.jar:/home/healarconr/netbeans/java/modules/ext/spring-3.0/spring-context-3.2.3.RELEASE.jar:/home/healarconr/netbeans/java/modules/ext/spring-3.0/spring-context-support-3.2.3.RELEASE.jar:/home/healarconr/netbeans/java/modules/ext/spring-3.0/spring-core-3.2.3.RELEASE.jar:/home/healarconr/netbeans/java/modules/ext/spring-3.0/spring-expression-3.2.3.RELEASE.jar:/home/healarconr/netbeans/java/modules/ext/spring-3.0/spring-instrument-3.2.3.RELEASE.jar:/home/healarconr/netbeans/java/modules/ext/spring-3.0/spring-instrument-tomcat-3.2.3.RELEASE.jar:/home/healarconr/netbeans/java/modules/ext/spring-3.0/spring-jdbc-3.2.3.RELEASE.jar:/home/healarconr/netbeans/java/modules/ext/spring-3.0/spring-jms-3.2.3.RELEASE.jar:/home/healarconr/netbeans/java/modules/ext/spring-3.0/spring-orm-3.2.3.RELEASE.jar:/home/healarconr/netbeans/java/modules/ext/spring-3.0/spring-oxm-3.2.3.RELEASE.jar:/home/healarconr/netbeans/java/modules/ext/spring-3.0/spring-struts-3.2.3.RELEASE.jar:/home/healarconr/netbeans/java/modules/ext/spring-3.0/spring-test-3.2.3.RELEASE.jar:/home/healarconr/netbeans/java/modules/ext/spring-3.0/spring-tx-3.2.3.RELEASE.jar:/home/healarconr/netbeans/java/modules/ext/spring-3.0/spring-web-3.2.3.RELEASE.jar:/home/healarconr/netbeans/java/modules/ext/spring-3.0/spring-webmvc-3.2.3.RELEASE.jar:/home/healarconr/netbeans/java/modules/ext/spring-3.0/spring-webmvc-portlet-3.2.3.RELEASE.jar" />
+    <property name="libs.jsp-compiler.maven-pom" value="" />
+    <property name="libs.spring-webmvc.maven-pom" value="" />
+    <property name="libs.ejb3-persistence.classpath" value="/home/healarconr/netbeans/java/modules/ext/hibernate/hibernate-jpa-2.0-api-1.0.1.Final.jar" />
+    <property name="libs.hibernate-persistencemodelgen.javadoc" value="" />
+    <property name="libs.JAXB-ENDORSED.src" value="" />
+    <property name="libs.spring-framework.javadoc" value="" />
+    <property name="libs.testng.javadoc" value="/home/healarconr/netbeans/platform/docs/testng-6.8.1-javadoc.zip" />
+    <property name="libs.PostgreSQLDriver.classpath" value="/home/healarconr/netbeans/ide/modules/ext/postgresql-9.2-1002.jdbc4.jar" />
+    <property name="libs.jsf12.maven-pom" value="" />
+    <property name="libs.junit.src" value="" />
+    <property name="annotation.processing.source.output" value="build/generated-sources/ap-source-output" />
+    <property name="build.dir" value="build" />
+    <property name="libs.CopyLibs.src" value="" />
+    <property name="libs.jsp-compilation.classpath" value="/home/healarconr/netbeans/extide/ant/lib/ant.jar:/home/healarconr/netbeans/enterprise/modules/ext/servlet3.1-jsp2.3-api.jar:/home/healarconr/netbeans/enterprise/modules/ext/glassfish-jspparser-4.0.jar:/home/healarconr/netbeans/enterprise/modules/ext/jsf-2_2/javax.faces.jar:/home/healarconr/netbeans/enterprise/modules/ext/jstl-api.jar:/home/healarconr/netbeans/extide/ant/lib/ant-launcher.jar" />
+    <property name="reference.common.jar" value="../common/dist/common.jar" />
+    <property name="j2ee.platform.is.jsr109" value="true" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.9.1 compiled on May 15 2013" />
+    <property name="file.encoding" value="UTF-8" />
+    <property name="build.classes.excludes" value="**/*.java,**/*.form,**/.nbattrs" />
+    <property name="jdkBug6558476" value="false" />
+    <property name="javadoc.nonavbar" value="false" />
+    <property name="platform.active" value="default_platform" />
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit" />
+    <property name="libs.javaee-web-api-7.0.javadoc" value="/home/healarconr/netbeans/enterprise/docs/javaee-doc-api.jar" />
+  </properties>
+  <testcase classname="com.g5.services.TransactionServiceTest" name="testRollbackTransaction" time="6.207" />
+  <testcase classname="com.g5.services.TransactionServiceTest" name="testRollbackPayment" time="5.356" />
+  <testcase classname="com.g5.services.TransactionServiceTest" name="testDeposit" time="6.444" />
+  <testcase classname="com.g5.services.TransactionServiceTest" name="testWithdraw" time="5.957" />
+  <testcase classname="com.g5.services.TransactionServiceTest" name="testFindById" time="6.377" />
+  <testcase classname="com.g5.services.TransactionServiceTest" name="testFindByAccountId" time="5.489" />
+  <testcase classname="com.g5.services.TransactionServiceTest" name="testRequestPayment" time="6.331" />
+  <testcase classname="com.g5.services.TransactionServiceTest" name="testApprovePayment" time="5.722" />
+  <system-out><![CDATA[Found populator: org.glassfish.kernel.embedded.EmbeddedDomainXml
+JdbcRuntimeExtension,  getAllSystemRAResourcesAndPools = [GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource]
+[EL Info]: 2014-01-03 16:32:56.053--ServerSession(2112555962)--EclipseLink, version: Eclipse Persistence Services - 2.5.1.v20130918-f2b9fc5
+[EL Info]: connection: 2014-01-03 16:32:56.073--ServerSession(2112555962)--file:/home/healarconr/netbeans-projects/g5/core/build/classes/_g5-non-jta login successful
+remove
+AbstractBaseDao.find()
+[EL Info]: connection: 2014-01-03 16:33:02.229--ServerSession(2112555962)--file:/home/healarconr/netbeans-projects/g5/core/build/classes/_g5-non-jta logout successful
+[EL Info]: 2014-01-03 16:33:02.257--ServerSession(1881308546)--EclipseLink, version: Eclipse Persistence Services - 2.5.1.v20130918-f2b9fc5
+[EL Info]: connection: 2014-01-03 16:33:02.265--ServerSession(1881308546)--file:/home/healarconr/netbeans-projects/g5/core/build/classes/_g5-non-jta login successful
+testRollbackPayment
+AbstractBaseDao.find()
+AbstractBaseDao.find()
+AbstractBaseDao.find()
+[EL Info]: connection: 2014-01-03 16:33:07.586--ServerSession(1881308546)--file:/home/healarconr/netbeans-projects/g5/core/build/classes/_g5-non-jta logout successful
+[EL Info]: 2014-01-03 16:33:07.617--ServerSession(1305659232)--EclipseLink, version: Eclipse Persistence Services - 2.5.1.v20130918-f2b9fc5
+[EL Info]: connection: 2014-01-03 16:33:07.626--ServerSession(1305659232)--file:/home/healarconr/netbeans-projects/g5/core/build/classes/_g5-non-jta login successful
+deposit
+AbstractBaseDao.find()
+[EL Info]: connection: 2014-01-03 16:33:14.03--ServerSession(1305659232)--file:/home/healarconr/netbeans-projects/g5/core/build/classes/_g5-non-jta logout successful
+[EL Info]: 2014-01-03 16:33:14.06--ServerSession(1775584112)--EclipseLink, version: Eclipse Persistence Services - 2.5.1.v20130918-f2b9fc5
+[EL Info]: connection: 2014-01-03 16:33:14.068--ServerSession(1775584112)--file:/home/healarconr/netbeans-projects/g5/core/build/classes/_g5-non-jta login successful
+withdraw
+AbstractBaseDao.find()
+[EL Info]: connection: 2014-01-03 16:33:19.988--ServerSession(1775584112)--file:/home/healarconr/netbeans-projects/g5/core/build/classes/_g5-non-jta logout successful
+[EL Info]: 2014-01-03 16:33:20.012--ServerSession(2036217266)--EclipseLink, version: Eclipse Persistence Services - 2.5.1.v20130918-f2b9fc5
+[EL Info]: connection: 2014-01-03 16:33:20.019--ServerSession(2036217266)--file:/home/healarconr/netbeans-projects/g5/core/build/classes/_g5-non-jta login successful
+findById
+AbstractBaseDao.find()
+[EL Info]: connection: 2014-01-03 16:33:26.366--ServerSession(2036217266)--file:/home/healarconr/netbeans-projects/g5/core/build/classes/_g5-non-jta logout successful
+[EL Info]: 2014-01-03 16:33:26.386--ServerSession(659794111)--EclipseLink, version: Eclipse Persistence Services - 2.5.1.v20130918-f2b9fc5
+[EL Info]: connection: 2014-01-03 16:33:26.394--ServerSession(659794111)--file:/home/healarconr/netbeans-projects/g5/core/build/classes/_g5-non-jta login successful
+findByAccountId
+AbstractBaseDao.find()
+[EL Info]: connection: 2014-01-03 16:33:31.856--ServerSession(659794111)--file:/home/healarconr/netbeans-projects/g5/core/build/classes/_g5-non-jta logout successful
+[EL Info]: 2014-01-03 16:33:31.88--ServerSession(2094752441)--EclipseLink, version: Eclipse Persistence Services - 2.5.1.v20130918-f2b9fc5
+[EL Info]: connection: 2014-01-03 16:33:31.888--ServerSession(2094752441)--file:/home/healarconr/netbeans-projects/g5/core/build/classes/_g5-non-jta login successful
+requestPayment
+AbstractBaseDao.find()
+[EL Info]: connection: 2014-01-03 16:33:38.188--ServerSession(2094752441)--file:/home/healarconr/netbeans-projects/g5/core/build/classes/_g5-non-jta logout successful
+[EL Info]: 2014-01-03 16:33:38.207--ServerSession(1915207040)--EclipseLink, version: Eclipse Persistence Services - 2.5.1.v20130918-f2b9fc5
+[EL Info]: connection: 2014-01-03 16:33:38.214--ServerSession(1915207040)--file:/home/healarconr/netbeans-projects/g5/core/build/classes/_g5-non-jta login successful
+approvePayment
+Current receiver balance: 100
+Current sender balance: 100
+New receiver balance: 110
+New sender balance: 90
+AbstractBaseDao.find()
+AbstractBaseDao.find()
+[EL Info]: connection: 2014-01-03 16:33:43.911--ServerSession(1915207040)--file:/home/healarconr/netbeans-projects/g5/core/build/classes/_g5-non-jta logout successful
+PlainTextActionReporterSUCCESSNo monitoring data to report.
+JdbcRuntimeExtension,  getAllSystemRAResourcesAndPools = [GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource]
+JdbcRuntimeExtension,  getAllSystemRAResourcesAndPools = [GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource]
+]]></system-out>
+  <system-err><![CDATA[ene 03, 2014 4:32:38 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl createContainer
+Información: [EJBContainerProviderImpl] Using installation location /home/healarconr/glassfish4/glassfish
+ene 03, 2014 4:32:38 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl createContainer
+Información: [EJBContainerProviderImpl] Using config file location: file:/tmp/domain1964410441260422863xml
+ene 03, 2014 4:32:38 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl createContainer
+Información: [EJBContainerProviderImpl] Using runtime class: class com.sun.enterprise.glassfish.bootstrap.StaticGlassFishRuntime
+ene 03, 2014 4:32:39 PM org.hibernate.validator.internal.util.Version <clinit>
+INFO: HV000001: Hibernate Validator 5.0.0.Final
+ene 03, 2014 4:32:40 PM com.sun.enterprise.security.auth.realm.Realm doInstantiate
+Información: realm.loaded.successfully
+ene 03, 2014 4:32:40 PM com.sun.enterprise.security.auth.realm.Realm doInstantiate
+Información: realm.loaded.successfully
+ene 03, 2014 4:32:40 PM com.sun.enterprise.security.auth.realm.Realm doInstantiate
+Información: realm.loaded.successfully
+ene 03, 2014 4:32:40 PM org.glassfish.ha.store.spi.BackingStoreFactoryRegistry register
+Información: Registered org.glassfish.ha.store.adapter.cache.ShoalBackingStoreProxy for persistence-type = replicated in BackingStoreFactoryRegistry
+ene 03, 2014 4:32:40 PM com.sun.enterprise.v3.server.AppServerStartup postStartupJob
+Información: GlassFish Server Open Source Edition  4.0  (89) startup time : Embedded (991ms), startup services(943ms), total(1.934ms)
+ene 03, 2014 4:32:40 PM org.glassfish.security.services.impl.authorization.AuthorizationServiceImpl initialize
+Información: Authorization Service has successfully initialized.
+ene 03, 2014 4:32:40 PM org.glassfish.admin.mbeanserver.JMXStartupService$JMXConnectorsStarterThread run
+Información: JMXStartupService has disabled JMXConnector system
+ene 03, 2014 4:32:40 PM org.glassfish.jersey.server.ApplicationHandler initialize
+Información: Initiating Jersey application, version Jersey: 2.0 2013-05-03 14:50:15...
+ene 03, 2014 4:32:41 PM org.glassfish.admin.mbeanserver.JMXStartupService shutdown
+Información: JMXStartupService and JMXConnectors have been shut down.
+ene 03, 2014 4:32:41 PM com.sun.enterprise.v3.server.AppServerStartup stop
+Información: Shutdown procedure finished
+ene 03, 2014 4:32:41 PM org.glassfish.ha.store.spi.BackingStoreFactoryRegistry register
+Información: Registered org.glassfish.ha.store.adapter.cache.ShoalBackingStoreProxy for persistence-type = replicated in BackingStoreFactoryRegistry
+ene 03, 2014 4:32:41 PM com.sun.enterprise.v3.server.AppServerStartup postStartupJob
+Información: GlassFish Server Open Source Edition  4.0  (89) startup time : Embedded (3.501ms), startup services(21ms), total(3.522ms)
+ene 03, 2014 4:32:41 PM org.glassfish.admin.mbeanserver.JMXStartupService$JMXConnectorsStarterThread run
+Información: JMXStartupService has disabled JMXConnector system
+ene 03, 2014 4:32:41 PM org.glassfish.jersey.server.ApplicationHandler initialize
+Información: Initiating Jersey application, version Jersey: 2.0 2013-05-03 14:50:15...
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+Información: ... skipping entry with a Manifest file with a special attribute: org.eclipse.persistence.jpa.jpql_2.5.1.v20130918-f2b9fc5.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+Información: ... skipping entry with a Manifest file with a special attribute: webservices-api-osgi.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+Información: ... skipping module: javax.management.j2ee-api.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+Información: ... skipping module: javax.websocket-api.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+Información: ... skipping module: javax.persistence.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+Información: ... skipping module: javax.jms-api.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+Información: ... skipping module: javax.servlet.jsp.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+Información: ... skipping module: javax.enterprise.concurrent-api.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+Información: ... skipping module: webservices-osgi.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+Información: ... skipping module: javax.el.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+Información: ... skipping module: javax.security.jacc-api.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+Información: ... skipping module: javax.xml.registry-api.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+Información: ... skipping module: javax.interceptor-api.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+Información: ... skipping module: javax.json.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+Información: ... skipping module: javax.mail.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+Información: ... skipping module: javax.servlet-api.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+Información: ... skipping module: javax.enterprise.deploy-api.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+Información: ... skipping module: javax.ws.rs-api.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+Información: ... skipping module: javax.xml.rpc-api.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+Información: ... skipping module: javax.enterprise.concurrent.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+Información: ... skipping module: jaxb-osgi.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+Información: ... skipping module: javax.faces.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+Información: ... skipping module: javax.batch-api.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+Información: ... skipping module: javax.resource-api.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+Información: ... skipping module: weld-osgi-bundle.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+Información: ... skipping module: javax.security.auth.message-api.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+Información: ... skipping module: javax.servlet.jsp.jstl-api.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+Información: ... skipping module: javax.inject.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+Información: ... skipping module: javax.transaction-api.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+Información: ... skipping module: javax.servlet.jsp.jstl.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+Información: ... skipping module: javax.ejb-api.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+Información: ... skipping module: bean-validator.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+Información: ... skipping module: javax.servlet.jsp-api.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+Información: ... skipping entry with a Manifest file with a special attribute: glassfish-embedded-static-shell.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+Información: [DeploymentElement] adding EJB module to ScatteredArchive classes
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+Información: [DeploymentElement] adding library to ScatteredArchive ant.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+Información: [DeploymentElement] adding library to ScatteredArchive ant-launcher.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+Información: [DeploymentElement] adding library to ScatteredArchive core-remote.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+Información: [DeploymentElement] adding library to ScatteredArchive jaxm-api.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+Información: [DeploymentElement] adding library to ScatteredArchive javax.annotation-api.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+Información: [DeploymentElement] adding library to ScatteredArchive junit-4.10.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+Información: [DeploymentElement] adding library to ScatteredArchive ant-junit4.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+Información: [DeploymentElement] adding library to ScatteredArchive ant-junit.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+Información: [DeploymentElement] adding library to ScatteredArchive eclipselink.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+Información: [DeploymentElement] adding library to ScatteredArchive classes
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+Información: [DeploymentElement] adding library to ScatteredArchive mysql-connector-java-5.1.23-bin.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+Información: [DeploymentElement] adding library to ScatteredArchive common.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+Información: [DeploymentElement] adding library to ScatteredArchive jaxb-api-osgi.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+Información: [DeploymentElement] adding library to ScatteredArchive javax.persistence_2.1.0.v201304241213.jar
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.EJBContainerImpl deploy
+Información: [EJBContainerImpl] Deploying app: org.glassfish.embeddable.archive.ScatteredArchive@6abc3ad4
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.EJBContainerImpl deploy
+Información: [EJBContainerImpl] GlassFish status: STARTED
+ene 03, 2014 4:32:42 PM org.glassfish.ejb.embedded.EJBContainerImpl deploy
+Información: [EJBContainerImpl] Deploying as a ScatteredArchive
+ene 03, 2014 4:32:48 PM com.sun.enterprise.security.ssl.impl.SecuritySupportImpl checkCertificateDates
+Grave: SEC5054: Certificate has expired: [
+[
+  Version: V3
+  Subject: CN=GTE CyberTrust Root 5, OU="GTE CyberTrust Solutions, Inc.", O=GTE Corporation, C=US
+  Signature Algorithm: SHA1withRSA, OID = 1.2.840.113549.1.1.5
+
+  Key:  Sun RSA public key, 2048 bits
+  modulus: 23741889829347261660812437366387754385443431973861114865490414153884050331745811968523116847625570146592736935209718565296053386842135985534863157983128812774162998053673746470782252407673402238146869994438729551246768368782318393878374421033907597162218758024581735139682087126982809511479059100617027892880227587855877479432885604404402435662802390484099065871430585284534529627347717530352189612077130606642676951640071336717026459037542552927905851171460589361570392199748753414855675665635003335769915908187224347232807336022456537328962095005323382940080676931822787496212635993279098588863972868266229522169377
+  public exponent: 65537
+  Validity: [From: Fri Aug 14 09:50:00 COT 1998,
+               To: Wed Aug 14 18:59:00 COT 2013]
+  Issuer: CN=GTE CyberTrust Root 5, OU="GTE CyberTrust Solutions, Inc.", O=GTE Corporation, C=US
+  SerialNumber: [    01b6]
+
+Certificate Extensions: 4
+[1]: ObjectId: 2.5.29.19 Criticality=true
+BasicConstraints:[
+  CA:true
+  PathLen:5
+]
+
+[2]: ObjectId: 2.5.29.32 Criticality=false
+CertificatePolicies [
+  [CertificatePolicyId: [1.2.840.113763.1.2.1.3]
+[]  ]
+]
+
+[3]: ObjectId: 2.5.29.15 Criticality=true
+KeyUsage [
+  Key_CertSign
+  Crl_Sign
+]
+
+[4]: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: 76 0A 49 21 38 4C 9F DE   F8 C4 49 C7 71 71 91 9D  v.I!8L....I.qq..
+]
+]
+
+]
+  Algorithm: [SHA1withRSA]
+  Signature:
+0000: 41 3A D4 18 5B DA B8 DE   21 1C E1 8E 09 E5 F1 68  A:..[...!......h
+0010: 34 FF DE 96 F4 07 F5 A7   3C F3 AC 4A B1 9B FA 92  4.......<..J....
+0020: FA 9B ED E6 32 21 AA 4A   76 C5 DC 4F 38 E5 DF D5  ....2!.Jv..O8...
+0030: 86 E4 D5 C8 76 7D 98 D7   B1 CD 8F 4D B5 91 23 6C  ....v......M..#l
+0040: 8B 8A EB EA 7C EF 14 94   C4 C6 F0 1F 4A 2D 32 71  ............J-2q
+0050: 63 2B 63 91 26 02 09 B6   80 1D ED E2 CC B8 7F DB  c+c.&...........
+0060: 87 63 C8 E1 D0 6C 26 B1   35 1D 40 66 10 1B CD 95  .c...l&.5.@f....
+0070: 54 18 33 61 EC 13 4F DA   13 F7 99 AF 3E D0 CF 8E  T.3a..O.....>...
+0080: A6 72 A2 B3 C3 05 9A C9   27 7D 92 CC 7E 52 8D B3  .r......'....R..
+0090: AB 70 6D 9E 89 9F 4D EB   1A 75 C2 98 AA D5 02 16  .pm...M..u......
+00A0: D7 0C 8A BF 25 E4 EB 2D   BC 98 E9 58 38 19 7C B9  ....%..-...X8...
+00B0: 37 FE DB E2 99 08 73 06   C7 97 83 6A 7D 10 01 2F  7.....s....j.../
+00C0: 32 B9 17 05 4A 65 E6 2F   CE BE 5E 53 A6 82 E9 9A  2...Je./..^S....
+00D0: 53 0A 84 74 2D 83 CA C8   94 16 76 5F 94 61 28 F0  S..t-.....v_.a(.
+00E0: 85 A7 39 BB D7 8B D9 A8   B2 13 1D 54 09 34 24 7D  ..9........T.4$.
+00F0: 20 81 7D 66 7E A2 90 74   5C 10 C6 BD EC AB 1B C2   ..f...t\.......
+
+]
+ene 03, 2014 4:32:48 PM com.sun.enterprise.security.SecurityLifecycle <init>
+Información: security.secmgroff
+ene 03, 2014 4:32:48 PM com.sun.enterprise.security.SecurityLifecycle onInitialization
+Información: sec.service.startup.enter
+ene 03, 2014 4:32:48 PM com.sun.enterprise.security.PolicyLoader loadPolicy
+Información: policy.loading
+ene 03, 2014 4:32:48 PM com.sun.enterprise.security.SecurityLifecycle onInitialization
+Información: sec.service.startup.exit
+ene 03, 2014 4:32:50 PM org.eclipse.persistence.session.file:/tmp/gfembed3578562303813343370tmp/applications/classes/_g5-jta
+Información: EclipseLink, version: Eclipse Persistence Services - 2.5.1.v20130918-f2b9fc5
+ene 03, 2014 4:32:50 PM org.eclipse.persistence.session.file:/tmp/gfembed3578562303813343370tmp/applications/classes/_g5-jta.connection
+Información: file:/tmp/gfembed3578562303813343370tmp/applications/classes/_g5-jta login successful
+ene 03, 2014 4:32:50 PM org.eclipse.persistence.session.file:/tmp/gfembed3578562303813343370tmp/applications/classes/_g5-jta.server
+Advertencia: Failed to find MBean Server: null or empty List returned from MBeanServerFactory.findMBeanServer(null)
+ene 03, 2014 4:32:51 PM com.sun.enterprise.security.ssl.impl.SecuritySupportImpl checkCertificateDates
+Grave: SEC5054: Certificate has expired: [
+[
+  Version: V3
+  Subject: CN=GTE CyberTrust Root 5, OU="GTE CyberTrust Solutions, Inc.", O=GTE Corporation, C=US
+  Signature Algorithm: SHA1withRSA, OID = 1.2.840.113549.1.1.5
+
+  Key:  Sun RSA public key, 2048 bits
+  modulus: 23741889829347261660812437366387754385443431973861114865490414153884050331745811968523116847625570146592736935209718565296053386842135985534863157983128812774162998053673746470782252407673402238146869994438729551246768368782318393878374421033907597162218758024581735139682087126982809511479059100617027892880227587855877479432885604404402435662802390484099065871430585284534529627347717530352189612077130606642676951640071336717026459037542552927905851171460589361570392199748753414855675665635003335769915908187224347232807336022456537328962095005323382940080676931822787496212635993279098588863972868266229522169377
+  public exponent: 65537
+  Validity: [From: Fri Aug 14 09:50:00 COT 1998,
+               To: Wed Aug 14 18:59:00 COT 2013]
+  Issuer: CN=GTE CyberTrust Root 5, OU="GTE CyberTrust Solutions, Inc.", O=GTE Corporation, C=US
+  SerialNumber: [    01b6]
+
+Certificate Extensions: 4
+[1]: ObjectId: 2.5.29.19 Criticality=true
+BasicConstraints:[
+  CA:true
+  PathLen:5
+]
+
+[2]: ObjectId: 2.5.29.32 Criticality=false
+CertificatePolicies [
+  [CertificatePolicyId: [1.2.840.113763.1.2.1.3]
+[]  ]
+]
+
+[3]: ObjectId: 2.5.29.15 Criticality=true
+KeyUsage [
+  Key_CertSign
+  Crl_Sign
+]
+
+[4]: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: 76 0A 49 21 38 4C 9F DE   F8 C4 49 C7 71 71 91 9D  v.I!8L....I.qq..
+]
+]
+
+]
+  Algorithm: [SHA1withRSA]
+  Signature:
+0000: 41 3A D4 18 5B DA B8 DE   21 1C E1 8E 09 E5 F1 68  A:..[...!......h
+0010: 34 FF DE 96 F4 07 F5 A7   3C F3 AC 4A B1 9B FA 92  4.......<..J....
+0020: FA 9B ED E6 32 21 AA 4A   76 C5 DC 4F 38 E5 DF D5  ....2!.Jv..O8...
+0030: 86 E4 D5 C8 76 7D 98 D7   B1 CD 8F 4D B5 91 23 6C  ....v......M..#l
+0040: 8B 8A EB EA 7C EF 14 94   C4 C6 F0 1F 4A 2D 32 71  ............J-2q
+0050: 63 2B 63 91 26 02 09 B6   80 1D ED E2 CC B8 7F DB  c+c.&...........
+0060: 87 63 C8 E1 D0 6C 26 B1   35 1D 40 66 10 1B CD 95  .c...l&.5.@f....
+0070: 54 18 33 61 EC 13 4F DA   13 F7 99 AF 3E D0 CF 8E  T.3a..O.....>...
+0080: A6 72 A2 B3 C3 05 9A C9   27 7D 92 CC 7E 52 8D B3  .r......'....R..
+0090: AB 70 6D 9E 89 9F 4D EB   1A 75 C2 98 AA D5 02 16  .pm...M..u......
+00A0: D7 0C 8A BF 25 E4 EB 2D   BC 98 E9 58 38 19 7C B9  ....%..-...X8...
+00B0: 37 FE DB E2 99 08 73 06   C7 97 83 6A 7D 10 01 2F  7.....s....j.../
+00C0: 32 B9 17 05 4A 65 E6 2F   CE BE 5E 53 A6 82 E9 9A  2...Je./..^S....
+00D0: 53 0A 84 74 2D 83 CA C8   94 16 76 5F 94 61 28 F0  S..t-.....v_.a(.
+00E0: 85 A7 39 BB D7 8B D9 A8   B2 13 1D 54 09 34 24 7D  ..9........T.4$.
+00F0: 20 81 7D 66 7E A2 90 74   5C 10 C6 BD EC AB 1B C2   ..f...t\.......
+
+]
+ene 03, 2014 4:32:51 PM com.sun.enterprise.security.ssl.impl.SecuritySupportImpl checkCertificateDates
+Grave: SEC5054: Certificate has expired: [
+[
+  Version: V3
+  Subject: CN=GTE CyberTrust Root 5, OU="GTE CyberTrust Solutions, Inc.", O=GTE Corporation, C=US
+  Signature Algorithm: SHA1withRSA, OID = 1.2.840.113549.1.1.5
+
+  Key:  Sun RSA public key, 2048 bits
+  modulus: 23741889829347261660812437366387754385443431973861114865490414153884050331745811968523116847625570146592736935209718565296053386842135985534863157983128812774162998053673746470782252407673402238146869994438729551246768368782318393878374421033907597162218758024581735139682087126982809511479059100617027892880227587855877479432885604404402435662802390484099065871430585284534529627347717530352189612077130606642676951640071336717026459037542552927905851171460589361570392199748753414855675665635003335769915908187224347232807336022456537328962095005323382940080676931822787496212635993279098588863972868266229522169377
+  public exponent: 65537
+  Validity: [From: Fri Aug 14 09:50:00 COT 1998,
+               To: Wed Aug 14 18:59:00 COT 2013]
+  Issuer: CN=GTE CyberTrust Root 5, OU="GTE CyberTrust Solutions, Inc.", O=GTE Corporation, C=US
+  SerialNumber: [    01b6]
+
+Certificate Extensions: 4
+[1]: ObjectId: 2.5.29.19 Criticality=true
+BasicConstraints:[
+  CA:true
+  PathLen:5
+]
+
+[2]: ObjectId: 2.5.29.32 Criticality=false
+CertificatePolicies [
+  [CertificatePolicyId: [1.2.840.113763.1.2.1.3]
+[]  ]
+]
+
+[3]: ObjectId: 2.5.29.15 Criticality=true
+KeyUsage [
+  Key_CertSign
+  Crl_Sign
+]
+
+[4]: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: 76 0A 49 21 38 4C 9F DE   F8 C4 49 C7 71 71 91 9D  v.I!8L....I.qq..
+]
+]
+
+]
+  Algorithm: [SHA1withRSA]
+  Signature:
+0000: 41 3A D4 18 5B DA B8 DE   21 1C E1 8E 09 E5 F1 68  A:..[...!......h
+0010: 34 FF DE 96 F4 07 F5 A7   3C F3 AC 4A B1 9B FA 92  4.......<..J....
+0020: FA 9B ED E6 32 21 AA 4A   76 C5 DC 4F 38 E5 DF D5  ....2!.Jv..O8...
+0030: 86 E4 D5 C8 76 7D 98 D7   B1 CD 8F 4D B5 91 23 6C  ....v......M..#l
+0040: 8B 8A EB EA 7C EF 14 94   C4 C6 F0 1F 4A 2D 32 71  ............J-2q
+0050: 63 2B 63 91 26 02 09 B6   80 1D ED E2 CC B8 7F DB  c+c.&...........
+0060: 87 63 C8 E1 D0 6C 26 B1   35 1D 40 66 10 1B CD 95  .c...l&.5.@f....
+0070: 54 18 33 61 EC 13 4F DA   13 F7 99 AF 3E D0 CF 8E  T.3a..O.....>...
+0080: A6 72 A2 B3 C3 05 9A C9   27 7D 92 CC 7E 52 8D B3  .r......'....R..
+0090: AB 70 6D 9E 89 9F 4D EB   1A 75 C2 98 AA D5 02 16  .pm...M..u......
+00A0: D7 0C 8A BF 25 E4 EB 2D   BC 98 E9 58 38 19 7C B9  ....%..-...X8...
+00B0: 37 FE DB E2 99 08 73 06   C7 97 83 6A 7D 10 01 2F  7.....s....j.../
+00C0: 32 B9 17 05 4A 65 E6 2F   CE BE 5E 53 A6 82 E9 9A  2...Je./..^S....
+00D0: 53 0A 84 74 2D 83 CA C8   94 16 76 5F 94 61 28 F0  S..t-.....v_.a(.
+00E0: 85 A7 39 BB D7 8B D9 A8   B2 13 1D 54 09 34 24 7D  ..9........T.4$.
+00F0: 20 81 7D 66 7E A2 90 74   5C 10 C6 BD EC AB 1B C2   ..f...t\.......
+
+]
+ene 03, 2014 4:32:51 PM com.sun.enterprise.security.ssl.impl.SecuritySupportImpl checkCertificateDates
+Grave: SEC5054: Certificate has expired: [
+[
+  Version: V3
+  Subject: CN=GTE CyberTrust Root 5, OU="GTE CyberTrust Solutions, Inc.", O=GTE Corporation, C=US
+  Signature Algorithm: SHA1withRSA, OID = 1.2.840.113549.1.1.5
+
+  Key:  Sun RSA public key, 2048 bits
+  modulus: 23741889829347261660812437366387754385443431973861114865490414153884050331745811968523116847625570146592736935209718565296053386842135985534863157983128812774162998053673746470782252407673402238146869994438729551246768368782318393878374421033907597162218758024581735139682087126982809511479059100617027892880227587855877479432885604404402435662802390484099065871430585284534529627347717530352189612077130606642676951640071336717026459037542552927905851171460589361570392199748753414855675665635003335769915908187224347232807336022456537328962095005323382940080676931822787496212635993279098588863972868266229522169377
+  public exponent: 65537
+  Validity: [From: Fri Aug 14 09:50:00 COT 1998,
+               To: Wed Aug 14 18:59:00 COT 2013]
+  Issuer: CN=GTE CyberTrust Root 5, OU="GTE CyberTrust Solutions, Inc.", O=GTE Corporation, C=US
+  SerialNumber: [    01b6]
+
+Certificate Extensions: 4
+[1]: ObjectId: 2.5.29.19 Criticality=true
+BasicConstraints:[
+  CA:true
+  PathLen:5
+]
+
+[2]: ObjectId: 2.5.29.32 Criticality=false
+CertificatePolicies [
+  [CertificatePolicyId: [1.2.840.113763.1.2.1.3]
+[]  ]
+]
+
+[3]: ObjectId: 2.5.29.15 Criticality=true
+KeyUsage [
+  Key_CertSign
+  Crl_Sign
+]
+
+[4]: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: 76 0A 49 21 38 4C 9F DE   F8 C4 49 C7 71 71 91 9D  v.I!8L....I.qq..
+]
+]
+
+]
+  Algorithm: [SHA1withRSA]
+  Signature:
+0000: 41 3A D4 18 5B DA B8 DE   21 1C E1 8E 09 E5 F1 68  A:..[...!......h
+0010: 34 FF DE 96 F4 07 F5 A7   3C F3 AC 4A B1 9B FA 92  4.......<..J....
+0020: FA 9B ED E6 32 21 AA 4A   76 C5 DC 4F 38 E5 DF D5  ....2!.Jv..O8...
+0030: 86 E4 D5 C8 76 7D 98 D7   B1 CD 8F 4D B5 91 23 6C  ....v......M..#l
+0040: 8B 8A EB EA 7C EF 14 94   C4 C6 F0 1F 4A 2D 32 71  ............J-2q
+0050: 63 2B 63 91 26 02 09 B6   80 1D ED E2 CC B8 7F DB  c+c.&...........
+0060: 87 63 C8 E1 D0 6C 26 B1   35 1D 40 66 10 1B CD 95  .c...l&.5.@f....
+0070: 54 18 33 61 EC 13 4F DA   13 F7 99 AF 3E D0 CF 8E  T.3a..O.....>...
+0080: A6 72 A2 B3 C3 05 9A C9   27 7D 92 CC 7E 52 8D B3  .r......'....R..
+0090: AB 70 6D 9E 89 9F 4D EB   1A 75 C2 98 AA D5 02 16  .pm...M..u......
+00A0: D7 0C 8A BF 25 E4 EB 2D   BC 98 E9 58 38 19 7C B9  ....%..-...X8...
+00B0: 37 FE DB E2 99 08 73 06   C7 97 83 6A 7D 10 01 2F  7.....s....j.../
+00C0: 32 B9 17 05 4A 65 E6 2F   CE BE 5E 53 A6 82 E9 9A  2...Je./..^S....
+00D0: 53 0A 84 74 2D 83 CA C8   94 16 76 5F 94 61 28 F0  S..t-.....v_.a(.
+00E0: 85 A7 39 BB D7 8B D9 A8   B2 13 1D 54 09 34 24 7D  ..9........T.4$.
+00F0: 20 81 7D 66 7E A2 90 74   5C 10 C6 BD EC AB 1B C2   ..f...t\.......
+
+]
+ene 03, 2014 4:32:52 PM com.sun.jts.CosTransactions.DefaultTransactionService setServerName
+Información: jts.startup_msg
+ene 03, 2014 4:32:53 PM com.sun.ejb.containers.BaseContainer initializeHome
+Información: EJB5181:Portable JNDI names for EJB TransactionDao: [java:global/classes/TransactionDao!com.g5.dao.TransactionDaoLocal, java:global/classes/TransactionDao!com.g5.dao.TransactionDaoRemote]
+ene 03, 2014 4:32:53 PM com.sun.ejb.containers.BaseContainer initializeHome
+Información: EJB5182:Glassfish-specific (Non-portable) JNDI names for EJB TransactionDao: [com.g5.dao.TransactionDaoRemote#com.g5.dao.TransactionDaoRemote, com.g5.dao.TransactionDaoRemote]
+ene 03, 2014 4:32:53 PM com.sun.ejb.containers.BaseContainer initializeHome
+Información: EJB5181:Portable JNDI names for EJB AccountService: [java:global/classes/AccountService!com.g5.services.AccountServiceRemote, java:global/classes/AccountService!com.g5.services.AccountServiceLocal]
+ene 03, 2014 4:32:53 PM com.sun.ejb.containers.BaseContainer initializeHome
+Información: EJB5182:Glassfish-specific (Non-portable) JNDI names for EJB AccountService: [com.g5.services.AccountServiceRemote#com.g5.services.AccountServiceRemote, com.g5.services.AccountServiceRemote]
+ene 03, 2014 4:32:53 PM com.sun.ejb.containers.BaseContainer initializeHome
+Información: EJB5181:Portable JNDI names for EJB CustomerDao: [java:global/classes/CustomerDao!com.g5.dao.CustomerDaoLocal, java:global/classes/CustomerDao!com.g5.dao.CustomerDaoRemote]
+ene 03, 2014 4:32:53 PM com.sun.ejb.containers.BaseContainer initializeHome
+Información: EJB5182:Glassfish-specific (Non-portable) JNDI names for EJB CustomerDao: [com.g5.dao.CustomerDaoRemote, com.g5.dao.CustomerDaoRemote#com.g5.dao.CustomerDaoRemote]
+ene 03, 2014 4:32:53 PM com.sun.ejb.containers.BaseContainer initializeHome
+Información: EJB5181:Portable JNDI names for EJB CustomerCredentialsDao: [java:global/classes/CustomerCredentialsDao!com.g5.dao.CustomerCredentialsDaoRemote, java:global/classes/CustomerCredentialsDao!com.g5.dao.CustomerCredentialsDaoLocal]
+ene 03, 2014 4:32:53 PM com.sun.ejb.containers.BaseContainer initializeHome
+Información: EJB5182:Glassfish-specific (Non-portable) JNDI names for EJB CustomerCredentialsDao: [com.g5.dao.CustomerCredentialsDaoRemote, com.g5.dao.CustomerCredentialsDaoRemote#com.g5.dao.CustomerCredentialsDaoRemote]
+ene 03, 2014 4:32:53 PM com.sun.ejb.containers.BaseContainer initializeHome
+Información: EJB5181:Portable JNDI names for EJB AccountDao: [java:global/classes/AccountDao!com.g5.dao.AccountDaoLocal, java:global/classes/AccountDao!com.g5.dao.AccountDaoRemote]
+ene 03, 2014 4:32:53 PM com.sun.ejb.containers.BaseContainer initializeHome
+Información: EJB5182:Glassfish-specific (Non-portable) JNDI names for EJB AccountDao: [com.g5.dao.AccountDaoRemote, com.g5.dao.AccountDaoRemote#com.g5.dao.AccountDaoRemote]
+ene 03, 2014 4:32:53 PM com.sun.ejb.containers.BaseContainer initializeHome
+Información: EJB5181:Portable JNDI names for EJB EntityFactory: [java:global/classes/EntityFactory!com.g5.entities.EntityFactoryRemote, java:global/classes/EntityFactory!com.g5.entities.EntityFactoryLocal]
+ene 03, 2014 4:32:53 PM com.sun.ejb.containers.BaseContainer initializeHome
+Información: EJB5182:Glassfish-specific (Non-portable) JNDI names for EJB EntityFactory: [com.g5.entities.EntityFactoryRemote#com.g5.entities.EntityFactoryRemote, com.g5.entities.EntityFactoryRemote]
+ene 03, 2014 4:32:53 PM com.sun.ejb.containers.BaseContainer initializeHome
+Información: EJB5181:Portable JNDI names for EJB TransactionService: [java:global/classes/TransactionService!com.g5.services.TransactionServiceLocal, java:global/classes/TransactionService!com.g5.services.TransactionServiceRemote]
+ene 03, 2014 4:32:53 PM com.sun.ejb.containers.BaseContainer initializeHome
+Información: EJB5182:Glassfish-specific (Non-portable) JNDI names for EJB TransactionService: [com.g5.services.TransactionServiceRemote, com.g5.services.TransactionServiceRemote#com.g5.services.TransactionServiceRemote]
+ene 03, 2014 4:32:53 PM com.sun.ejb.containers.BaseContainer initializeHome
+Información: EJB5181:Portable JNDI names for EJB CustomerService: [java:global/classes/CustomerService!com.g5.services.CustomerServiceRemote, java:global/classes/CustomerService!com.g5.services.CustomerServiceLocal]
+ene 03, 2014 4:32:53 PM com.sun.ejb.containers.BaseContainer initializeHome
+Información: EJB5182:Glassfish-specific (Non-portable) JNDI names for EJB CustomerService: [com.g5.services.CustomerServiceRemote#com.g5.services.CustomerServiceRemote, com.g5.services.CustomerServiceRemote]
+ene 03, 2014 4:32:53 PM com.sun.ejb.containers.BaseContainer initializeHome
+Información: EJB5181:Portable JNDI names for EJB SaltGenerator: [java:global/classes/SaltGenerator!com.g5.services.SaltGeneratorRemote, java:global/classes/SaltGenerator!com.g5.services.SaltGeneratorLocal]
+ene 03, 2014 4:32:53 PM com.sun.ejb.containers.BaseContainer initializeHome
+Información: EJB5182:Glassfish-specific (Non-portable) JNDI names for EJB SaltGenerator: [com.g5.services.SaltGeneratorRemote, com.g5.services.SaltGeneratorRemote#com.g5.services.SaltGeneratorRemote]
+ene 03, 2014 4:32:53 PM com.sun.ejb.containers.BaseContainer initializeHome
+Información: EJB5181:Portable JNDI names for EJB KeyGenerator: [java:global/classes/KeyGenerator!com.g5.services.KeyGeneratorLocal, java:global/classes/KeyGenerator!com.g5.services.KeyGeneratorRemote]
+ene 03, 2014 4:32:53 PM com.sun.ejb.containers.BaseContainer initializeHome
+Información: EJB5182:Glassfish-specific (Non-portable) JNDI names for EJB KeyGenerator: [com.g5.services.KeyGeneratorRemote#com.g5.services.KeyGeneratorRemote, com.g5.services.KeyGeneratorRemote]
+ene 03, 2014 4:32:53 PM com.sun.ejb.containers.BaseContainer initializeHome
+Información: EJB5181:Portable JNDI names for EJB PaymentDao: [java:global/classes/PaymentDao!com.g5.dao.PaymentDaoLocal, java:global/classes/PaymentDao!com.g5.dao.PaymentDaoRemote]
+ene 03, 2014 4:32:53 PM com.sun.ejb.containers.BaseContainer initializeHome
+Información: EJB5182:Glassfish-specific (Non-portable) JNDI names for EJB PaymentDao: [com.g5.dao.PaymentDaoRemote#com.g5.dao.PaymentDaoRemote, com.g5.dao.PaymentDaoRemote]
+ene 03, 2014 4:32:53 PM org.jboss.weld.bootstrap.WeldBootstrap <clinit>
+Información: WELD-000900 2.0.0 (SP1)
+ene 03, 2014 4:32:53 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:53 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:53 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:54 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:55 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:55 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:55 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+Advertencia: AS-CDI-005
+ene 03, 2014 4:32:56 PM org.glassfish.deployment.admin.DeployCommand execute
+Información: classes was successfully deployed in 10.696 milliseconds.
+ene 03, 2014 4:33:43 PM org.eclipse.persistence.session.file:/tmp/gfembed3578562303813343370tmp/applications/classes/_g5-jta.connection
+Información: file:/tmp/gfembed3578562303813343370tmp/applications/classes/_g5-jta logout successful
+ene 03, 2014 4:33:44 PM com.sun.enterprise.connectors.service.ResourceAdapterAdminServiceImpl sendStopToResourceAdapter
+Información: RAR7094: __ds_jdbc_ra shutdown successful.
+ene 03, 2014 4:33:44 PM org.glassfish.admin.mbeanserver.JMXStartupService shutdown
+Información: JMXStartupService and JMXConnectors have been shut down.
+ene 03, 2014 4:33:44 PM org.glassfish.admin.mbeanserver.JMXStartupService shutdown
+Información: JMXStartupService and JMXConnectors have been shut down.
+ene 03, 2014 4:33:44 PM com.sun.enterprise.v3.server.AppServerStartup stop
+Información: Shutdown procedure finished
+]]></system-err>
+</testsuite>
