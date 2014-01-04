@@ -10,7 +10,7 @@ import javax.validation.Payload;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
-@Pattern(regexp = ".*[^\\s]{8,}.*")
+@Pattern(regexp = ".*([^\\s].*?){1,}")
 @Size(max = 140)
 @Constraint(validatedBy = {})
 @Documented
@@ -27,7 +27,7 @@ public @interface Description {
     Class<?>[] groups() default {};
 
     Class<? extends Payload>[] payload() default {};
-    
+
     @Target({ElementType.METHOD,
         ElementType.FIELD,
         ElementType.ANNOTATION_TYPE,

@@ -4,6 +4,7 @@ import com.g5.exceptions.NotEnoughFundsException;
 import com.g5.types.Transaction;
 import com.g5.constraints.Description;
 import com.g5.constraints.Id;
+import com.g5.constraints.NotZeroDecimal;
 import com.g5.constraints.PositiveDecimal;
 import java.math.BigDecimal;
 import java.util.List;
@@ -13,9 +14,9 @@ import javax.validation.constraints.NotNull;
 @Local
 public interface TransactionServiceLocal {
 
-    public void rollbackTransaction(@Id final long transactionId);
+    public Transaction create(@Id final long accountId, @Description String description, @NotZeroDecimal final BigDecimal value);
 
-    public void rollbackPayment(@Id final long paymentId);
+    public void rollbackTransaction(@Id final long transactionId);
 
     @NotNull
     public Transaction deposit(@Id final long accountId, @PositiveDecimal final BigDecimal value);
@@ -27,10 +28,5 @@ public interface TransactionServiceLocal {
 
     @NotNull
     public List<Transaction> findByAccountId(@Id final long accountId);
-
-    public long requestPayment(@Id final long receiverAccountId, @Description final String description, @PositiveDecimal final BigDecimal value);
-
-    @NotNull
-    public Transaction approvePayment(@Id long paymentId, @Id final long senderAccountId, @PositiveDecimal final BigDecimal value);
 
 }

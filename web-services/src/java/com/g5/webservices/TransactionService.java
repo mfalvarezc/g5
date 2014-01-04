@@ -27,11 +27,6 @@ public class TransactionService {
         service.rollbackTransaction(transactionId);
     }
 
-    @WebMethod(operationName = "rollbackPayment")
-    public void rollbackPayment(@WebParam(name = "paymentId") @XmlElement(required = true) long paymentId) {
-        service.rollbackPayment(paymentId);
-    }
-
     @WebMethod(operationName = "deposit")
     @XmlElement(name = "transaction")
     public TransactionDto deposit(@WebParam(name = "accountId") @XmlElement(required = true) long accountId, @WebParam(name = "value") @XmlElement(required = true) BigDecimal value) {
@@ -62,16 +57,6 @@ public class TransactionService {
         }
 
         return transactionDtos;
-    }
-
-    @WebMethod(operationName = "requestPayment")
-    public long requestPayment(@WebParam(name = "receiverAccountId") @XmlElement(required = true) long receiverAccountId, @WebParam(name = "description") String description, @WebParam(name = "value") BigDecimal value) {
-        return service.requestPayment(receiverAccountId, description, value);
-    }
-
-    @WebMethod(operationName = "approvePayment")
-    public TransactionDto approvePayment(@WebParam(name = "paymentId") @XmlElement(required = true) long paymentId, @WebParam(name = "senderAccountId") long senderAccountId, @WebParam(name = "value") BigDecimal value) {
-        return dtoFactory.createTransactionDto(service.approvePayment(paymentId, senderAccountId, value));
     }
 
 }

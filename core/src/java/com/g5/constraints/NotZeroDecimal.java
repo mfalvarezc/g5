@@ -7,12 +7,8 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 import javax.validation.Constraint;
 import javax.validation.Payload;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
 
-@Pattern(regexp = "(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^\\w\\s]).*$")
-@Size(min = 8, max = 160)
-@Constraint(validatedBy = {})
+@Constraint(validatedBy = {NotZeroDecimalValidator.class})
 @Documented
 @Target({ElementType.METHOD,
     ElementType.FIELD,
@@ -20,9 +16,9 @@ import javax.validation.constraints.Size;
     ElementType.CONSTRUCTOR,
     ElementType.PARAMETER})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Password {
+public @interface NotZeroDecimal {
 
-    String message() default "{com.g5.validation.Password.message}";
+    String message() default "{com.g5.validation.NotZero.message}";
 
     Class<?>[] groups() default {};
 
@@ -37,6 +33,6 @@ public @interface Password {
     @Documented
     @interface List {
 
-        Password[] value();
+        NotZeroDecimal[] value();
     }
 }

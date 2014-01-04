@@ -10,6 +10,7 @@ import com.g5.types.Account;
 import com.g5.constraints.Id;
 import com.g5.constraints.Password;
 import com.g5.constraints.Username;
+import com.g5.services.validators.CustomerValidatorLocal;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
@@ -36,11 +37,16 @@ public class CustomerService implements CustomerServiceLocal {
     private SaltGeneratorLocal saltGenerator;
     @Inject
     private KeyGeneratorLocal keyGenerator;
+    @Inject
+    private CustomerValidatorLocal customerValidator;
 
     @Override
     @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
     public void changePassword(@Id final long id, @Password final String password) {
         Customer customer = customerDao.find(id);
+
+        customerValidator.exists(customer);
+        customerValidator.isEnabled(customer);
 
         CustomerCredentials customerCredentials = customerCredentialsDao.findByCustomer(customer);
 
@@ -54,7 +60,6 @@ public class CustomerService implements CustomerServiceLocal {
     @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
     @NotNull
     public Customer create(@Username final String username, @Password final String password) {
-
         Customer customer = entityFactory.createCustomer();
 
         customerDao.persist(customer);
@@ -82,14 +87,14 @@ public class CustomerService implements CustomerServiceLocal {
     public void disable(@Id final long id) {
         Customer customer = customerDao.find(id, LockModeType.PESSIMISTIC_WRITE);
 
-        if (!customer.isEnabled()) {
-            throw new IllegalStateException("The customer is disabled");
-        }
+        customerValidator.exists(customer);
+        customerValidator.isEnabled(customer);
 
         List<Account> accounts = accountDao.findByCustomer(customer, LockModeType.PESSIMISTIC_WRITE);
 
         customer.setEnabled(false);
 
+        // TODO: Store open accounts to reopen if the customer gets enabled
         for (Account account : accounts) {
             account.setOpen(false);
         }
@@ -100,14 +105,14 @@ public class CustomerService implements CustomerServiceLocal {
     public void enable(@Id final long id) {
         Customer customer = customerDao.find(id, LockModeType.PESSIMISTIC_WRITE);
 
-        if (customer.isEnabled()) {
-            throw new IllegalStateException("The customer is enabled");
-        }
+        customerValidator.exists(customer);
+        customerValidator.isDisabled(customer);
 
         List<Account> accounts = accountDao.findByCustomer(customer, LockModeType.PESSIMISTIC_WRITE);
 
         customer.setEnabled(true);
 
+        // TODO: Only reopen accounts which were open before disabling the customer
         for (Account account : accounts) {
             account.setOpen(true);
         }

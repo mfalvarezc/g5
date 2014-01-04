@@ -10,6 +10,9 @@
     <service name="AccountService">
       <implementation-class>com.g5.webservices.AccountService</implementation-class>
     </service>
+    <service name="PaymentService">
+      <implementation-class>com.g5.webservices.PaymentService</implementation-class>
+    </service>
   </services>
   <clients/>
 </jax-ws>

@@ -1,5 +1,5 @@
 package com.g5.exceptions;
 
-public class NotEnoughFundsException extends RuntimeException {
+public class NotEnoughFundsException extends Exception {
 
 }
