@@ -9,7 +9,7 @@ import javax.inject.Inject;
 import javax.persistence.LockModeType;
 
 @Stateless
-public class AccountDao extends AbstractBaseDao<Account, AccountEntity> implements AccountDaoRemote, AccountDaoLocal {
+public class AccountDao extends AbstractBaseDao<Account, AccountEntity> implements AccountDaoLocal {
 
     @Inject
     private TransactionDaoLocal transactionDao;

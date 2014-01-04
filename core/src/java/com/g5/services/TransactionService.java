@@ -18,7 +18,7 @@ import javax.inject.Inject;
 import javax.persistence.LockModeType;
 
 @Stateless
-public class TransactionService implements TransactionServiceRemote, TransactionServiceLocal {
+public class TransactionService implements TransactionServiceLocal {
 
     @Inject
     private EntityFactoryLocal entityFactory;

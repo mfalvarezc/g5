@@ -7,7 +7,7 @@ import java.util.List;
 import javax.ejb.Stateless;
 
 @Stateless
-public class TransactionDao extends AbstractBaseDao<Transaction, TransactionEntity> implements TransactionDaoRemote, TransactionDaoLocal {
+public class TransactionDao extends AbstractBaseDao<Transaction, TransactionEntity> implements TransactionDaoLocal {
 
     @Override
     public List<Transaction> findByAccount(final Account account) {

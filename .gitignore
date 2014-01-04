@@ -4,3 +4,7 @@
 *.jar
 *.war
 *.ear
+/core-remote/build/
+/core-remote/dist/
+/core-remote/nbproject/private/
+/core/dist/

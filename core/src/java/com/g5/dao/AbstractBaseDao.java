@@ -5,7 +5,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.LockModeType;
 import javax.persistence.PersistenceContext;
 
-public abstract class AbstractBaseDao<I, E extends I> implements BaseDaoLocal<I>, BaseDaoRemote<I> {
+public abstract class AbstractBaseDao<I, E extends I> implements BaseDaoLocal<I> {
 
     @PersistenceContext(unitName = "g5-jta")
     protected EntityManager entityManager;

@@ -6,7 +6,7 @@ import com.g5.entities.CustomerCredentialsEntity;
 import javax.ejb.Stateless;
 
 @Stateless
-public class CustomerCredentialsDao extends AbstractBaseDao<CustomerCredentials, CustomerCredentialsEntity> implements CustomerCredentialsDaoRemote, CustomerCredentialsDaoLocal {
+public class CustomerCredentialsDao extends AbstractBaseDao<CustomerCredentials, CustomerCredentialsEntity> implements CustomerCredentialsDaoLocal {
 
     @Override
     public CustomerCredentials findByCustomer(final Customer customer) {

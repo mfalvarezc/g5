@@ -10,7 +10,7 @@ import javax.ejb.TransactionAttribute;
 import javax.ejb.TransactionAttributeType;
 
 @Stateless
-public class EntityFactory implements EntityFactoryLocal, EntityFactoryRemote {
+public class EntityFactory implements EntityFactoryLocal {
 
     @Override
     @TransactionAttribute(TransactionAttributeType.NOT_SUPPORTED)

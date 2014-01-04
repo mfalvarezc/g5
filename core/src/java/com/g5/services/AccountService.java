@@ -14,7 +14,7 @@ import javax.inject.Inject;
 import javax.persistence.LockModeType;
 
 @Stateless
-public class AccountService implements AccountServiceRemote, AccountServiceLocal {
+public class AccountService implements AccountServiceLocal {
 
     @Inject
     private CustomerDaoLocal customerDao;

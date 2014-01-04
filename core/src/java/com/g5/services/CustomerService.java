@@ -18,7 +18,7 @@ import javax.persistence.LockModeType;
 
 @Stateless
 @TransactionManagement(TransactionManagementType.CONTAINER)
-public class CustomerService implements CustomerServiceRemote, CustomerServiceLocal {
+public class CustomerService implements CustomerServiceLocal {
 
     @Inject
     private CustomerDaoLocal customerDao;

@@ -10,7 +10,7 @@ import javax.ejb.TransactionAttributeType;
 import javax.inject.Inject;
 
 @Stateless
-public class CustomerDao extends AbstractBaseDao<Customer, CustomerEntity> implements CustomerDaoRemote, CustomerDaoLocal {
+public class CustomerDao extends AbstractBaseDao<Customer, CustomerEntity> implements CustomerDaoLocal {
 
     @Inject
     private CustomerCredentialsDaoLocal customerCredentialsDao;

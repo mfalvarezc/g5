@@ -9,7 +9,7 @@ import javax.ejb.Stateless;
 import javax.inject.Inject;
 
 @Stateless
-public class PaymentDao extends AbstractBaseDao<Payment, PaymentEntity> implements PaymentDaoRemote, PaymentDaoLocal {
+public class PaymentDao extends AbstractBaseDao<Payment, PaymentEntity> implements PaymentDaoLocal {
 
     @Inject
     private TransactionDaoLocal transactionDao;

@@ -10,7 +10,7 @@ import javax.ejb.TransactionAttributeType;
 import javax.xml.bind.DatatypeConverter;
 
 @Stateless
-public class SaltGenerator implements SaltGeneratorRemote, SaltGeneratorLocal {
+public class SaltGenerator implements SaltGeneratorLocal {
     
     private final static String ALGORITHM = "SHA1PRNG";
     private final static int SALT_LENGTH = 24;

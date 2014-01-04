@@ -14,7 +14,7 @@ import javax.ejb.TransactionAttributeType;
 import javax.xml.bind.DatatypeConverter;
 
 @Stateless
-public class KeyGenerator implements KeyGeneratorRemote, KeyGeneratorLocal {
+public class KeyGenerator implements KeyGeneratorLocal {
 
     private static final String ALGORITHM = "PBKDF2WithHmacSHA1";
     private static final int ITERATIONS = 1000;
