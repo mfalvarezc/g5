@@ -18,7 +18,6 @@ public abstract class AbstractBaseDao<I, E extends I> implements BaseDaoLocal<I>
 
     @Override
     public I find(long id) {
-        System.out.println("AbstractBaseDao.find()");
         return entityManager.find(entityClass, id);
     }
 

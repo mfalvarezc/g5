@@ -7,6 +7,9 @@ import com.g5.dao.CustomerCredentialsDaoLocal;
 import com.g5.dao.CustomerDaoLocal;
 import com.g5.entities.EntityFactoryLocal;
 import com.g5.types.Account;
+import com.g5.validation.Id;
+import com.g5.validation.Password;
+import com.g5.validation.Username;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
@@ -35,9 +38,7 @@ public class CustomerService implements CustomerServiceLocal {
 
     @Override
     @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
-    public void changePassword(final long id, final String password) {
-        checkPassword(password);
-
+    public void changePassword(@Id final long id, @Password final String password) {
         Customer customer = customerDao.find(id);
 
         CustomerCredentials customerCredentials = customerCredentialsDao.findByCustomer(customer);
@@ -48,15 +49,9 @@ public class CustomerService implements CustomerServiceLocal {
         customerCredentialsDao.merge(customerCredentials);
     }
 
-    private void checkPassword(String password) {
-        // TODO: Check password
-    }
-
     @Override
     @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
-    public Customer create(final String username, String password) {
-        checkUsername(username);
-        checkPassword(password);
+    public Customer create(@Username final String username, @Password final String password) {
 
         Customer customer = entityFactory.createCustomer();
 
@@ -74,19 +69,15 @@ public class CustomerService implements CustomerServiceLocal {
         return customer;
     }
 
-    private void checkUsername(String username) {
-        // TODO: Check username
-    }
-
     @Override
     @TransactionAttribute(TransactionAttributeType.NOT_SUPPORTED)
-    public Customer findById(final long id) {
+    public Customer findById(@Id final long id) {
         return customerDao.find(id);
     }
 
     @Override
     @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
-    public void disable(final long id) {
+    public void disable(@Id final long id) {
         Customer customer = customerDao.find(id, LockModeType.PESSIMISTIC_WRITE);
 
         if (!customer.isEnabled()) {
@@ -104,7 +95,7 @@ public class CustomerService implements CustomerServiceLocal {
 
     @Override
     @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
-    public void enable(final long id) {
+    public void enable(@Id final long id) {
         Customer customer = customerDao.find(id, LockModeType.PESSIMISTIC_WRITE);
 
         if (customer.isEnabled()) {
