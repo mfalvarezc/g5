@@ -13,7 +13,7 @@ public abstract class AbstractBaseDao<I, E extends I> implements BaseDaoLocal<I>
 
     public AbstractBaseDao() {
         ParameterizedType genericSuperclass = (ParameterizedType) getClass().getGenericSuperclass();
-        this.entityClass = (Class<E>) genericSuperclass.getActualTypeArguments()[1];
+        entityClass = (Class<E>) genericSuperclass.getActualTypeArguments()[1];
     }
 
     @Override

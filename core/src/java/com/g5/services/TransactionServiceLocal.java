@@ -2,27 +2,35 @@ package com.g5.services;
 
 import com.g5.exceptions.NotEnoughFundsException;
 import com.g5.types.Transaction;
+import com.g5.constraints.Description;
+import com.g5.constraints.Id;
+import com.g5.constraints.PositiveDecimal;
 import java.math.BigDecimal;
 import java.util.List;
 import javax.ejb.Local;
+import javax.validation.constraints.NotNull;
 
 @Local
 public interface TransactionServiceLocal {
 
-    public void rollbackTransaction(final long transactionId);
+    public void rollbackTransaction(@Id final long transactionId);
 
-    public void rollbackPayment(final long paymentId);
-    
-    public Transaction deposit(final long accountId, final BigDecimal value);
+    public void rollbackPayment(@Id final long paymentId);
 
-    public Transaction withdraw(final long accountId, final BigDecimal value) throws NotEnoughFundsException;
+    @NotNull
+    public Transaction deposit(@Id final long accountId, @PositiveDecimal final BigDecimal value);
 
-    public Transaction findById(final long id);
+    @NotNull
+    public Transaction withdraw(@Id final long accountId, @PositiveDecimal final BigDecimal value) throws NotEnoughFundsException;
 
-    public List<Transaction> findByAccountId(final long accountId);
+    public Transaction findById(@Id final long id);
 
-    public long requestPayment(final long receiverAccountId, final String description, final BigDecimal value);
+    @NotNull
+    public List<Transaction> findByAccountId(@Id final long accountId);
 
-    public Transaction approvePayment(long paymentId, final long senderAccountId, final BigDecimal value);
+    public long requestPayment(@Id final long receiverAccountId, @Description final String description, @PositiveDecimal final BigDecimal value);
+
+    @NotNull
+    public Transaction approvePayment(@Id long paymentId, @Id final long senderAccountId, @PositiveDecimal final BigDecimal value);
 
 }

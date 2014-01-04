@@ -264,7 +264,7 @@ public class TransactionServiceTest {
 
         TransactionServiceLocal service = getTransactionService();
 
-        String description = "Payment";
+        String description = "Payment description";
         BigDecimal value = new BigDecimal(10);
 
         service.requestPayment(account.getId(), description, value);

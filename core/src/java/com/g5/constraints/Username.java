@@ -1,4 +1,4 @@
-package com.g5.validation;
+package com.g5.constraints;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -6,6 +6,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 import javax.validation.Constraint;
+import javax.validation.ConstraintTarget;
 import javax.validation.Payload;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
@@ -21,7 +22,8 @@ import javax.validation.constraints.Size;
     ElementType.PARAMETER})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Username {
-String message() default "{com.g5.validation.Username.message}";
+
+    String message() default "{com.g5.validation.Username.message}";
 
     Class<?>[] groups() default {};
 

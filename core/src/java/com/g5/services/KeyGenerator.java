@@ -1,5 +1,8 @@
 package com.g5.services;
 
+import com.g5.constraints.Key;
+import com.g5.constraints.Password;
+import com.g5.constraints.Salt;
 import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
 import java.security.spec.KeySpec;
@@ -11,6 +14,7 @@ import javax.crypto.spec.PBEKeySpec;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
 import javax.ejb.TransactionAttributeType;
+import javax.validation.ConstraintTarget;
 import javax.xml.bind.DatatypeConverter;
 
 @Stateless
@@ -22,7 +26,8 @@ public class KeyGenerator implements KeyGeneratorLocal {
 
     @Override
     @TransactionAttribute(TransactionAttributeType.NOT_SUPPORTED)
-    public String generateKey(final String password, final String salt) {
+    @Key(validationAppliesTo = ConstraintTarget.RETURN_VALUE)
+    public String generateKey(@Password final String password, @Salt final String salt) {
         KeySpec keySpec = new PBEKeySpec(password.toCharArray(), DatatypeConverter.parseBase64Binary(salt), ITERATIONS, KEY_LENGTH);
         SecretKey secretKey = null;
 

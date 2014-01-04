@@ -1,4 +1,4 @@
-package com.g5.validation;
+package com.g5.constraints;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -7,9 +7,11 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 import javax.validation.Constraint;
 import javax.validation.Payload;
-import javax.validation.constraints.Min;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
-@Min(1)
+@Pattern(regexp = ".*[^\\s]{8,}.*")
+@Size(max = 140)
 @Constraint(validatedBy = {})
 @Documented
 @Target({ElementType.METHOD,
@@ -18,14 +20,14 @@ import javax.validation.constraints.Min;
     ElementType.CONSTRUCTOR,
     ElementType.PARAMETER})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Id {
+public @interface Description {
 
-    String message() default "{com.g5.validation.Id.message}";
+    String message() default "{com.g5.validation.Description.message}";
 
     Class<?>[] groups() default {};
 
     Class<? extends Payload>[] payload() default {};
-
+    
     @Target({ElementType.METHOD,
         ElementType.FIELD,
         ElementType.ANNOTATION_TYPE,
@@ -35,7 +37,6 @@ public @interface Id {
     @Documented
     @interface List {
 
-        Id[] value();
+        Description[] value();
     }
-
 }

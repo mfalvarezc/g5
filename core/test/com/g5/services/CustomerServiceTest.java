@@ -73,7 +73,7 @@ public class CustomerServiceTest {
         
         CustomerServiceLocal service = (CustomerServiceLocal) getCustomerService();
         
-        service.changePassword(customer.getId(), "password");
+        service.changePassword(customer.getId(), "MyN3wPa$$word");
         
         entityManager.refresh(customerCredentials);
         
@@ -91,7 +91,7 @@ public class CustomerServiceTest {
         CustomerServiceLocal service = getCustomerService();
         
         String username = "username";
-        String password = "password";
+        String password = "MyP4$$word";
         
         Customer result = service.create(username, password);
         

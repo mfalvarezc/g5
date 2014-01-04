@@ -1,23 +1,16 @@
-package com.g5.validation;
+package com.g5.constraints;
 
+import com.g5.constraints.validators.KeyValidator;
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 import javax.validation.Constraint;
+import javax.validation.ConstraintTarget;
 import javax.validation.Payload;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
 
-@Pattern.List({
-    @Pattern(regexp = ".*\\d+.*"),
-    @Pattern(regexp = ".*[A-Z]+.*"),
-    @Pattern(regexp = ".*[a-z]+.*"),
-    @Pattern(regexp = ".*[^\\w\\s]+.*")
-})
-@Size(min = 8, max=160)
-@Constraint(validatedBy = {})
+@Constraint(validatedBy = {KeyValidator.class})
 @Documented
 @Target({ElementType.METHOD,
     ElementType.FIELD,
@@ -25,13 +18,15 @@ import javax.validation.constraints.Size;
     ElementType.CONSTRUCTOR,
     ElementType.PARAMETER})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Password {
+public @interface Key {
 
-    String message() default "{com.g5.validation.Username.message}";
+    String message() default "{com.g5.validation.Salt.message}";
 
     Class<?>[] groups() default {};
 
     Class<? extends Payload>[] payload() default {};
+
+    ConstraintTarget validationAppliesTo() default ConstraintTarget.IMPLICIT;
 
     @Target({ElementType.METHOD,
         ElementType.FIELD,
@@ -42,6 +37,6 @@ public @interface Password {
     @Documented
     @interface List {
 
-        Password[] value();
+        Key[] value();
     }
 }

@@ -7,9 +7,9 @@ import com.g5.dao.CustomerCredentialsDaoLocal;
 import com.g5.dao.CustomerDaoLocal;
 import com.g5.entities.EntityFactoryLocal;
 import com.g5.types.Account;
-import com.g5.validation.Id;
-import com.g5.validation.Password;
-import com.g5.validation.Username;
+import com.g5.constraints.Id;
+import com.g5.constraints.Password;
+import com.g5.constraints.Username;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
@@ -18,6 +18,7 @@ import javax.ejb.TransactionManagement;
 import javax.ejb.TransactionManagementType;
 import javax.inject.Inject;
 import javax.persistence.LockModeType;
+import javax.validation.constraints.NotNull;
 
 @Stateless
 @TransactionManagement(TransactionManagementType.CONTAINER)
@@ -51,6 +52,7 @@ public class CustomerService implements CustomerServiceLocal {
 
     @Override
     @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+    @NotNull
     public Customer create(@Username final String username, @Password final String password) {
 
         Customer customer = entityFactory.createCustomer();

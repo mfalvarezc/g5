@@ -8,6 +8,9 @@ import com.g5.dao.TransactionDaoLocal;
 import com.g5.entities.EntityFactoryLocal;
 import com.g5.exceptions.NotEnoughFundsException;
 import com.g5.types.Payment;
+import com.g5.constraints.Description;
+import com.g5.constraints.Id;
+import com.g5.constraints.PositiveDecimal;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
@@ -16,6 +19,7 @@ import javax.ejb.TransactionAttribute;
 import javax.ejb.TransactionAttributeType;
 import javax.inject.Inject;
 import javax.persistence.LockModeType;
+import javax.validation.constraints.NotNull;
 
 @Stateless
 public class TransactionService implements TransactionServiceLocal {
@@ -29,7 +33,7 @@ public class TransactionService implements TransactionServiceLocal {
     @Inject
     private TransactionDaoLocal transactionDao;
 
-    private Transaction create(final long accountId, String description, final BigDecimal value) {
+    private Transaction create(@Id final long accountId, @Description String description, @PositiveDecimal final BigDecimal value) {
         Account account = accountDao.find(accountId);
 
         Transaction transaction = entityFactory.createTransaction();
@@ -49,7 +53,7 @@ public class TransactionService implements TransactionServiceLocal {
 
     @Override
     @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
-    public void rollbackTransaction(final long transactionId) {
+    public void rollbackTransaction(@Id final long transactionId) {
         Transaction transaction = transactionDao.find(transactionId, LockModeType.PESSIMISTIC_WRITE);
 
         Payment payment = paymentDao.findByTransaction(transaction);
@@ -66,7 +70,7 @@ public class TransactionService implements TransactionServiceLocal {
     }
 
     @Override
-    public void rollbackPayment(long paymentId) {
+    public void rollbackPayment(@Id long paymentId) {
         Payment payment = paymentDao.find(paymentId);
 
         Account receiverAccount = payment.getReceiverAccount();
@@ -81,25 +85,17 @@ public class TransactionService implements TransactionServiceLocal {
 
     @Override
     @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
-    public Transaction deposit(final long accountId, final BigDecimal value) {
-        checkValue(value);
-
+    @NotNull
+    public Transaction deposit(@Id final long accountId, @PositiveDecimal final BigDecimal value) {
         accountDao.find(accountId, LockModeType.PESSIMISTIC_WRITE);
 
         return create(accountId, "Deposit", value);
     }
 
-    private void checkValue(BigDecimal value) {
-        if (value.signum() != 1) {
-            throw new IllegalArgumentException("The value must be greater than zero");
-        }
-    }
-
     @Override
     @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
-    public Transaction withdraw(final long accountId, final BigDecimal value) throws NotEnoughFundsException {
-        checkValue(value);
-
+    @NotNull
+    public Transaction withdraw(@Id final long accountId, @PositiveDecimal final BigDecimal value) throws NotEnoughFundsException {
         Account account = accountDao.find(accountId, LockModeType.PESSIMISTIC_WRITE);
 
         if (account.getBalance().compareTo(value) < 0) {
@@ -111,22 +107,21 @@ public class TransactionService implements TransactionServiceLocal {
 
     @Override
     @TransactionAttribute(TransactionAttributeType.NOT_SUPPORTED)
-    public Transaction findById(final long id) {
+    public Transaction findById(@Id final long id) {
         return transactionDao.find(id);
     }
 
     @Override
     @TransactionAttribute(TransactionAttributeType.NOT_SUPPORTED)
-    public List<Transaction> findByAccountId(final long accountId) {
+    @NotNull
+    public List<Transaction> findByAccountId(@Id final long accountId) {
         Account account = accountDao.find(accountId);
         return transactionDao.findByAccount(account);
     }
 
     @Override
     @TransactionAttribute(TransactionAttributeType.NOT_SUPPORTED)
-    public long requestPayment(final long receiverAccountId, final String description, final BigDecimal value) {
-        checkValue(value);
-
+    public long requestPayment(@Id final long receiverAccountId, @Description final String description, @PositiveDecimal final BigDecimal value) {
         Account receiverAccount = accountDao.find(receiverAccountId);
 
         Payment payment = entityFactory.createPayment();
@@ -141,9 +136,8 @@ public class TransactionService implements TransactionServiceLocal {
 
     @Override
     @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
-    public Transaction approvePayment(long paymentId, final long senderAccountId, final BigDecimal value) {
-        checkValue(value);
-
+    @NotNull
+    public Transaction approvePayment(@Id long paymentId, @Id final long senderAccountId, @PositiveDecimal final BigDecimal value) {
         Payment payment = paymentDao.find(paymentId, LockModeType.PESSIMISTIC_WRITE);
 
         if (payment.getReceiverTransaction() != null || payment.getSenderAccount() != null || payment.getSenderTransaction() != null) {

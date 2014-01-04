@@ -1,5 +1,6 @@
 package com.g5.services;
 
+import com.g5.constraints.Salt;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.util.logging.Level;
@@ -11,12 +12,13 @@ import javax.xml.bind.DatatypeConverter;
 
 @Stateless
 public class SaltGenerator implements SaltGeneratorLocal {
-    
+
     private final static String ALGORITHM = "SHA1PRNG";
     private final static int SALT_LENGTH = 24;
-    
+
     @Override
     @TransactionAttribute(TransactionAttributeType.NOT_SUPPORTED)
+    //@Salt
     public String generateSalt() {
         byte[] salt = new byte[SALT_LENGTH];
         try {
@@ -26,5 +28,5 @@ public class SaltGenerator implements SaltGeneratorLocal {
         }
         return DatatypeConverter.printBase64Binary(salt);
     }
-    
+
 }

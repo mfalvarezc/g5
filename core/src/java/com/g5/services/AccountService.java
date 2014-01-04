@@ -5,6 +5,7 @@ import com.g5.types.Customer;
 import com.g5.dao.AccountDaoLocal;
 import com.g5.dao.CustomerDaoLocal;
 import com.g5.entities.EntityFactoryLocal;
+import com.g5.constraints.Id;
 import java.math.BigDecimal;
 import java.util.Date;
 import javax.ejb.Stateless;
@@ -12,6 +13,7 @@ import javax.ejb.TransactionAttribute;
 import javax.ejb.TransactionAttributeType;
 import javax.inject.Inject;
 import javax.persistence.LockModeType;
+import javax.validation.constraints.NotNull;
 
 @Stateless
 public class AccountService implements AccountServiceLocal {
@@ -25,7 +27,8 @@ public class AccountService implements AccountServiceLocal {
 
     @Override
     @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
-    public Account create(final long customerId) {
+    @NotNull
+    public Account create(@Id final long customerId) {
         Customer customer = customerDao.find(customerId);
 
         Account account = entityFactory.createAccount();
@@ -40,13 +43,13 @@ public class AccountService implements AccountServiceLocal {
 
     @Override
     @TransactionAttribute(TransactionAttributeType.NOT_SUPPORTED)
-    public Account findById(final long id) {
+    public Account findById(@Id final long id) {
         return accountDao.find(id);
     }
 
     @Override
     @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
-    public void close(final long id) {
+    public void close(@Id final long id) {
         Account account = accountDao.find(id, LockModeType.PESSIMISTIC_WRITE);
 
         if (!account.isOpen()) {
@@ -57,7 +60,7 @@ public class AccountService implements AccountServiceLocal {
     }
 
     @Override
-    public void reopen(long id) {
+    public void reopen(@Id long id) {
         Account account = accountDao.find(id, LockModeType.PESSIMISTIC_WRITE);
 
         if (account.isOpen()) {
