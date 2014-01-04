@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="ion" name="com.g5.services.AccountServiceTest" skipped="0" tests="3" time="38.325" timestamp="2014-01-03T21:31:13">
+<testsuite errors="0" failures="1" hostname="ion" name="com.g5.services.AccountServiceTest" skipped="0" tests="3" time="36.084" timestamp="2014-01-04T04:11:10">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="ES" />
@@ -61,7 +61,7 @@
     <property name="libs.Comet-GlassFish-v3.javadoc" value="" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.g5.services.AccountServiceTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/healarconr/netbeans-projects/g5/core/build/test/results/TEST-com.g5.services.AccountServiceTest.xml crashfile=/home/healarconr/netbeans-projects/g5/core/build/junitvmwatcher3996781131668737313.properties propsfile=/home/healarconr/netbeans-projects/g5/core/build/junit3950874460773820250.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.g5.services.AccountServiceTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/healarconr/netbeans-projects/g5/core/build/test/results/TEST-com.g5.services.AccountServiceTest.xml crashfile=/home/healarconr/netbeans-projects/g5/core/build/junitvmwatcher4705465615050300634.properties propsfile=/home/healarconr/netbeans-projects/g5/core/build/junit3069222280334617597.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="ap.supported.internal" value="true" />
@@ -399,170 +399,174 @@
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit" />
     <property name="libs.javaee-web-api-7.0.javadoc" value="/home/healarconr/netbeans/enterprise/docs/javaee-doc-api.jar" />
   </properties>
-  <testcase classname="com.g5.services.AccountServiceTest" name="testFindById" time="8.002" />
-  <testcase classname="com.g5.services.AccountServiceTest" name="testCloseAndReopen" time="4.988" />
-  <testcase classname="com.g5.services.AccountServiceTest" name="testCreate" time="6.307" />
+  <testcase classname="com.g5.services.AccountServiceTest" name="testCloseAndReopen" time="4.95" />
+  <testcase classname="com.g5.services.AccountServiceTest" name="testFindById" time="5.202">
+    <failure message="expected:&lt;Fri Jan 03 23:11:38 COT 2014&gt; but was:&lt;Fri Jan 03 23:11:33 COT 2014&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;Fri Jan 03 23:11:38 COT 2014&gt; but was:&lt;Fri Jan 03 23:11:33 COT 2014&gt;
+	at com.g5.services.AccountServiceTest.testFindById(AccountServiceTest.java:103)
+</failure>
+  </testcase>
+  <testcase classname="com.g5.services.AccountServiceTest" name="testCreate" time="7.047" />
   <system-out><![CDATA[Found populator: org.glassfish.kernel.embedded.EmbeddedDomainXml
 JdbcRuntimeExtension,  getAllSystemRAResourcesAndPools = [GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource]
-[EL Info]: 2014-01-03 16:31:31.847--ServerSession(240140310)--EclipseLink, version: Eclipse Persistence Services - 2.5.1.v20130918-f2b9fc5
-[EL Info]: connection: 2014-01-03 16:31:31.867--ServerSession(240140310)--file:/home/healarconr/netbeans-projects/g5/core/build/classes/_g5-non-jta login successful
+[EL Info]: 2014-01-03 23:11:28.855--ServerSession(1850353532)--EclipseLink, version: Eclipse Persistence Services - 2.5.1.v20130918-f2b9fc5
+[EL Info]: connection: 2014-01-03 23:11:28.871--ServerSession(1850353532)--file:/home/healarconr/netbeans-projects/g5/core/build/classes/_g5-non-jta login successful
+closeAndReopen
+[EL Info]: connection: 2014-01-03 23:11:33.774--ServerSession(1850353532)--file:/home/healarconr/netbeans-projects/g5/core/build/classes/_g5-non-jta logout successful
+[EL Info]: 2014-01-03 23:11:33.797--ServerSession(2050947031)--EclipseLink, version: Eclipse Persistence Services - 2.5.1.v20130918-f2b9fc5
+[EL Info]: connection: 2014-01-03 23:11:33.805--ServerSession(2050947031)--file:/home/healarconr/netbeans-projects/g5/core/build/classes/_g5-non-jta login successful
 findById
 AbstractBaseDao.find()
-[EL Info]: connection: 2014-01-03 16:31:39.819--ServerSession(240140310)--file:/home/healarconr/netbeans-projects/g5/core/build/classes/_g5-non-jta logout successful
-[EL Info]: 2014-01-03 16:31:39.837--ServerSession(1611116457)--EclipseLink, version: Eclipse Persistence Services - 2.5.1.v20130918-f2b9fc5
-[EL Info]: connection: 2014-01-03 16:31:39.846--ServerSession(1611116457)--file:/home/healarconr/netbeans-projects/g5/core/build/classes/_g5-non-jta login successful
-closeAndReopen
-[EL Info]: connection: 2014-01-03 16:31:44.807--ServerSession(1611116457)--file:/home/healarconr/netbeans-projects/g5/core/build/classes/_g5-non-jta logout successful
-[EL Info]: 2014-01-03 16:31:44.83--ServerSession(1750348163)--EclipseLink, version: Eclipse Persistence Services - 2.5.1.v20130918-f2b9fc5
-[EL Info]: connection: 2014-01-03 16:31:44.839--ServerSession(1750348163)--file:/home/healarconr/netbeans-projects/g5/core/build/classes/_g5-non-jta login successful
+[EL Info]: connection: 2014-01-03 23:11:38.977--ServerSession(2050947031)--file:/home/healarconr/netbeans-projects/g5/core/build/classes/_g5-non-jta logout successful
+[EL Info]: 2014-01-03 23:11:38.997--ServerSession(1807052112)--EclipseLink, version: Eclipse Persistence Services - 2.5.1.v20130918-f2b9fc5
+[EL Info]: connection: 2014-01-03 23:11:39.007--ServerSession(1807052112)--file:/home/healarconr/netbeans-projects/g5/core/build/classes/_g5-non-jta login successful
 create
 AbstractBaseDao.find()
-[EL Info]: connection: 2014-01-03 16:31:51.115--ServerSession(1750348163)--file:/home/healarconr/netbeans-projects/g5/core/build/classes/_g5-non-jta logout successful
+[EL Info]: connection: 2014-01-03 23:11:46.026--ServerSession(1807052112)--file:/home/healarconr/netbeans-projects/g5/core/build/classes/_g5-non-jta logout successful
 PlainTextActionReporterSUCCESSNo monitoring data to report.
 JdbcRuntimeExtension,  getAllSystemRAResourcesAndPools = [GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource]
 JdbcRuntimeExtension,  getAllSystemRAResourcesAndPools = [GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource]
 ]]></system-out>
-  <system-err><![CDATA[ene 03, 2014 4:31:13 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl createContainer
+  <system-err><![CDATA[ene 03, 2014 11:11:10 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl createContainer
 Información: [EJBContainerProviderImpl] Using installation location /home/healarconr/glassfish4/glassfish
-ene 03, 2014 4:31:13 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl createContainer
-Información: [EJBContainerProviderImpl] Using config file location: file:/tmp/domain806721120844463840xml
-ene 03, 2014 4:31:13 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl createContainer
+ene 03, 2014 11:11:10 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl createContainer
+Información: [EJBContainerProviderImpl] Using config file location: file:/tmp/domain4231268695293765772xml
+ene 03, 2014 11:11:10 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl createContainer
 Información: [EJBContainerProviderImpl] Using runtime class: class com.sun.enterprise.glassfish.bootstrap.StaticGlassFishRuntime
-ene 03, 2014 4:31:14 PM org.hibernate.validator.internal.util.Version <clinit>
+ene 03, 2014 11:11:12 PM org.hibernate.validator.internal.util.Version <clinit>
 INFO: HV000001: Hibernate Validator 5.0.0.Final
-ene 03, 2014 4:31:15 PM com.sun.enterprise.security.auth.realm.Realm doInstantiate
+ene 03, 2014 11:11:12 PM com.sun.enterprise.security.auth.realm.Realm doInstantiate
 Información: realm.loaded.successfully
-ene 03, 2014 4:31:15 PM com.sun.enterprise.security.auth.realm.Realm doInstantiate
+ene 03, 2014 11:11:12 PM com.sun.enterprise.security.auth.realm.Realm doInstantiate
 Información: realm.loaded.successfully
-ene 03, 2014 4:31:15 PM com.sun.enterprise.security.auth.realm.Realm doInstantiate
+ene 03, 2014 11:11:12 PM com.sun.enterprise.security.auth.realm.Realm doInstantiate
 Información: realm.loaded.successfully
-ene 03, 2014 4:31:15 PM org.glassfish.ha.store.spi.BackingStoreFactoryRegistry register
+ene 03, 2014 11:11:12 PM org.glassfish.ha.store.spi.BackingStoreFactoryRegistry register
 Información: Registered org.glassfish.ha.store.adapter.cache.ShoalBackingStoreProxy for persistence-type = replicated in BackingStoreFactoryRegistry
-ene 03, 2014 4:31:15 PM com.sun.enterprise.v3.server.AppServerStartup postStartupJob
-Información: GlassFish Server Open Source Edition  4.0  (89) startup time : Embedded (977ms), startup services(946ms), total(1.923ms)
-ene 03, 2014 4:31:15 PM org.glassfish.security.services.impl.authorization.AuthorizationServiceImpl initialize
+ene 03, 2014 11:11:12 PM com.sun.enterprise.v3.server.AppServerStartup postStartupJob
+Información: GlassFish Server Open Source Edition  4.0  (89) startup time : Embedded (1.181ms), startup services(935ms), total(2.116ms)
+ene 03, 2014 11:11:12 PM org.glassfish.security.services.impl.authorization.AuthorizationServiceImpl initialize
 Información: Authorization Service has successfully initialized.
-ene 03, 2014 4:31:15 PM org.glassfish.jersey.server.ApplicationHandler initialize
-Información: Initiating Jersey application, version Jersey: 2.0 2013-05-03 14:50:15...
-ene 03, 2014 4:31:15 PM org.glassfish.admin.mbeanserver.JMXStartupService$JMXConnectorsStarterThread run
+ene 03, 2014 11:11:13 PM org.glassfish.admin.mbeanserver.JMXStartupService$JMXConnectorsStarterThread run
 Información: JMXStartupService has disabled JMXConnector system
-ene 03, 2014 4:31:16 PM org.glassfish.admin.mbeanserver.JMXStartupService shutdown
+ene 03, 2014 11:11:13 PM org.glassfish.jersey.server.ApplicationHandler initialize
+Información: Initiating Jersey application, version Jersey: 2.0 2013-05-03 14:50:15...
+ene 03, 2014 11:11:14 PM org.glassfish.admin.mbeanserver.JMXStartupService shutdown
 Información: JMXStartupService and JMXConnectors have been shut down.
-ene 03, 2014 4:31:16 PM com.sun.enterprise.v3.server.AppServerStartup stop
+ene 03, 2014 11:11:14 PM com.sun.enterprise.v3.server.AppServerStartup stop
 Información: Shutdown procedure finished
-ene 03, 2014 4:31:16 PM org.glassfish.ha.store.spi.BackingStoreFactoryRegistry register
+ene 03, 2014 11:11:14 PM org.glassfish.ha.store.spi.BackingStoreFactoryRegistry register
 Información: Registered org.glassfish.ha.store.adapter.cache.ShoalBackingStoreProxy for persistence-type = replicated in BackingStoreFactoryRegistry
-ene 03, 2014 4:31:16 PM com.sun.enterprise.v3.server.AppServerStartup postStartupJob
-Información: GlassFish Server Open Source Edition  4.0  (89) startup time : Embedded (3.512ms), startup services(21ms), total(3.533ms)
-ene 03, 2014 4:31:16 PM org.glassfish.admin.mbeanserver.JMXStartupService$JMXConnectorsStarterThread run
+ene 03, 2014 11:11:14 PM com.sun.enterprise.v3.server.AppServerStartup postStartupJob
+Información: GlassFish Server Open Source Edition  4.0  (89) startup time : Embedded (3.846ms), startup services(21ms), total(3.867ms)
+ene 03, 2014 11:11:14 PM org.glassfish.admin.mbeanserver.JMXStartupService$JMXConnectorsStarterThread run
 Información: JMXStartupService has disabled JMXConnector system
-ene 03, 2014 4:31:16 PM org.glassfish.jersey.server.ApplicationHandler initialize
+ene 03, 2014 11:11:14 PM org.glassfish.jersey.server.ApplicationHandler initialize
 Información: Initiating Jersey application, version Jersey: 2.0 2013-05-03 14:50:15...
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 Información: ... skipping entry with a Manifest file with a special attribute: org.eclipse.persistence.jpa.jpql_2.5.1.v20130918-f2b9fc5.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 Información: ... skipping entry with a Manifest file with a special attribute: webservices-api-osgi.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 Información: ... skipping module: javax.management.j2ee-api.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 Información: ... skipping module: javax.websocket-api.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 Información: ... skipping module: javax.persistence.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 Información: ... skipping module: javax.jms-api.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 Información: ... skipping module: javax.servlet.jsp.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 Información: ... skipping module: javax.enterprise.concurrent-api.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 Información: ... skipping module: webservices-osgi.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 Información: ... skipping module: javax.el.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 Información: ... skipping module: javax.security.jacc-api.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 Información: ... skipping module: javax.xml.registry-api.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 Información: ... skipping module: javax.interceptor-api.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 Información: ... skipping module: javax.json.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 Información: ... skipping module: javax.mail.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 Información: ... skipping module: javax.servlet-api.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 Información: ... skipping module: javax.enterprise.deploy-api.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 Información: ... skipping module: javax.ws.rs-api.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 Información: ... skipping module: javax.xml.rpc-api.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 Información: ... skipping module: javax.enterprise.concurrent.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 Información: ... skipping module: jaxb-osgi.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 Información: ... skipping module: javax.faces.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 Información: ... skipping module: javax.batch-api.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 Información: ... skipping module: javax.resource-api.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 Información: ... skipping module: weld-osgi-bundle.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 Información: ... skipping module: javax.security.auth.message-api.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 Información: ... skipping module: javax.servlet.jsp.jstl-api.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 Información: ... skipping module: javax.inject.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 Información: ... skipping module: javax.transaction-api.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 Información: ... skipping module: javax.servlet.jsp.jstl.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 Información: ... skipping module: javax.ejb-api.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 Información: ... skipping module: bean-validator.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 Información: ... skipping module: javax.servlet.jsp-api.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
 Información: ... skipping entry with a Manifest file with a special attribute: glassfish-embedded-static-shell.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
 Información: [DeploymentElement] adding EJB module to ScatteredArchive classes
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-Información: [DeploymentElement] adding library to ScatteredArchive jaxm-api.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-Información: [DeploymentElement] adding library to ScatteredArchive mysql-connector-java-5.1.23-bin.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-Información: [DeploymentElement] adding library to ScatteredArchive core-remote.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-Información: [DeploymentElement] adding library to ScatteredArchive ant-junit4.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-Información: [DeploymentElement] adding library to ScatteredArchive junit-4.10.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-Información: [DeploymentElement] adding library to ScatteredArchive ant-junit.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
 Información: [DeploymentElement] adding library to ScatteredArchive ant.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-Información: [DeploymentElement] adding library to ScatteredArchive ant-launcher.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-Información: [DeploymentElement] adding library to ScatteredArchive eclipselink.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
 Información: [DeploymentElement] adding library to ScatteredArchive classes
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-Información: [DeploymentElement] adding library to ScatteredArchive jaxb-api-osgi.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-Información: [DeploymentElement] adding library to ScatteredArchive common.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
-Información: [DeploymentElement] adding library to ScatteredArchive javax.persistence_2.1.0.v201304241213.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
 Información: [DeploymentElement] adding library to ScatteredArchive javax.annotation-api.jar
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.EJBContainerImpl deploy
-Información: [EJBContainerImpl] Deploying app: org.glassfish.embeddable.archive.ScatteredArchive@7a674818
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.EJBContainerImpl deploy
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+Información: [DeploymentElement] adding library to ScatteredArchive common.jar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+Información: [DeploymentElement] adding library to ScatteredArchive mysql-connector-java-5.1.23-bin.jar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+Información: [DeploymentElement] adding library to ScatteredArchive ant-junit4.jar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+Información: [DeploymentElement] adding library to ScatteredArchive eclipselink.jar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+Información: [DeploymentElement] adding library to ScatteredArchive javax.persistence_2.1.0.v201304241213.jar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+Información: [DeploymentElement] adding library to ScatteredArchive junit-4.10.jar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+Información: [DeploymentElement] adding library to ScatteredArchive jaxm-api.jar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+Información: [DeploymentElement] adding library to ScatteredArchive ant-junit.jar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+Información: [DeploymentElement] adding library to ScatteredArchive ant-launcher.jar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+Información: [DeploymentElement] adding library to ScatteredArchive core-remote.jar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+Información: [DeploymentElement] adding library to ScatteredArchive jaxb-api-osgi.jar
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.EJBContainerImpl deploy
+Información: [EJBContainerImpl] Deploying app: org.glassfish.embeddable.archive.ScatteredArchive@5b258325
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.EJBContainerImpl deploy
 Información: [EJBContainerImpl] GlassFish status: STARTED
-ene 03, 2014 4:31:17 PM org.glassfish.ejb.embedded.EJBContainerImpl deploy
+ene 03, 2014 11:11:15 PM org.glassfish.ejb.embedded.EJBContainerImpl deploy
 Información: [EJBContainerImpl] Deploying as a ScatteredArchive
-ene 03, 2014 4:31:23 PM com.sun.enterprise.security.ssl.impl.SecuritySupportImpl checkCertificateDates
+ene 03, 2014 11:11:20 PM com.sun.enterprise.security.ssl.impl.SecuritySupportImpl checkCertificateDates
 Grave: SEC5054: Certificate has expired: [
 [
   Version: V3
@@ -624,21 +628,21 @@ KeyIdentifier [
 00F0: 20 81 7D 66 7E A2 90 74   5C 10 C6 BD EC AB 1B C2   ..f...t\.......
 
 ]
-ene 03, 2014 4:31:23 PM com.sun.enterprise.security.SecurityLifecycle <init>
+ene 03, 2014 11:11:20 PM com.sun.enterprise.security.SecurityLifecycle <init>
 Información: security.secmgroff
-ene 03, 2014 4:31:23 PM com.sun.enterprise.security.SecurityLifecycle onInitialization
+ene 03, 2014 11:11:20 PM com.sun.enterprise.security.SecurityLifecycle onInitialization
 Información: sec.service.startup.enter
-ene 03, 2014 4:31:23 PM com.sun.enterprise.security.PolicyLoader loadPolicy
+ene 03, 2014 11:11:20 PM com.sun.enterprise.security.PolicyLoader loadPolicy
 Información: policy.loading
-ene 03, 2014 4:31:23 PM com.sun.enterprise.security.SecurityLifecycle onInitialization
+ene 03, 2014 11:11:21 PM com.sun.enterprise.security.SecurityLifecycle onInitialization
 Información: sec.service.startup.exit
-ene 03, 2014 4:31:25 PM org.eclipse.persistence.session.file:/tmp/gfembed952963571624425638tmp/applications/classes/_g5-jta
+ene 03, 2014 11:11:23 PM org.eclipse.persistence.session.file:/tmp/gfembed9123884637668017431tmp/applications/classes/_g5-jta
 Información: EclipseLink, version: Eclipse Persistence Services - 2.5.1.v20130918-f2b9fc5
-ene 03, 2014 4:31:26 PM org.eclipse.persistence.session.file:/tmp/gfembed952963571624425638tmp/applications/classes/_g5-jta.connection
-Información: file:/tmp/gfembed952963571624425638tmp/applications/classes/_g5-jta login successful
-ene 03, 2014 4:31:26 PM org.eclipse.persistence.session.file:/tmp/gfembed952963571624425638tmp/applications/classes/_g5-jta.server
+ene 03, 2014 11:11:23 PM org.eclipse.persistence.session.file:/tmp/gfembed9123884637668017431tmp/applications/classes/_g5-jta.connection
+Información: file:/tmp/gfembed9123884637668017431tmp/applications/classes/_g5-jta login successful
+ene 03, 2014 11:11:23 PM org.eclipse.persistence.session.file:/tmp/gfembed9123884637668017431tmp/applications/classes/_g5-jta.server
 Advertencia: Failed to find MBean Server: null or empty List returned from MBeanServerFactory.findMBeanServer(null)
-ene 03, 2014 4:31:26 PM com.sun.enterprise.security.ssl.impl.SecuritySupportImpl checkCertificateDates
+ene 03, 2014 11:11:24 PM com.sun.enterprise.security.ssl.impl.SecuritySupportImpl checkCertificateDates
 Grave: SEC5054: Certificate has expired: [
 [
   Version: V3
@@ -700,7 +704,7 @@ KeyIdentifier [
 00F0: 20 81 7D 66 7E A2 90 74   5C 10 C6 BD EC AB 1B C2   ..f...t\.......
 
 ]
-ene 03, 2014 4:31:26 PM com.sun.enterprise.security.ssl.impl.SecuritySupportImpl checkCertificateDates
+ene 03, 2014 11:11:24 PM com.sun.enterprise.security.ssl.impl.SecuritySupportImpl checkCertificateDates
 Grave: SEC5054: Certificate has expired: [
 [
   Version: V3
@@ -762,7 +766,7 @@ KeyIdentifier [
 00F0: 20 81 7D 66 7E A2 90 74   5C 10 C6 BD EC AB 1B C2   ..f...t\.......
 
 ]
-ene 03, 2014 4:31:26 PM com.sun.enterprise.security.ssl.impl.SecuritySupportImpl checkCertificateDates
+ene 03, 2014 11:11:24 PM com.sun.enterprise.security.ssl.impl.SecuritySupportImpl checkCertificateDates
 Grave: SEC5054: Certificate has expired: [
 [
   Version: V3
@@ -824,239 +828,239 @@ KeyIdentifier [
 00F0: 20 81 7D 66 7E A2 90 74   5C 10 C6 BD EC AB 1B C2   ..f...t\.......
 
 ]
-ene 03, 2014 4:31:28 PM com.sun.jts.CosTransactions.DefaultTransactionService setServerName
+ene 03, 2014 11:11:25 PM com.sun.jts.CosTransactions.DefaultTransactionService setServerName
 Información: jts.startup_msg
-ene 03, 2014 4:31:28 PM com.sun.ejb.containers.BaseContainer initializeHome
-Información: EJB5181:Portable JNDI names for EJB EntityFactory: [java:global/classes/EntityFactory!com.g5.entities.EntityFactoryRemote, java:global/classes/EntityFactory!com.g5.entities.EntityFactoryLocal]
-ene 03, 2014 4:31:28 PM com.sun.ejb.containers.BaseContainer initializeHome
-Información: EJB5182:Glassfish-specific (Non-portable) JNDI names for EJB EntityFactory: [com.g5.entities.EntityFactoryRemote#com.g5.entities.EntityFactoryRemote, com.g5.entities.EntityFactoryRemote]
-ene 03, 2014 4:31:28 PM com.sun.ejb.containers.BaseContainer initializeHome
-Información: EJB5181:Portable JNDI names for EJB SaltGenerator: [java:global/classes/SaltGenerator!com.g5.services.SaltGeneratorRemote, java:global/classes/SaltGenerator!com.g5.services.SaltGeneratorLocal]
-ene 03, 2014 4:31:28 PM com.sun.ejb.containers.BaseContainer initializeHome
-Información: EJB5182:Glassfish-specific (Non-portable) JNDI names for EJB SaltGenerator: [com.g5.services.SaltGeneratorRemote, com.g5.services.SaltGeneratorRemote#com.g5.services.SaltGeneratorRemote]
-ene 03, 2014 4:31:28 PM com.sun.ejb.containers.BaseContainer initializeHome
-Información: EJB5181:Portable JNDI names for EJB AccountDao: [java:global/classes/AccountDao!com.g5.dao.AccountDaoLocal, java:global/classes/AccountDao!com.g5.dao.AccountDaoRemote]
-ene 03, 2014 4:31:28 PM com.sun.ejb.containers.BaseContainer initializeHome
-Información: EJB5182:Glassfish-specific (Non-portable) JNDI names for EJB AccountDao: [com.g5.dao.AccountDaoRemote, com.g5.dao.AccountDaoRemote#com.g5.dao.AccountDaoRemote]
-ene 03, 2014 4:31:28 PM com.sun.ejb.containers.BaseContainer initializeHome
-Información: EJB5181:Portable JNDI names for EJB TransactionService: [java:global/classes/TransactionService!com.g5.services.TransactionServiceLocal, java:global/classes/TransactionService!com.g5.services.TransactionServiceRemote]
-ene 03, 2014 4:31:28 PM com.sun.ejb.containers.BaseContainer initializeHome
-Información: EJB5182:Glassfish-specific (Non-portable) JNDI names for EJB TransactionService: [com.g5.services.TransactionServiceRemote, com.g5.services.TransactionServiceRemote#com.g5.services.TransactionServiceRemote]
-ene 03, 2014 4:31:28 PM com.sun.ejb.containers.BaseContainer initializeHome
-Información: EJB5181:Portable JNDI names for EJB AccountService: [java:global/classes/AccountService!com.g5.services.AccountServiceRemote, java:global/classes/AccountService!com.g5.services.AccountServiceLocal]
-ene 03, 2014 4:31:28 PM com.sun.ejb.containers.BaseContainer initializeHome
-Información: EJB5182:Glassfish-specific (Non-portable) JNDI names for EJB AccountService: [com.g5.services.AccountServiceRemote#com.g5.services.AccountServiceRemote, com.g5.services.AccountServiceRemote]
-ene 03, 2014 4:31:28 PM com.sun.ejb.containers.BaseContainer initializeHome
-Información: EJB5181:Portable JNDI names for EJB CustomerService: [java:global/classes/CustomerService!com.g5.services.CustomerServiceRemote, java:global/classes/CustomerService!com.g5.services.CustomerServiceLocal]
-ene 03, 2014 4:31:28 PM com.sun.ejb.containers.BaseContainer initializeHome
-Información: EJB5182:Glassfish-specific (Non-portable) JNDI names for EJB CustomerService: [com.g5.services.CustomerServiceRemote#com.g5.services.CustomerServiceRemote, com.g5.services.CustomerServiceRemote]
-ene 03, 2014 4:31:29 PM com.sun.ejb.containers.BaseContainer initializeHome
-Información: EJB5181:Portable JNDI names for EJB CustomerCredentialsDao: [java:global/classes/CustomerCredentialsDao!com.g5.dao.CustomerCredentialsDaoRemote, java:global/classes/CustomerCredentialsDao!com.g5.dao.CustomerCredentialsDaoLocal]
-ene 03, 2014 4:31:29 PM com.sun.ejb.containers.BaseContainer initializeHome
-Información: EJB5182:Glassfish-specific (Non-portable) JNDI names for EJB CustomerCredentialsDao: [com.g5.dao.CustomerCredentialsDaoRemote, com.g5.dao.CustomerCredentialsDaoRemote#com.g5.dao.CustomerCredentialsDaoRemote]
-ene 03, 2014 4:31:29 PM com.sun.ejb.containers.BaseContainer initializeHome
+ene 03, 2014 11:11:25 PM com.sun.ejb.containers.BaseContainer initializeHome
 Información: EJB5181:Portable JNDI names for EJB CustomerDao: [java:global/classes/CustomerDao!com.g5.dao.CustomerDaoLocal, java:global/classes/CustomerDao!com.g5.dao.CustomerDaoRemote]
-ene 03, 2014 4:31:29 PM com.sun.ejb.containers.BaseContainer initializeHome
+ene 03, 2014 11:11:25 PM com.sun.ejb.containers.BaseContainer initializeHome
 Información: EJB5182:Glassfish-specific (Non-portable) JNDI names for EJB CustomerDao: [com.g5.dao.CustomerDaoRemote, com.g5.dao.CustomerDaoRemote#com.g5.dao.CustomerDaoRemote]
-ene 03, 2014 4:31:29 PM com.sun.ejb.containers.BaseContainer initializeHome
-Información: EJB5181:Portable JNDI names for EJB TransactionDao: [java:global/classes/TransactionDao!com.g5.dao.TransactionDaoLocal, java:global/classes/TransactionDao!com.g5.dao.TransactionDaoRemote]
-ene 03, 2014 4:31:29 PM com.sun.ejb.containers.BaseContainer initializeHome
-Información: EJB5182:Glassfish-specific (Non-portable) JNDI names for EJB TransactionDao: [com.g5.dao.TransactionDaoRemote#com.g5.dao.TransactionDaoRemote, com.g5.dao.TransactionDaoRemote]
-ene 03, 2014 4:31:29 PM com.sun.ejb.containers.BaseContainer initializeHome
-Información: EJB5181:Portable JNDI names for EJB KeyGenerator: [java:global/classes/KeyGenerator!com.g5.services.KeyGeneratorLocal, java:global/classes/KeyGenerator!com.g5.services.KeyGeneratorRemote]
-ene 03, 2014 4:31:29 PM com.sun.ejb.containers.BaseContainer initializeHome
-Información: EJB5182:Glassfish-specific (Non-portable) JNDI names for EJB KeyGenerator: [com.g5.services.KeyGeneratorRemote#com.g5.services.KeyGeneratorRemote, com.g5.services.KeyGeneratorRemote]
-ene 03, 2014 4:31:29 PM com.sun.ejb.containers.BaseContainer initializeHome
+ene 03, 2014 11:11:26 PM com.sun.ejb.containers.BaseContainer initializeHome
+Información: EJB5181:Portable JNDI names for EJB CustomerCredentialsDao: [java:global/classes/CustomerCredentialsDao!com.g5.dao.CustomerCredentialsDaoRemote, java:global/classes/CustomerCredentialsDao!com.g5.dao.CustomerCredentialsDaoLocal]
+ene 03, 2014 11:11:26 PM com.sun.ejb.containers.BaseContainer initializeHome
+Información: EJB5182:Glassfish-specific (Non-portable) JNDI names for EJB CustomerCredentialsDao: [com.g5.dao.CustomerCredentialsDaoRemote, com.g5.dao.CustomerCredentialsDaoRemote#com.g5.dao.CustomerCredentialsDaoRemote]
+ene 03, 2014 11:11:26 PM com.sun.ejb.containers.BaseContainer initializeHome
+Información: EJB5181:Portable JNDI names for EJB EntityFactory: [java:global/classes/EntityFactory!com.g5.entities.EntityFactoryRemote, java:global/classes/EntityFactory!com.g5.entities.EntityFactoryLocal]
+ene 03, 2014 11:11:26 PM com.sun.ejb.containers.BaseContainer initializeHome
+Información: EJB5182:Glassfish-specific (Non-portable) JNDI names for EJB EntityFactory: [com.g5.entities.EntityFactoryRemote#com.g5.entities.EntityFactoryRemote, com.g5.entities.EntityFactoryRemote]
+ene 03, 2014 11:11:26 PM com.sun.ejb.containers.BaseContainer initializeHome
 Información: EJB5181:Portable JNDI names for EJB PaymentDao: [java:global/classes/PaymentDao!com.g5.dao.PaymentDaoLocal, java:global/classes/PaymentDao!com.g5.dao.PaymentDaoRemote]
-ene 03, 2014 4:31:29 PM com.sun.ejb.containers.BaseContainer initializeHome
+ene 03, 2014 11:11:26 PM com.sun.ejb.containers.BaseContainer initializeHome
 Información: EJB5182:Glassfish-specific (Non-portable) JNDI names for EJB PaymentDao: [com.g5.dao.PaymentDaoRemote#com.g5.dao.PaymentDaoRemote, com.g5.dao.PaymentDaoRemote]
-ene 03, 2014 4:31:29 PM org.jboss.weld.bootstrap.WeldBootstrap <clinit>
+ene 03, 2014 11:11:26 PM com.sun.ejb.containers.BaseContainer initializeHome
+Información: EJB5181:Portable JNDI names for EJB CustomerService: [java:global/classes/CustomerService!com.g5.services.CustomerServiceRemote, java:global/classes/CustomerService!com.g5.services.CustomerServiceLocal]
+ene 03, 2014 11:11:26 PM com.sun.ejb.containers.BaseContainer initializeHome
+Información: EJB5182:Glassfish-specific (Non-portable) JNDI names for EJB CustomerService: [com.g5.services.CustomerServiceRemote#com.g5.services.CustomerServiceRemote, com.g5.services.CustomerServiceRemote]
+ene 03, 2014 11:11:26 PM com.sun.ejb.containers.BaseContainer initializeHome
+Información: EJB5181:Portable JNDI names for EJB TransactionService: [java:global/classes/TransactionService!com.g5.services.TransactionServiceLocal, java:global/classes/TransactionService!com.g5.services.TransactionServiceRemote]
+ene 03, 2014 11:11:26 PM com.sun.ejb.containers.BaseContainer initializeHome
+Información: EJB5182:Glassfish-specific (Non-portable) JNDI names for EJB TransactionService: [com.g5.services.TransactionServiceRemote, com.g5.services.TransactionServiceRemote#com.g5.services.TransactionServiceRemote]
+ene 03, 2014 11:11:26 PM com.sun.ejb.containers.BaseContainer initializeHome
+Información: EJB5181:Portable JNDI names for EJB AccountDao: [java:global/classes/AccountDao!com.g5.dao.AccountDaoLocal, java:global/classes/AccountDao!com.g5.dao.AccountDaoRemote]
+ene 03, 2014 11:11:26 PM com.sun.ejb.containers.BaseContainer initializeHome
+Información: EJB5182:Glassfish-specific (Non-portable) JNDI names for EJB AccountDao: [com.g5.dao.AccountDaoRemote, com.g5.dao.AccountDaoRemote#com.g5.dao.AccountDaoRemote]
+ene 03, 2014 11:11:26 PM com.sun.ejb.containers.BaseContainer initializeHome
+Información: EJB5181:Portable JNDI names for EJB SaltGenerator: [java:global/classes/SaltGenerator!com.g5.services.SaltGeneratorRemote, java:global/classes/SaltGenerator!com.g5.services.SaltGeneratorLocal]
+ene 03, 2014 11:11:26 PM com.sun.ejb.containers.BaseContainer initializeHome
+Información: EJB5182:Glassfish-specific (Non-portable) JNDI names for EJB SaltGenerator: [com.g5.services.SaltGeneratorRemote, com.g5.services.SaltGeneratorRemote#com.g5.services.SaltGeneratorRemote]
+ene 03, 2014 11:11:26 PM com.sun.ejb.containers.BaseContainer initializeHome
+Información: EJB5181:Portable JNDI names for EJB TransactionDao: [java:global/classes/TransactionDao!com.g5.dao.TransactionDaoLocal, java:global/classes/TransactionDao!com.g5.dao.TransactionDaoRemote]
+ene 03, 2014 11:11:26 PM com.sun.ejb.containers.BaseContainer initializeHome
+Información: EJB5182:Glassfish-specific (Non-portable) JNDI names for EJB TransactionDao: [com.g5.dao.TransactionDaoRemote#com.g5.dao.TransactionDaoRemote, com.g5.dao.TransactionDaoRemote]
+ene 03, 2014 11:11:26 PM com.sun.ejb.containers.BaseContainer initializeHome
+Información: EJB5181:Portable JNDI names for EJB KeyGenerator: [java:global/classes/KeyGenerator!com.g5.services.KeyGeneratorLocal, java:global/classes/KeyGenerator!com.g5.services.KeyGeneratorRemote]
+ene 03, 2014 11:11:26 PM com.sun.ejb.containers.BaseContainer initializeHome
+Información: EJB5182:Glassfish-specific (Non-portable) JNDI names for EJB KeyGenerator: [com.g5.services.KeyGeneratorRemote#com.g5.services.KeyGeneratorRemote, com.g5.services.KeyGeneratorRemote]
+ene 03, 2014 11:11:26 PM com.sun.ejb.containers.BaseContainer initializeHome
+Información: EJB5181:Portable JNDI names for EJB AccountService: [java:global/classes/AccountService!com.g5.services.AccountServiceRemote, java:global/classes/AccountService!com.g5.services.AccountServiceLocal]
+ene 03, 2014 11:11:26 PM com.sun.ejb.containers.BaseContainer initializeHome
+Información: EJB5182:Glassfish-specific (Non-portable) JNDI names for EJB AccountService: [com.g5.services.AccountServiceRemote#com.g5.services.AccountServiceRemote, com.g5.services.AccountServiceRemote]
+ene 03, 2014 11:11:26 PM org.jboss.weld.bootstrap.WeldBootstrap <clinit>
 Información: WELD-000900 2.0.0 (SP1)
-ene 03, 2014 4:31:29 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:26 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:29 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:26 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:29 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:26 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:29 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:29 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:29 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:29 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:29 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:29 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:29 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:29 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:29 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:29 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:29 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:30 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
+ene 03, 2014 11:11:27 PM org.glassfish.weld.BeanDeploymentArchiveImpl handleEntry
 Advertencia: AS-CDI-005
-ene 03, 2014 4:31:31 PM org.glassfish.deployment.admin.DeployCommand execute
-Información: classes was successfully deployed in 11.310 milliseconds.
-ene 03, 2014 4:31:51 PM org.eclipse.persistence.session.file:/tmp/gfembed952963571624425638tmp/applications/classes/_g5-jta.connection
-Información: file:/tmp/gfembed952963571624425638tmp/applications/classes/_g5-jta logout successful
-ene 03, 2014 4:31:51 PM com.sun.enterprise.connectors.service.ResourceAdapterAdminServiceImpl sendStopToResourceAdapter
+ene 03, 2014 11:11:28 PM org.glassfish.deployment.admin.DeployCommand execute
+Información: classes was successfully deployed in 10.814 milliseconds.
+ene 03, 2014 11:11:46 PM org.eclipse.persistence.session.file:/tmp/gfembed9123884637668017431tmp/applications/classes/_g5-jta.connection
+Información: file:/tmp/gfembed9123884637668017431tmp/applications/classes/_g5-jta logout successful
+ene 03, 2014 11:11:46 PM com.sun.enterprise.connectors.service.ResourceAdapterAdminServiceImpl sendStopToResourceAdapter
 Información: RAR7094: __ds_jdbc_ra shutdown successful.
-ene 03, 2014 4:31:51 PM org.glassfish.admin.mbeanserver.JMXStartupService shutdown
+ene 03, 2014 11:11:46 PM org.glassfish.admin.mbeanserver.JMXStartupService shutdown
 Información: JMXStartupService and JMXConnectors have been shut down.
-ene 03, 2014 4:31:51 PM org.glassfish.admin.mbeanserver.JMXStartupService shutdown
+ene 03, 2014 11:11:46 PM org.glassfish.admin.mbeanserver.JMXStartupService shutdown
 Información: JMXStartupService and JMXConnectors have been shut down.
-ene 03, 2014 4:31:51 PM com.sun.enterprise.v3.server.AppServerStartup stop
+ene 03, 2014 11:11:46 PM com.sun.enterprise.v3.server.AppServerStartup stop
 Información: Shutdown procedure finished
 ]]></system-err>
 </testsuite>
