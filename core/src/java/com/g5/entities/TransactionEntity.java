@@ -22,15 +22,20 @@ import javax.persistence.Version;
 @Entity(name = "Transaction")
 @Table(name = "TRANSACTION_")
 @NamedQueries({
-    @NamedQuery(name = "Transaction.findByAccount", query = "SELECT t FROM Transaction t WHERE t.account = :account"),
-    @NamedQuery(name = "Transaction.removeByAccount", query = "DELETE FROM Transaction t WHERE t.account = :account"),
-    @NamedQuery(name = "Transaction.findAll", query = "SELECT t FROM Transaction t"),
-    @NamedQuery(name = "Transaction.removeAll", query = "DELETE FROM Transaction")})
+    @NamedQuery(name = "Transaction.findByAccount", query =
+            "SELECT t FROM Transaction t WHERE t.account = :account"),
+    @NamedQuery(name = "Transaction.removeByAccount", query =
+            "DELETE FROM Transaction t WHERE t.account = :account"),
+    @NamedQuery(name = "Transaction.findAll", query =
+            "SELECT t FROM Transaction t"),
+    @NamedQuery(name = "Transaction.removeAll", query =
+            "DELETE FROM Transaction")})
 @TableGenerator(name = "TransactionSequence", initialValue = 1)
 public class TransactionEntity implements Transaction, Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE, generator = "TransactionSequence")
+    @GeneratedValue(strategy = GenerationType.TABLE, generator =
+            "TransactionSequence")
     private Long id;
     @ManyToOne(targetEntity = AccountEntity.class, optional = false)
     private Account account;
@@ -122,7 +127,8 @@ public class TransactionEntity implements Transaction, Serializable {
 
     @Override
     public String toString() {
-        return "TransactionEntity{" + "id=" + id + ", description=" + description + ", date=" + date + ", value=" + value + '}';
+        return "TransactionEntity{" + "id=" + id + ", description=" +
+                description + ", date=" + date + ", value=" + value + '}';
     }
 
 }

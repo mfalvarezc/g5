@@ -1,42 +1,31 @@
 package com.g5.webservices;
 
 import com.g5.dto.AccountDto;
-import com.g5.dto.DtoFactory;
-import com.g5.services.AccountServiceLocal;
-import javax.inject.Inject;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
+import javax.jws.WebResult;
 import javax.jws.WebService;
 import javax.xml.bind.annotation.XmlElement;
 
-@WebService(serviceName = "AccountService")
-public class AccountService {
-
-    @Inject
-    private AccountServiceLocal service;
-    @Inject
-    private DtoFactory dtoFactory;
-
-    @WebMethod(operationName = "createAccount")
-    @XmlElement(name = "account")
-    public AccountDto createAccount(@WebParam(name = "customerId") @XmlElement(required = true) long customerId) {
-        return dtoFactory.createAccountDto(service.create(customerId));
-    }
-
-    @WebMethod(operationName = "findAccountById")
-    @XmlElement(name = "account")
-    public AccountDto findAccountById(@WebParam(name = "id") @XmlElement(required = true) long id) {
-        return dtoFactory.createAccountDto(service.findById(id));
-    }
+@WebService(name = "AccountService")
+public interface AccountService {
 
     @WebMethod(operationName = "closeAccount")
-    public void closeAccount(@WebParam(name = "id") @XmlElement(required = true) long id) {
-        service.close(id);
-    }
+    void closeAccount(@WebParam(name = "accountId")
+            @XmlElement(required = true) final long accountId);
+
+    @WebMethod(operationName = "createAccount")
+    @WebResult(name = "account")
+    public AccountDto createAccount(@WebParam(name = "customerId")
+            @XmlElement(required = true) final long customerId);
+
+    @WebMethod(operationName = "findAccountById")
+    @WebResult(name = "account")
+    public AccountDto findAccountById(@WebParam(name = "accountId")
+            @XmlElement(required = true) final long accountId);
 
     @WebMethod(operationName = "reopenAccount")
-    public void reopenAccount(@WebParam(name = "id") @XmlElement(required = true) long id) {
-        service.reopen(id);
-    }
+    public void reopenAccount(@WebParam(name = "accountId")
+            @XmlElement(required = true) final long accountId);
 
 }

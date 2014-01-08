@@ -1,62 +1,46 @@
 package com.g5.webservices;
 
-import com.g5.dto.DtoFactory;
 import com.g5.dto.TransactionDto;
 import com.g5.exceptions.NotEnoughFundsException;
-import com.g5.services.TransactionServiceLocal;
-import com.g5.types.Transaction;
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.List;
-import javax.inject.Inject;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
+import javax.jws.WebResult;
 import javax.jws.WebService;
 import javax.xml.bind.annotation.XmlElement;
 
-@WebService(serviceName = "TransactionService")
-public class TransactionService {
-
-    @Inject
-    private TransactionServiceLocal service;
-    @Inject
-    private DtoFactory dtoFactory;
-
-    @WebMethod(operationName = "rollbackTransaction")
-    public void rollbackTransaction(@WebParam(name = "transactionId") @XmlElement(required = true) long transactionId) {
-        service.rollbackTransaction(transactionId);
-    }
+@WebService(name = "TransactionService")
+public interface TransactionService {
 
     @WebMethod(operationName = "deposit")
-    @XmlElement(name = "transaction")
-    public TransactionDto deposit(@WebParam(name = "accountId") @XmlElement(required = true) long accountId, @WebParam(name = "value") @XmlElement(required = true) BigDecimal value) {
-        return dtoFactory.createTransactionDto(service.deposit(accountId, value));
-    }
-
-    @WebMethod(operationName = "withdraw")
-    @XmlElement(name = "transaction")
-    public TransactionDto withdraw(@WebParam(name = "accountId") @XmlElement(required = true) long accountId, @WebParam(name = "value") @XmlElement(required = true) BigDecimal value) throws NotEnoughFundsException {
-        return dtoFactory.createTransactionDto(service.withdraw(accountId, value));
-    }
+    @WebResult(name = "transaction")
+    public TransactionDto deposit(@WebParam(name = "accountId")
+            @XmlElement(required = true) final long accountId, @WebParam(name =
+                    "value")
+            @XmlElement(required = true) final BigDecimal value);
 
     @WebMethod(operationName = "findTransactionById")
-    @XmlElement(name = "transaction")
-    public TransactionDto findTransactionById(@WebParam(name = "id") @XmlElement(required = true) long id) {
-        return dtoFactory.createTransactionDto(service.findById(id));
-    }
+    @WebResult(name = "transaction")
+    public TransactionDto findTransactionById(@WebParam(name = "transactionId")
+            @XmlElement(required = true) final long transactionId);
 
     @WebMethod(operationName = "findTransactionsByAccountId")
-    @XmlElement(name = "transaction")
-    public List<TransactionDto> findTransactionsByAccountId(@WebParam(name = "accountId") @XmlElement(required = true) long accountId) {
-        List<Transaction> transactions = service.findByAccountId(accountId);
+    @WebResult(name = "transaction")
+    public List<TransactionDto> findTransactionsByAccountId(@WebParam(name =
+            "accountId")
+            @XmlElement(required = true) final long accountId);
 
-        List<TransactionDto> transactionDtos = new ArrayList<>(transactions.size());
+    @WebMethod(operationName = "rollbackTransaction")
+    public void rollbackTransaction(@WebParam(name = "transactionId")
+            @XmlElement(required = true) final long transactionId);
 
-        for (Transaction transaction : transactions) {
-            transactionDtos.add(dtoFactory.createTransactionDto(transaction));
-        }
-
-        return transactionDtos;
-    }
+    @WebMethod(operationName = "withdraw")
+    @WebResult(name = "transaction")
+    public TransactionDto withdraw(@WebParam(name = "accountId")
+            @XmlElement(required = true) final long accountId, @WebParam(name =
+                    "value")
+            @XmlElement(required = true) final BigDecimal value) throws
+            NotEnoughFundsException;
 
 }

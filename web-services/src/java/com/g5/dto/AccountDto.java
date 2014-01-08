@@ -93,7 +93,9 @@ public class AccountDto {
 
     @Override
     public String toString() {
-        return "AccountDto{" + "id=" + id + ", customerId=" + customerId + ", creationDate=" + creationDate + ", balance=" + balance + ", open=" + open + '}';
+        return "AccountDto{" + "id=" + id + ", customerId=" + customerId +
+                ", creationDate=" + creationDate + ", balance=" + balance +
+                ", open=" + open + '}';
     }
 
 }

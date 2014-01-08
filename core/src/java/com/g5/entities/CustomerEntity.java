@@ -16,14 +16,16 @@ import javax.persistence.Version;
 @Entity(name = "Customer")
 @Table(name = "CUSTOMER")
 @NamedQueries({
-    @NamedQuery(name = "Customer.findByAccount", query = "SELECT a.customer FROM Account a WHERE a = :account"),
+    @NamedQuery(name = "Customer.findByAccount", query =
+            "SELECT a.customer FROM Account a WHERE a = :account"),
     @NamedQuery(name = "Customer.findAll", query = "SELECT c FROM Customer c"),
     @NamedQuery(name = "Customer.removeAll", query = "DELETE FROM Customer")})
 @TableGenerator(name = "CustomerSequence", initialValue = 1)
 public class CustomerEntity implements Customer, Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE, generator = "CustomerSequence")
+    @GeneratedValue(strategy = GenerationType.TABLE, generator =
+            "CustomerSequence")
     private Long id;
     @Version
     private int version;

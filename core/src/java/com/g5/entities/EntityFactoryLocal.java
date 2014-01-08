@@ -10,13 +10,13 @@ import javax.ejb.Local;
 @Local
 public interface EntityFactoryLocal {
 
-    public Customer createCustomer();
-    
-    public CustomerCredentials createCustomerCredentials();
-    
-    public Account createAccount();
-    
-    public Transaction createTransaction();
-    
-    public Payment createPayment();
+    Customer createCustomer();
+
+    CustomerCredentials createCustomerCredentials();
+
+    Account createAccount();
+
+    Transaction createTransaction();
+
+    Payment createPayment();
 }

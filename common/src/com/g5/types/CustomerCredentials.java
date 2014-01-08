@@ -18,8 +18,8 @@ public interface CustomerCredentials {
 
     public void setSalt(String salt);
 
-    public String getKey();
+    public String getHash();
 
-    public void setKey(String key);
+    public void setHash(String hash);
 
 }

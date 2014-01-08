@@ -9,6 +9,7 @@
 <!-- in the project's Project Properties dialog box.-->
 <project name="web-services" default="default" basedir=".">
     <description>Builds, tests, and runs the project web-services.</description>
+    <import file="nbproject/wsit-deploy.xml"/>
     <import file="nbproject/build-impl.xml"/>
     <!--
 

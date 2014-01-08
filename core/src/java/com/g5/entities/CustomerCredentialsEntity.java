@@ -19,23 +19,29 @@ import javax.persistence.Version;
 @Entity(name = "CustomerCredentials")
 @Table(name = "CUSTOMER_CREDENTIALS")
 @NamedQueries({
-    @NamedQuery(name = "CustomerCredentials.findByCustomer", query = "SELECT cc FROM CustomerCredentials cc WHERE cc.customer = :customer"),
-    @NamedQuery(name = "CustomerCredentials.findByUsernameAndKey", query = "SELECT cc FROM CustomerCredentials cc WHERE cc.username = :username AND cc.key = :key"),
-    @NamedQuery(name = "CustomerCredentials.findAll", query = "SELECT cc FROM CustomerCredentials cc"),
-    @NamedQuery(name = "CustomerCredentials.removeAll", query = "DELETE FROM CustomerCredentials")
+    @NamedQuery(name = "CustomerCredentials.findByCustomer", query =
+            "SELECT cc FROM CustomerCredentials cc WHERE cc.customer = :customer"),
+    @NamedQuery(name = "CustomerCredentials.findByUsername", query =
+            "SELECT cc FROM CustomerCredentials cc WHERE cc.username = :username"),
+    @NamedQuery(name = "CustomerCredentials.findAll", query =
+            "SELECT cc FROM CustomerCredentials cc"),
+    @NamedQuery(name = "CustomerCredentials.removeAll", query =
+            "DELETE FROM CustomerCredentials")
 })
 @TableGenerator(name = "CustomerCredentialsSequence", initialValue = 1)
-public class CustomerCredentialsEntity implements CustomerCredentials, Serializable {
+public class CustomerCredentialsEntity implements CustomerCredentials,
+        Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE, generator = "CustomerCredentialsSequence")
+    @GeneratedValue(strategy = GenerationType.TABLE, generator =
+            "CustomerCredentialsSequence")
     private Long id;
     @OneToOne(targetEntity = CustomerEntity.class, optional = false)
     private Customer customer;
     private String username;
     private String salt;
-    @Column(name = "KEY_")
-    private String key;
+    @Column(name = "HASH_")
+    private String hash;
     @Version
     private int version;
 
@@ -80,13 +86,13 @@ public class CustomerCredentialsEntity implements CustomerCredentials, Serializa
     }
 
     @Override
-    public String getKey() {
-        return key;
+    public String getHash() {
+        return hash;
     }
 
     @Override
-    public void setKey(String key) {
-        this.key = key;
+    public void setHash(String hash) {
+        this.hash = hash;
     }
 
     public int getVersion() {
@@ -118,7 +124,9 @@ public class CustomerCredentialsEntity implements CustomerCredentials, Serializa
 
     @Override
     public String toString() {
-        return "CustomerCredentialsEntity{" + "id=" + id + ", customer=" + customer + ", username=" + username + ", salt=" + salt + ", _key=" + key + '}';
+        return "CustomerCredentialsEntity{" + "id=" + id + ", username=" +
+                username + ", salt=" + salt + ", hash=" + hash + ", version=" +
+                version + '}';
     }
 
 }

@@ -21,7 +21,8 @@ import javax.persistence.Version;
 @Entity(name = "Payment")
 @Table(name = "PAYMENT")
 @NamedQueries({
-    @NamedQuery(name = "Payment.findByTransaction", query = "SELECT p FROM Payment p WHERE p.receiverTransaction = :transaction OR p.senderTransaction = :transaction"),
+    @NamedQuery(name = "Payment.findByTransaction", query =
+            "SELECT p FROM Payment p WHERE p.receiverTransaction = :transaction OR p.senderTransaction = :transaction"),
     @NamedQuery(name = "Payment.findAll", query = "SELECT p FROM Payment p"),
     @NamedQuery(name = "Payment.removeAll", query = "DELETE FROM Payment")
 })
@@ -29,7 +30,8 @@ import javax.persistence.Version;
 public class PaymentEntity implements Payment, Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE, generator = "PaymentSequence")
+    @GeneratedValue(strategy = GenerationType.TABLE, generator =
+            "PaymentSequence")
     private Long id;
     @OneToOne(targetEntity = AccountEntity.class, optional = false)
     private Account receiverAccount;
@@ -144,7 +146,8 @@ public class PaymentEntity implements Payment, Serializable {
 
     @Override
     public String toString() {
-        return "PaymentEntity{" + "id=" + id + ", description=" + description + ", value=" + value + '}';
+        return "PaymentEntity{" + "id=" + id + ", description=" + description +
+                ", value=" + value + '}';
     }
 
 }

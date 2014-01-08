@@ -6,6 +6,7 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.Objects;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -21,14 +22,16 @@ import javax.persistence.Version;
 @Entity(name = "Account")
 @Table(name = "ACCOUNT")
 @NamedQueries({
-    @NamedQuery(name = "Account.findByCustomer", query = "SELECT a FROM Account a WHERE a.customer = :customer"),
+    @NamedQuery(name = "Account.findByCustomer", query =
+            "SELECT a FROM Account a WHERE a.customer = :customer"),
     @NamedQuery(name = "Account.findAll", query = "SELECT a FROM Account a"),
     @NamedQuery(name = "Account.removeAll", query = "DELETE FROM Account")})
 @TableGenerator(name = "AccountSequence", initialValue = 1)
 public class AccountEntity implements Account, Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE, generator = "AccountSequence")
+    @GeneratedValue(strategy = GenerationType.TABLE, generator =
+            "AccountSequence")
     private Long id;
     @Temporal(javax.persistence.TemporalType.TIMESTAMP)
     private Date creationDate;
@@ -37,6 +40,7 @@ public class AccountEntity implements Account, Serializable {
     private Customer customer;
     @Version
     private int version;
+    @Column(name = "OPEN_")
     private boolean open = true;
 
     @Override
@@ -121,7 +125,8 @@ public class AccountEntity implements Account, Serializable {
 
     @Override
     public String toString() {
-        return "AccountEntity{" + "id=" + id + ", creationDate=" + creationDate + ", balance=" + balance + '}';
+        return "AccountEntity{" + "id=" + id + ", creationDate=" + creationDate +
+                ", balance=" + balance + '}';
     }
 
 }
