@@ -11,11 +11,11 @@ import javax.naming.NamingException;
 public class GetSaltAndHash {
 
     private final DatabaseHelper databaseHelper;
-    private final DatabaseDescriptor databaseDescriptor;
+    private final DatabaseDescription databaseDescriptor;
     private final String username;
 
     public GetSaltAndHash(DatabaseHelper databaseHelper,
-            DatabaseDescriptor databaseDescriptor, String username) {
+            DatabaseDescription databaseDescriptor, String username) {
         this.databaseHelper = databaseHelper;
         this.databaseDescriptor = databaseDescriptor;
         this.username = username;
