@@ -1,10 +1,10 @@
 package com.g5.businesslogic.customer;
 
-import com.g5.businesslogic.HashGeneratorLocal;
-import com.g5.businesslogic.SaltGeneratorLocal;
 import com.g5.businesslogic.constraints.Id;
 import com.g5.businesslogic.constraints.Password;
 import com.g5.entities.EntityClassHelperLocal;
+import com.g5.security.HashGenerator;
+import com.g5.security.SaltGenerator;
 import com.g5.types.Customer;
 import com.g5.types.CustomerCredentials;
 import javax.ejb.Stateless;
@@ -23,10 +23,6 @@ public class ChangeCustomerPassword implements ChangeCustomerPasswordLocal {
     private EntityClassHelperLocal entityClassHelper;
     @Inject
     private CustomerValidatorLocal customerValidator;
-    @Inject
-    private SaltGeneratorLocal saltGenerator;
-    @Inject
-    private HashGeneratorLocal hashGenerator;
 
     @Override
     @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
@@ -42,8 +38,8 @@ public class ChangeCustomerPassword implements ChangeCustomerPasswordLocal {
                         entityClassHelper.getCustomerCredentialsClass()).
                 setParameter("customer", customer).getSingleResult();
 
-        customerCredentials.setSalt(saltGenerator.generateSalt());
-        customerCredentials.setHash(hashGenerator.generateHash(password,
+        customerCredentials.setSalt(SaltGenerator.generateSalt());
+        customerCredentials.setHash(HashGenerator.generateHash(password,
                 customerCredentials.getSalt()));
     }
 
