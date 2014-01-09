@@ -8,20 +8,24 @@ public class DatabaseDescription {
     private final String saltColumn;
     private final String hashColumn;
     private final String groupUserTable;
+    private final String userFkColumn;
+    private final String groupFkColumn;
     private final String groupTable;
     private final String groupPkColumn;
     private final String groupNameColumn;
 
     public DatabaseDescription(String userTable, String userPkColumn,
             String usernameColumn, String saltColumn, String hashColumn,
-            String groupUserTable, String groupTable, String groupPkColumn,
-            String groupNameColumn) {
+            String groupUserTable, String userFkColumn, String groupFkColumn,
+            String groupTable, String groupPkColumn, String groupNameColumn) {
         this.userTable = userTable;
         this.userPkColumn = userPkColumn;
         this.usernameColumn = usernameColumn;
         this.saltColumn = saltColumn;
         this.hashColumn = hashColumn;
         this.groupUserTable = groupUserTable;
+        this.userFkColumn = userFkColumn;
+        this.groupFkColumn = groupFkColumn;
         this.groupTable = groupTable;
         this.groupPkColumn = groupPkColumn;
         this.groupNameColumn = groupNameColumn;
@@ -49,6 +53,14 @@ public class DatabaseDescription {
 
     public String getGroupUserTable() {
         return groupUserTable;
+    }
+
+    public String getUserFkColumn() {
+        return userFkColumn;
+    }
+
+    public String getGroupFkColumn() {
+        return groupFkColumn;
     }
 
     public String getGroupTable() {

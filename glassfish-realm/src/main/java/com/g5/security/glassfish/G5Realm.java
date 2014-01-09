@@ -24,6 +24,8 @@ public class G5Realm extends AppservRealm {
     private static final String SALT_COLUMN_PARAM = "salt-column";
     private static final String HASH_COLUMN_PARAM = "hash-column";
     private static final String GROUP_USER_TABLE_PARAM = "group-user-table";
+    private static final String USER_FK_COLUMN_PARAM = "user-fk-column";
+    private static final String GROUP_FK_COLUMN_PARAM = "group-fk-column";
     private static final String GROUP_TABLE_PARAM = "group-table";
     private static final String GROUP_PK_COLUMN_PARAM = "group-pk-column";
     private static final String GROUP_NAME_COLUMN_PARAM =
@@ -46,6 +48,10 @@ public class G5Realm extends AppservRealm {
         String hashColumn = getRequiredProperty(properties, HASH_COLUMN_PARAM);
         String groupUserTable = getRequiredProperty(properties,
                 GROUP_USER_TABLE_PARAM);
+        String userFkColumn = getRequiredProperty(properties,
+                USER_FK_COLUMN_PARAM);
+        String groupFkColumn = getRequiredProperty(properties,
+                GROUP_FK_COLUMN_PARAM);
         String groupTable = getRequiredProperty(properties, GROUP_TABLE_PARAM);
         String groupPkColumn = getRequiredProperty(properties,
                 GROUP_PK_COLUMN_PARAM);
@@ -59,7 +65,8 @@ public class G5Realm extends AppservRealm {
                 dbUser, dbPassword);
         databaseDescription = new DatabaseDescription(userTable, userPkColumn,
                 usernameColumn, saltColumn, hashColumn, groupUserTable,
-                groupTable, groupPkColumn, groupPkColumn);
+                userFkColumn, groupFkColumn, groupTable, groupPkColumn,
+                groupPkColumn);
     }
 
     private String getRequiredProperty(Properties properties,

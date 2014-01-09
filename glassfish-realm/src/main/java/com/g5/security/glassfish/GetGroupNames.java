@@ -57,14 +57,16 @@ public class GetGroupNames {
         final String groupNameColumn = databaseDescription.getGroupNameColumn();
         final String groupPkColumn = databaseDescription.getGroupPkColumn();
         final String groupUserTable = databaseDescription.getGroupUserTable();
+        final String userFkColumn = databaseDescription.getUserFkColumn();
+        final String groupFkColumn = databaseDescription.getGroupFkColumn();
         final String userTable = databaseDescription.getUserTable();
         final String userPkColumn = databaseDescription.getUserPkColumn();
         final String usernameColumn = databaseDescription.getUsernameColumn();
 
         return "SELECT g." + groupNameColumn + " FROM " + groupTable +
                 " g INNER JOIN " + groupUserTable + " gu ON g." + groupPkColumn +
-                " = gu." + groupPkColumn + " INNER JOIN " + userTable +
-                " u ON gu." + userPkColumn + " = u." + userPkColumn +
+                " = gu." + groupFkColumn + " INNER JOIN " + userTable +
+                " u ON gu." + userFkColumn + " = u." + userPkColumn +
                 " WHERE u." +
                 usernameColumn + " = ?";
     }
