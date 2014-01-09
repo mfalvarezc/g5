@@ -20,7 +20,7 @@ public class G5LoginModule extends AppservPasswordLoginModule {
         G5Realm g5Realm = (G5Realm) realm;
 
         DatabaseHelper databaseHelper = g5Realm.getDatabaseHelper();
-        DatabaseDescriptor databaseDescriptor = g5Realm.getDatabaseDescriptor();
+        DatabaseDescription databaseDescriptor = g5Realm.getDatabaseDescriptor();
 
         SaltAndHash saltAndHash =
                 (new GetSaltAndHash(databaseHelper, databaseDescriptor,

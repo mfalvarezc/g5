@@ -13,13 +13,13 @@ import javax.naming.NamingException;
 public class GetGroupNames {
 
     private final DatabaseHelper databaseHelper;
-    private final DatabaseDescriptor databaseDescriptor;
+    private final DatabaseDescription databaseDescription;
     private final String username;
 
     public GetGroupNames(DatabaseHelper connectionFactory,
-            DatabaseDescriptor databaseDescriptor, String username) {
+            DatabaseDescription databaseDescription, String username) {
         this.databaseHelper = connectionFactory;
-        this.databaseDescriptor = databaseDescriptor;
+        this.databaseDescription = databaseDescription;
         this.username = username;
     }
 
@@ -53,11 +53,19 @@ public class GetGroupNames {
     }
 
     private String getQuery() {
-        final String groupColumn = databaseDescriptor.getGroupColumn();
-        final String groupTable = databaseDescriptor.getGroupTable();
-        final String usernameColumn = databaseDescriptor.getUsernameColumn();
+        final String groupTable = databaseDescription.getGroupTable();
+        final String groupNameColumn = databaseDescription.getGroupNameColumn();
+        final String groupPkColumn = databaseDescription.getGroupPkColumn();
+        final String groupUserTable = databaseDescription.getGroupUserTable();
+        final String userTable = databaseDescription.getUserTable();
+        final String userPkColumn = databaseDescription.getUserPkColumn();
+        final String usernameColumn = databaseDescription.getUsernameColumn();
 
-        return "SELECT " + groupColumn + " FROM " + groupTable + " WHERE " +
+        return "SELECT g." + groupNameColumn + " FROM " + groupTable +
+                " g INNER JOIN " + groupUserTable + " gu ON g." + groupPkColumn +
+                " = gu." + groupPkColumn + " INNER JOIN " + userTable +
+                " u ON gu." + userPkColumn + " = u." + userPkColumn +
+                " WHERE u." +
                 usernameColumn + " = ?";
     }
 
