@@ -2,7 +2,8 @@ package com.g5.entities;
 
 import com.g5.types.Account;
 import com.g5.types.Customer;
-import com.g5.types.CustomerCredentials;
+import com.g5.types.Group;
+import com.g5.types.User;
 import com.g5.types.Payment;
 import com.g5.types.Transaction;
 import javax.ejb.Local;
@@ -12,7 +13,9 @@ public interface EntityFactoryLocal {
 
     Customer createCustomer();
 
-    CustomerCredentials createCustomerCredentials();
+    User createUser();
+
+    Group createGroup();
 
     Account createAccount();
 

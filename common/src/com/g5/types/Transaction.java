@@ -5,24 +5,24 @@ import java.util.Date;
 
 public interface Transaction {
 
-    public Long getId();
+    Long getId();
 
-    public void setId(Long id);
+    void setId(Long id);
 
-    public Account getAccount();
+    Account getAccount();
 
-    public void setAccount(Account account);
+    void setAccount(Account account);
 
-    public String getDescription();
+    String getDescription();
 
-    public void setDescription(String description);
+    void setDescription(String description);
 
-    public Date getDate();
+    Date getDate();
 
-    public void setDate(Date date);
+    void setDate(Date date);
 
-    public BigDecimal getValue();
+    BigDecimal getValue();
 
-    public void setValue(BigDecimal value);
+    void setValue(BigDecimal value);
 
 }

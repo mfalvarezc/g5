@@ -5,23 +5,23 @@ import java.util.Date;
 
 public interface Account {
 
-    public Long getId();
+    Long getId();
 
-    public void setId(Long id);
+    void setId(Long id);
 
-    public Date getCreationDate();
+    Date getCreationDate();
 
-    public void setCreationDate(Date creationDate);
+    void setCreationDate(Date creationDate);
 
-    public BigDecimal getBalance();
+    BigDecimal getBalance();
 
-    public void setBalance(BigDecimal balance);
+    void setBalance(BigDecimal balance);
 
-    public Customer getCustomer();
+    Customer getCustomer();
 
-    public void setCustomer(Customer customer);
+    void setCustomer(Customer customer);
 
-    public boolean isOpen();
+    boolean isOpen();
 
-    public void setOpen(boolean open);
+    void setOpen(boolean open);
 }

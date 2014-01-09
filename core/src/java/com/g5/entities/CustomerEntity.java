@@ -1,14 +1,17 @@
 package com.g5.entities;
 
 import com.g5.types.Customer;
+import com.g5.types.User;
 import java.io.Serializable;
 import java.util.Objects;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.TableGenerator;
 import javax.persistence.Version;
@@ -27,6 +30,8 @@ public class CustomerEntity implements Customer, Serializable {
     @GeneratedValue(strategy = GenerationType.TABLE, generator =
             "CustomerSequence")
     private Long id;
+    @OneToOne(fetch = FetchType.LAZY, targetEntity = UserEntity.class)
+    private User user;
     @Version
     private int version;
     private boolean enabled = true;
@@ -39,6 +44,16 @@ public class CustomerEntity implements Customer, Serializable {
     @Override
     public void setId(Long id) {
         this.id = id;
+    }
+
+    @Override
+    public User getUser() {
+        return user;
+    }
+
+    @Override
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public int getVersion() {

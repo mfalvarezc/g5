@@ -1,13 +1,16 @@
 package com.g5.businesslogic;
 
+import com.g5.businesslogic.groups.GroupName;
 import com.g5.entities.AccountEntity;
-import com.g5.entities.CustomerCredentialsEntity;
+import com.g5.entities.UserEntity;
 import com.g5.entities.CustomerEntity;
+import com.g5.entities.GroupEntity;
 import com.g5.entities.PaymentEntity;
 import com.g5.entities.TransactionEntity;
 import com.g5.types.Account;
 import com.g5.types.Customer;
-import com.g5.types.CustomerCredentials;
+import com.g5.types.Group;
+import com.g5.types.User;
 import com.g5.types.Payment;
 import com.g5.types.Transaction;
 import java.math.BigDecimal;
@@ -19,20 +22,21 @@ import javax.persistence.EntityManager;
 public final class TestData {
 
     private final static String[] ENTITY_NAMES = {"Payment", "Transaction",
-        "CustomerCredentials", "Account", "Customer"};
+        "Account", "Customer", "User", "Group"};
 
-    private List<Customer> customers;
-    private List<CustomerCredentials> customerCredentials;
-    private List<Account> accounts;
-    private List<Transaction> transactions;
-    private List<Payment> payments;
+    private final List<Group> groups;
+    private final List<User> users;
+    private final List<Customer> customers;
+    private final List<Account> accounts;
+    private final List<Transaction> transactions;
+    private final List<Payment> payments;
 
-    public TestData(List<Customer> customers,
-            List<CustomerCredentials> customerCredentials,
-            List<Account> accounts, List<Transaction> transactions,
-            List<Payment> payments) {
+    public TestData(List<Group> groups, List<User> users,
+            List<Customer> customers, List<Account> accounts,
+            List<Transaction> transactions, List<Payment> payments) {
+        this.groups = groups;
+        this.users = users;
         this.customers = customers;
-        this.customerCredentials = customerCredentials;
         this.accounts = accounts;
         this.transactions = transactions;
         this.payments = payments;
@@ -58,20 +62,26 @@ public final class TestData {
     }
 
     private static TestData insertTestData(EntityManager entityManager) {
-        List<Customer> customerList = new ArrayList<>(1);
+        List<Group> groupList = new ArrayList<>(1);
 
+        Group customerGroup = new GroupEntity();
+        customerGroup.setName(GroupName.CUSTOMERS.toString());
+        entityManager.persist(customerGroup);
+        groupList.add(customerGroup);
+
+        List<User> userList = new ArrayList<>(1);
+        User customerUser = new UserEntity();
+        customerUser.setSalt("salt");
+        customerUser.setHash("hash");
+        customerUser.getGroups().add(customerGroup);
+        entityManager.persist(customerUser);
+        userList.add(customerUser);
+
+        List<Customer> customerList = new ArrayList<>(1);
         Customer customer = new CustomerEntity();
+        customer.setUser(customerUser);
         entityManager.persist(customer);
         customerList.add(customer);
-
-        List<CustomerCredentials> customerCredentialsList = new ArrayList<>(1);
-        CustomerCredentials customerCredentials =
-                new CustomerCredentialsEntity();
-        customerCredentials.setCustomer(customer);
-        customerCredentials.setSalt("salt");
-        customerCredentials.setHash("hash");
-        entityManager.persist(customerCredentials);
-        customerCredentialsList.add(customerCredentials);
 
         List<Account> accountList = new ArrayList<>(2);
         Account account1 = new AccountEntity();
@@ -131,49 +141,32 @@ public final class TestData {
         entityManager.persist(payment2);
         paymentList.add(payment2);
 
-        return new TestData(customerList, customerCredentialsList, accountList,
+        return new TestData(groupList, userList, customerList, accountList,
                 transactionList, paymentList);
+    }
+
+    public List<Group> getGroups() {
+        return groups;
+    }
+
+    public List<User> getUsers() {
+        return users;
     }
 
     public List<Customer> getCustomers() {
         return customers;
     }
 
-    public void setCustomers(List<Customer> customers) {
-        this.customers = customers;
-    }
-
-    public List<CustomerCredentials> getCustomerCredentials() {
-        return customerCredentials;
-    }
-
-    public void setCustomerCredentials(
-            List<CustomerCredentials> customerCredentials) {
-        this.customerCredentials = customerCredentials;
-    }
-
     public List<Account> getAccounts() {
         return accounts;
-    }
-
-    public void setAccounts(List<Account> accounts) {
-        this.accounts = accounts;
     }
 
     public List<Transaction> getTransactions() {
         return transactions;
     }
 
-    public void setTransactions(List<Transaction> transactions) {
-        this.transactions = transactions;
-    }
-
     public List<Payment> getPayments() {
         return payments;
-    }
-
-    public void setPayments(List<Payment> payments) {
-        this.payments = payments;
     }
 
 }

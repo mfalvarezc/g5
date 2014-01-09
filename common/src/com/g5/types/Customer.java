@@ -2,12 +2,16 @@ package com.g5.types;
 
 public interface Customer {
 
-    public Long getId();
+    Long getId();
 
-    public void setId(Long id);
+    void setId(Long id);
 
-    public boolean isEnabled();
+    User getUser();
 
-    public void setEnabled(boolean enabled);
+    void setUser(User user);
+
+    boolean isEnabled();
+
+    void setEnabled(boolean enabled);
 
 }

@@ -1,11 +1,11 @@
 package com.g5.businesslogic;
 
 import com.g5.entities.AccountEntity;
-import com.g5.entities.CustomerCredentialsEntity;
+import com.g5.entities.UserEntity;
 import com.g5.entities.CustomerEntity;
 import com.g5.types.Account;
 import com.g5.types.Customer;
-import com.g5.types.CustomerCredentials;
+import com.g5.types.User;
 import java.util.List;
 import javax.ejb.embeddable.EJBContainer;
 import javax.naming.Context;
@@ -67,24 +67,23 @@ public class CustomerFacadeTest {
         System.out.println("changeCustomerPassword");
 
         Customer customer = testData.getCustomers().get(0);
-        CustomerCredentials customerCredentials = testData.
-                getCustomerCredentials().get(0);
+        User user = testData.getUsers().get(0);
 
-        String username = customerCredentials.getUsername();
-        String salt = customerCredentials.getSalt();
-        String hash = customerCredentials.getHash();
+        String username = user.getUsername();
+        String salt = user.getSalt();
+        String hash = user.getHash();
 
         CustomerFacadeLocal facade = (CustomerFacadeLocal) getCustomerFacade();
 
         facade.changeCustomerPassword(customer.getId(), "MyN3wPa$$word");
 
-        entityManager.refresh(customerCredentials);
+        entityManager.refresh(user);
 
-        assertEquals(username, customerCredentials.getUsername());
-        assertFalse(salt.equals(customerCredentials.getSalt()));
-        assertEquals(32, customerCredentials.getSalt().length());
-        assertFalse(hash.equals(customerCredentials.getHash()));
-        assertEquals(32, customerCredentials.getHash().length());
+        assertEquals(username, user.getUsername());
+        assertFalse(salt.equals(user.getSalt()));
+        assertEquals(32, user.getSalt().length());
+        assertFalse(hash.equals(user.getHash()));
+        assertEquals(32, user.getHash().length());
     }
 
     @Test
@@ -110,17 +109,14 @@ public class CustomerFacadeTest {
 
         assertEquals(customer.getId(), result.getId());
 
-        CustomerCredentials customerCredentials = entityManager.
-                createNamedQuery("CustomerCredentials.findByCustomer",
-                        CustomerCredentialsEntity.class).
-                setParameter("customer", result).getSingleResult();
+        User user = customer.getUser();
 
-        assertTrue(customerCredentials.getId() >= 1);
-        assertEquals(username, customerCredentials.getUsername());
-        assertNotNull(customerCredentials.getSalt());
-        assertEquals(32, customerCredentials.getSalt().length());
-        assertNotNull(customerCredentials.getHash());
-        assertEquals(32, customerCredentials.getHash().length());
+        assertTrue(user.getId() >= 1);
+        assertEquals(username, user.getUsername());
+        assertNotNull(user.getSalt());
+        assertEquals(32, user.getSalt().length());
+        assertNotNull(user.getHash());
+        assertEquals(32, user.getHash().length());
     }
 
     @Test

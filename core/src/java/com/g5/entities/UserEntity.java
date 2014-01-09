@@ -1,43 +1,48 @@
 package com.g5.entities;
 
-import com.g5.types.Customer;
-import com.g5.types.CustomerCredentials;
+import com.g5.types.Group;
+import com.g5.types.User;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.TableGenerator;
 import javax.persistence.Version;
 
-@Entity(name = "CustomerCredentials")
-@Table(name = "CUSTOMER_CREDENTIALS")
+@Entity(name = "User")
+@Table(name = "USER_")
 @NamedQueries({
-    @NamedQuery(name = "CustomerCredentials.findByCustomer", query =
-            "SELECT cc FROM CustomerCredentials cc WHERE cc.customer = :customer"),
-    @NamedQuery(name = "CustomerCredentials.findByUsername", query =
-            "SELECT cc FROM CustomerCredentials cc WHERE cc.username = :username"),
-    @NamedQuery(name = "CustomerCredentials.findAll", query =
-            "SELECT cc FROM CustomerCredentials cc"),
-    @NamedQuery(name = "CustomerCredentials.removeAll", query =
-            "DELETE FROM CustomerCredentials")
+    @NamedQuery(name = "User.findByUsername", query =
+            "SELECT u FROM User u WHERE u.username = :username"),
+    @NamedQuery(name = "User.findAll", query =
+            "SELECT u FROM User u"),
+    @NamedQuery(name = "User.removeAll", query =
+            "DELETE FROM User")
 })
-@TableGenerator(name = "CustomerCredentialsSequence", initialValue = 1)
-public class CustomerCredentialsEntity implements CustomerCredentials,
+@TableGenerator(name = "UserSequence", initialValue = 1)
+public class UserEntity implements User,
         Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.TABLE, generator =
-            "CustomerCredentialsSequence")
+            "UserSequence")
     private Long id;
-    @OneToOne(targetEntity = CustomerEntity.class, optional = false)
-    private Customer customer;
+    @ManyToMany(targetEntity = GroupEntity.class)
+    @JoinTable(name = "GROUP_USER", joinColumns = {
+        @JoinColumn(name = "USER_ID")}, inverseJoinColumns = {
+        @JoinColumn(name = "GROUP_ID")})
+    private List<Group> groups = new ArrayList<>();
     private String username;
     private String salt;
     @Column(name = "HASH_")
@@ -56,13 +61,13 @@ public class CustomerCredentialsEntity implements CustomerCredentials,
     }
 
     @Override
-    public Customer getCustomer() {
-        return customer;
+    public List<Group> getGroups() {
+        return groups;
     }
 
     @Override
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
+    public void setGroups(List<Group> groups) {
+        this.groups = groups;
     }
 
     @Override
@@ -105,9 +110,9 @@ public class CustomerCredentialsEntity implements CustomerCredentials,
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 59 * hash + Objects.hashCode(this.id);
-        return hash;
+        int hash_ = 7;
+        hash_ = 59 * hash_ + Objects.hashCode(this.id);
+        return hash_;
     }
 
     @Override
@@ -118,13 +123,13 @@ public class CustomerCredentialsEntity implements CustomerCredentials,
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final CustomerCredentialsEntity other = (CustomerCredentialsEntity) obj;
+        final UserEntity other = (UserEntity) obj;
         return Objects.equals(this.id, other.id);
     }
 
     @Override
     public String toString() {
-        return "CustomerCredentialsEntity{" + "id=" + id + ", username=" +
+        return "UserEntity{" + "id=" + id + ", username=" +
                 username + ", salt=" + salt + ", hash=" + hash + ", version=" +
                 version + '}';
     }

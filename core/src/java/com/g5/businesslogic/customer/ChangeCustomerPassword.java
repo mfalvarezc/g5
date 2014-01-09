@@ -6,7 +6,7 @@ import com.g5.entities.EntityClassHelperLocal;
 import com.g5.security.HashGenerator;
 import com.g5.security.SaltGenerator;
 import com.g5.types.Customer;
-import com.g5.types.CustomerCredentials;
+import com.g5.types.User;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
 import javax.ejb.TransactionAttributeType;
@@ -33,14 +33,11 @@ public class ChangeCustomerPassword implements ChangeCustomerPasswordLocal {
         customerValidator.exists(customer);
         customerValidator.isEnabled(customer);
 
-        CustomerCredentials customerCredentials = entityManager.
-                createNamedQuery("CustomerCredentials.findByCustomer",
-                        entityClassHelper.getCustomerCredentialsClass()).
-                setParameter("customer", customer).getSingleResult();
+        User user = customer.getUser();
 
-        customerCredentials.setSalt(SaltGenerator.generateSalt());
-        customerCredentials.setHash(HashGenerator.generateHash(password,
-                customerCredentials.getSalt()));
+        user.setSalt(SaltGenerator.generateSalt());
+        user.setHash(HashGenerator.generateHash(password,
+                user.getSalt()));
     }
 
 }

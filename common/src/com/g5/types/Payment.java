@@ -4,32 +4,32 @@ import java.math.BigDecimal;
 
 public interface Payment {
 
-    public Long getId();
+    Long getId();
 
-    public void setId(Long id);
+    void setId(Long id);
 
-    public Account getReceiverAccount();
+    Account getReceiverAccount();
 
-    public void setReceiverAccount(Account receiverAccount);
+    void setReceiverAccount(Account receiverAccount);
 
-    public Transaction getReceiverTransaction();
+    Transaction getReceiverTransaction();
 
-    public void setReceiverTransaction(Transaction receiverTransaction);
+    void setReceiverTransaction(Transaction receiverTransaction);
 
-    public Transaction getSenderTransaction();
+    Transaction getSenderTransaction();
 
-    public void setSenderTransaction(Transaction senderTransaction);
+    void setSenderTransaction(Transaction senderTransaction);
 
-    public Account getSenderAccount();
+    Account getSenderAccount();
 
-    public void setSenderAccount(Account senderAccount);
+    void setSenderAccount(Account senderAccount);
 
-    public String getDescription();
+    String getDescription();
 
-    public void setDescription(String description);
+    void setDescription(String description);
 
-    public BigDecimal getValue();
+    BigDecimal getValue();
 
-    public void setValue(BigDecimal value);
+    void setValue(BigDecimal value);
 
 }
