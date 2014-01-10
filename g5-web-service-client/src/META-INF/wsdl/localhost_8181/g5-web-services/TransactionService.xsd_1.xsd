@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.3 (tags/2.3-7528; 2013-04-29T19:34:10+0000) JAXWS-RI/2.2.8 JAXWS/2.2 svn-revision#unknown. --><xs:schema xmlns:tns="http://webservices.g5.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://webservices.g5.com/">
+
+    <xs:element name="NotEnoughFundsException" type="tns:NotEnoughFundsException"/>
+
+    <xs:element name="deposit" type="tns:deposit"/>
+
+    <xs:element name="depositResponse" type="tns:depositResponse"/>
+
+    <xs:element name="findTransactionById" type="tns:findTransactionById"/>
+
+    <xs:element name="findTransactionByIdResponse" type="tns:findTransactionByIdResponse"/>
+
+    <xs:element name="findTransactionsByAccountId" type="tns:findTransactionsByAccountId"/>
+
+    <xs:element name="findTransactionsByAccountIdResponse" type="tns:findTransactionsByAccountIdResponse"/>
+
+    <xs:element name="rollbackTransaction" type="tns:rollbackTransaction"/>
+
+    <xs:element name="rollbackTransactionResponse" type="tns:rollbackTransactionResponse"/>
+
+    <xs:element name="withdraw" type="tns:withdraw"/>
+
+    <xs:element name="withdrawResponse" type="tns:withdrawResponse"/>
+
+    <xs:complexType name="findTransactionsByAccountId">
+        <xs:sequence>
+            <xs:element name="accountId" type="xs:long"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="findTransactionsByAccountIdResponse">
+        <xs:sequence>
+            <xs:element name="transaction" type="tns:transaction" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="transaction">
+        <xs:sequence>
+            <xs:element name="accountId" type="xs:long"/>
+            <xs:element name="date" type="xs:dateTime" minOccurs="0"/>
+            <xs:element name="description" type="xs:string" minOccurs="0"/>
+            <xs:element name="id" type="xs:long"/>
+            <xs:element name="value" type="xs:decimal" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="deposit">
+        <xs:sequence>
+            <xs:element name="accountId" type="xs:long"/>
+            <xs:element name="value" type="xs:decimal"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="depositResponse">
+        <xs:sequence>
+            <xs:element name="transaction" type="tns:transaction" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="findTransactionById">
+        <xs:sequence>
+            <xs:element name="transactionId" type="xs:long"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="findTransactionByIdResponse">
+        <xs:sequence>
+            <xs:element name="transaction" type="tns:transaction" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="withdraw">
+        <xs:sequence>
+            <xs:element name="accountId" type="xs:long"/>
+            <xs:element name="value" type="xs:decimal"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="withdrawResponse">
+        <xs:sequence>
+            <xs:element name="transaction" type="tns:transaction" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="NotEnoughFundsException">
+        <xs:sequence>
+            <xs:element name="message" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="rollbackTransaction">
+        <xs:sequence>
+            <xs:element name="transactionId" type="xs:long"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="rollbackTransactionResponse">
+        <xs:sequence/>
+    </xs:complexType>
+</xs:schema>

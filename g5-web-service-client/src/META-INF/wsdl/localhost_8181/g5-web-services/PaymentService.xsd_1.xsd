@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.3 (tags/2.3-7528; 2013-04-29T19:34:10+0000) JAXWS-RI/2.2.8 JAXWS/2.2 svn-revision#unknown. --><xs:schema xmlns:tns="http://webservices.g5.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://webservices.g5.com/">
+
+    <xs:element name="NotEnoughFundsException" type="tns:NotEnoughFundsException"/>
+
+    <xs:element name="approvePayment" type="tns:approvePayment"/>
+
+    <xs:element name="approvePaymentResponse" type="tns:approvePaymentResponse"/>
+
+    <xs:element name="requestPayment" type="tns:requestPayment"/>
+
+    <xs:element name="requestPaymentResponse" type="tns:requestPaymentResponse"/>
+
+    <xs:element name="rollbackPayment" type="tns:rollbackPayment"/>
+
+    <xs:element name="rollbackPaymentResponse" type="tns:rollbackPaymentResponse"/>
+
+    <xs:complexType name="rollbackPayment">
+        <xs:sequence>
+            <xs:element name="paymentId" type="xs:long"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="rollbackPaymentResponse">
+        <xs:sequence/>
+    </xs:complexType>
+
+    <xs:complexType name="approvePayment">
+        <xs:sequence>
+            <xs:element name="paymentId" type="xs:long"/>
+            <xs:element name="senderAccountId" type="xs:long"/>
+            <xs:element name="value" type="xs:decimal"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="approvePaymentResponse">
+        <xs:sequence>
+            <xs:element name="transaction" type="tns:transaction" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="transaction">
+        <xs:sequence>
+            <xs:element name="accountId" type="xs:long"/>
+            <xs:element name="date" type="xs:dateTime" minOccurs="0"/>
+            <xs:element name="description" type="xs:string" minOccurs="0"/>
+            <xs:element name="id" type="xs:long"/>
+            <xs:element name="value" type="xs:decimal" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="NotEnoughFundsException">
+        <xs:sequence>
+            <xs:element name="message" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="requestPayment">
+        <xs:sequence>
+            <xs:element name="receiverAccountId" type="xs:long"/>
+            <xs:element name="description" type="xs:string"/>
+            <xs:element name="value" type="xs:decimal"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="requestPaymentResponse">
+        <xs:sequence>
+            <xs:element name="paymentId" type="xs:long"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

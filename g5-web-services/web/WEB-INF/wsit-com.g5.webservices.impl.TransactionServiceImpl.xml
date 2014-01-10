@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions 
+    xmlns="http://schemas.xmlsoap.org/wsdl/" 
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="TransactionServiceImplService" targetNamespace="http://impl.webservices.g5.com/" xmlns:tns="http://impl.webservices.g5.com/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:fi="http://java.sun.com/xml/ns/wsit/2006/09/policy/fastinfoset/service" xmlns:tcp="http://java.sun.com/xml/ns/wsit/2006/09/policy/soaptcp/service" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:sc="http://schemas.sun.com/2006/03/wss/server" xmlns:wspp="http://java.sun.com/xml/ns/wsit/policy" 
+>
+    <message name="rollbackTransaction"/>
+    <message name="rollbackTransactionResponse"/>
+    <message name="deposit"/>
+    <message name="depositResponse"/>
+    <message name="withdraw"/>
+    <message name="withdrawResponse"/>
+    <message name="NotEnoughFundsException"/>
+    <message name="findTransactionById"/>
+    <message name="findTransactionByIdResponse"/>
+    <message name="findTransactionsByAccountId"/>
+    <message name="findTransactionsByAccountIdResponse"/>
+    <portType name="TransactionServiceImpl">
+        <operation name="rollbackTransaction">
+            <input message="tns:rollbackTransaction"/>
+            <output message="tns:rollbackTransactionResponse"/>
+        </operation>
+        <operation name="deposit">
+            <input message="tns:deposit"/>
+            <output message="tns:depositResponse"/>
+        </operation>
+        <operation name="withdraw">
+            <input message="tns:withdraw"/>
+            <output message="tns:withdrawResponse"/>
+            <fault name="NotEnoughFundsException" message="tns:NotEnoughFundsException"/>
+        </operation>
+        <operation name="findTransactionById">
+            <input message="tns:findTransactionById"/>
+            <output message="tns:findTransactionByIdResponse"/>
+        </operation>
+        <operation name="findTransactionsByAccountId">
+            <input message="tns:findTransactionsByAccountId"/>
+            <output message="tns:findTransactionsByAccountIdResponse"/>
+        </operation>
+    </portType>
+    <binding name="TransactionServiceImplPortBinding" type="tns:TransactionServiceImpl">
+        <wsp:PolicyReference URI="#TransactionServiceImplPortBindingPolicy"/>
+        <operation name="rollbackTransaction">
+            <input>
+                <wsp:PolicyReference URI="#InputPolicy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#OutputPolicy"/>
+            </output>
+        </operation>
+        <operation name="deposit">
+            <input>
+                <wsp:PolicyReference URI="#InputPolicy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#OutputPolicy"/>
+            </output>
+        </operation>
+        <operation name="withdraw">
+            <input>
+                <wsp:PolicyReference URI="#InputPolicy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#OutputPolicy"/>
+            </output>
+            <fault name="NotEnoughFundsException"/>
+        </operation>
+        <operation name="findTransactionById">
+            <input>
+                <wsp:PolicyReference URI="#InputPolicy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#OutputPolicy"/>
+            </output>
+        </operation>
+        <operation name="findTransactionsByAccountId">
+            <input>
+                <wsp:PolicyReference URI="#InputPolicy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#OutputPolicy"/>
+            </output>
+        </operation>
+    </binding>
+    <service name="TransactionServiceImplService">
+        <port name="TransactionServiceImplPort" binding="tns:TransactionServiceImplPortBinding"/>
+    </service>
+    <wsp:Policy wsu:Id="TransactionServiceImplPortBindingPolicy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <wsam:Addressing wsp:Optional="false"/>
+                <sp:SymmetricBinding>
+                    <wsp:Policy>
+                        <sp:ProtectionToken>
+                            <wsp:Policy>
+                                <sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never">
+                                    <wsp:Policy>
+                                        <sp:WssX509V3Token10/>
+                                        <sp:RequireIssuerSerialReference/>
+                                    </wsp:Policy>
+                                </sp:X509Token>
+                            </wsp:Policy>
+                        </sp:ProtectionToken>
+                        <sp:Layout>
+                            <wsp:Policy>
+                                <sp:Strict/>
+                            </wsp:Policy>
+                        </sp:Layout>
+                        <sp:IncludeTimestamp/>
+                        <sp:OnlySignEntireHeadersAndBody/>
+                        <sp:AlgorithmSuite>
+                            <wsp:Policy>
+                                <sp:Basic128/>
+                            </wsp:Policy>
+                        </sp:AlgorithmSuite>
+                    </wsp:Policy>
+                </sp:SymmetricBinding>
+                <sp:Wss11>
+                    <wsp:Policy>
+                        <sp:MustSupportRefIssuerSerial/>
+                        <sp:MustSupportRefThumbprint/>
+                        <sp:MustSupportRefEncryptedKey/>
+                    </wsp:Policy>
+                </sp:Wss11>
+                <sp:SignedEncryptedSupportingTokens>
+                    <wsp:Policy>
+                        <sp:UsernameToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient">
+                            <wsp:Policy>
+                                <sp:WssUsernameToken10/>
+                            </wsp:Policy>
+                        </sp:UsernameToken>
+                    </wsp:Policy>
+                </sp:SignedEncryptedSupportingTokens>
+                <sc:KeyStore wspp:visibility="private" location="/home/healarconr/glassfish4/glassfish/domains/domain1/config/keystore.jks" type="JKS" storepass="changeit" alias="xws-security-server"/>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="InputPolicy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                    <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="AckRequested" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="SequenceAcknowledgement" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="Sequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="CreateSequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="OutputPolicy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                    <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="AckRequested" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="SequenceAcknowledgement" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="Sequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="CreateSequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+</definitions>

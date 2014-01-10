@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="https://localhost:8181/g5-web-services/CustomerService?wsdl" uri="wsdl/localhost_8181/g5-web-services/CustomerService.wsdl"/>
+    <system systemId="https://localhost:8181/g5-web-services/CustomerService?wsdl=1" uri="wsdl/localhost_8181/g5-web-services/CustomerService.wsdl_1.wsdl"/>
+    <system systemId="https://localhost:8181/g5-web-services/CustomerService?xsd=1" uri="wsdl/localhost_8181/g5-web-services/CustomerService.xsd_1.xsd"/>
+    <system systemId="https://localhost:8181/g5-web-services/AccountService?wsdl" uri="wsdl/localhost_8181/g5-web-services/AccountService.wsdl"/>
+    <system systemId="https://localhost:8181/g5-web-services/AccountService?wsdl=1" uri="wsdl/localhost_8181/g5-web-services/AccountService.wsdl_1.wsdl"/>
+    <system systemId="https://localhost:8181/g5-web-services/AccountService?xsd=1" uri="wsdl/localhost_8181/g5-web-services/AccountService.xsd_1.xsd"/>
+    <system systemId="https://localhost:8181/g5-web-services/TransactionService?wsdl" uri="wsdl/localhost_8181/g5-web-services/TransactionService.wsdl"/>
+    <system systemId="https://localhost:8181/g5-web-services/TransactionService?wsdl=1" uri="wsdl/localhost_8181/g5-web-services/TransactionService.wsdl_1.wsdl"/>
+    <system systemId="https://localhost:8181/g5-web-services/TransactionService?xsd=1" uri="wsdl/localhost_8181/g5-web-services/TransactionService.xsd_1.xsd"/>
+    <system systemId="https://localhost:8181/g5-web-services/PaymentService?wsdl" uri="wsdl/localhost_8181/g5-web-services/PaymentService.wsdl"/>
+    <system systemId="https://localhost:8181/g5-web-services/PaymentService?wsdl=1" uri="wsdl/localhost_8181/g5-web-services/PaymentService.wsdl_1.wsdl"/>
+    <system systemId="https://localhost:8181/g5-web-services/PaymentService?xsd=1" uri="wsdl/localhost_8181/g5-web-services/PaymentService.xsd_1.xsd"/>
+</catalog>

@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.3 (tags/2.3-7528; 2013-04-29T19:34:10+0000) JAXWS-RI/2.2.8 JAXWS/2.2 svn-revision#unknown. --><xs:schema xmlns:tns="http://webservices.g5.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://webservices.g5.com/">
+
+    <xs:element name="changeCustomerPassword" type="tns:changeCustomerPassword"/>
+
+    <xs:element name="changeCustomerPasswordResponse" type="tns:changeCustomerPasswordResponse"/>
+
+    <xs:element name="createCustomer" type="tns:createCustomer"/>
+
+    <xs:element name="createCustomerResponse" type="tns:createCustomerResponse"/>
+
+    <xs:element name="disableCustomer" type="tns:disableCustomer"/>
+
+    <xs:element name="disableCustomerResponse" type="tns:disableCustomerResponse"/>
+
+    <xs:element name="enableCustomer" type="tns:enableCustomer"/>
+
+    <xs:element name="enableCustomerResponse" type="tns:enableCustomerResponse"/>
+
+    <xs:element name="findCustomerById" type="tns:findCustomerById"/>
+
+    <xs:element name="findCustomerByIdResponse" type="tns:findCustomerByIdResponse"/>
+
+    <xs:complexType name="disableCustomer">
+        <xs:sequence>
+            <xs:element name="customerId" type="xs:long"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="disableCustomerResponse">
+        <xs:sequence/>
+    </xs:complexType>
+
+    <xs:complexType name="findCustomerById">
+        <xs:sequence>
+            <xs:element name="customerId" type="xs:long"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="findCustomerByIdResponse">
+        <xs:sequence>
+            <xs:element name="customer" type="tns:customer" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="customer">
+        <xs:sequence>
+            <xs:element name="enabled" type="xs:boolean"/>
+            <xs:element name="id" type="xs:long"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="enableCustomer">
+        <xs:sequence>
+            <xs:element name="customerId" type="xs:long"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="enableCustomerResponse">
+        <xs:sequence/>
+    </xs:complexType>
+
+    <xs:complexType name="changeCustomerPassword">
+        <xs:sequence>
+            <xs:element name="customerId" type="xs:long"/>
+            <xs:element name="password" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="changeCustomerPasswordResponse">
+        <xs:sequence/>
+    </xs:complexType>
+
+    <xs:complexType name="createCustomer">
+        <xs:sequence>
+            <xs:element name="username" type="xs:string"/>
+            <xs:element name="password" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="createCustomerResponse">
+        <xs:sequence>
+            <xs:element name="customer" type="tns:customer" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

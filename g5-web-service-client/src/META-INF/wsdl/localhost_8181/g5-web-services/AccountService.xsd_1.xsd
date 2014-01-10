@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.3 (tags/2.3-7528; 2013-04-29T19:34:10+0000) JAXWS-RI/2.2.8 JAXWS/2.2 svn-revision#unknown. --><xs:schema xmlns:tns="http://webservices.g5.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://webservices.g5.com/">
+
+    <xs:element name="closeAccount" type="tns:closeAccount"/>
+
+    <xs:element name="closeAccountResponse" type="tns:closeAccountResponse"/>
+
+    <xs:element name="createAccount" type="tns:createAccount"/>
+
+    <xs:element name="createAccountResponse" type="tns:createAccountResponse"/>
+
+    <xs:element name="findAccountById" type="tns:findAccountById"/>
+
+    <xs:element name="findAccountByIdResponse" type="tns:findAccountByIdResponse"/>
+
+    <xs:element name="reopenAccount" type="tns:reopenAccount"/>
+
+    <xs:element name="reopenAccountResponse" type="tns:reopenAccountResponse"/>
+
+    <xs:complexType name="closeAccount">
+        <xs:sequence>
+            <xs:element name="accountId" type="xs:long"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="closeAccountResponse">
+        <xs:sequence/>
+    </xs:complexType>
+
+    <xs:complexType name="createAccount">
+        <xs:sequence>
+            <xs:element name="customerId" type="xs:long"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="createAccountResponse">
+        <xs:sequence>
+            <xs:element name="account" type="tns:account" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="account">
+        <xs:sequence>
+            <xs:element name="balance" type="xs:decimal" minOccurs="0"/>
+            <xs:element name="creationDate" type="xs:dateTime" minOccurs="0"/>
+            <xs:element name="customerId" type="xs:long"/>
+            <xs:element name="id" type="xs:long"/>
+            <xs:element name="open" type="xs:boolean"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="reopenAccount">
+        <xs:sequence>
+            <xs:element name="accountId" type="xs:long"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="reopenAccountResponse">
+        <xs:sequence/>
+    </xs:complexType>
+
+    <xs:complexType name="findAccountById">
+        <xs:sequence>
+            <xs:element name="accountId" type="xs:long"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="findAccountByIdResponse">
+        <xs:sequence>
+            <xs:element name="account" type="tns:account" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
