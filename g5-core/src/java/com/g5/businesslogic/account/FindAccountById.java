@@ -3,6 +3,7 @@ package com.g5.businesslogic.account;
 import com.g5.businesslogic.constraints.Id;
 import com.g5.entities.EntityClassHelperLocal;
 import com.g5.types.Account;
+import javax.annotation.security.RolesAllowed;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
@@ -17,6 +18,7 @@ public class FindAccountById implements FindAccountByIdLocal {
     private EntityClassHelperLocal entityClassHelper;
 
     @Override
+    @RolesAllowed({"Administrators", "Customers"})
     public Account execute(@Id long accountId) {
         return entityManager.
                 find(entityClassHelper.getAccountClass(), accountId);

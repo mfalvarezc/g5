@@ -8,6 +8,7 @@ import com.g5.businesslogic.constraints.PositiveDecimal;
 import com.g5.types.Account;
 import com.g5.types.Transaction;
 import java.math.BigDecimal;
+import javax.annotation.security.RolesAllowed;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
 import javax.ejb.TransactionAttributeType;
@@ -31,6 +32,7 @@ public class Deposit implements DepositLocal {
 
     @Override
     @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+    @RolesAllowed({"Customers"})
     public Transaction execute(@Id long accountId,
             @PositiveDecimal BigDecimal value) {
         Account account = entityManager.

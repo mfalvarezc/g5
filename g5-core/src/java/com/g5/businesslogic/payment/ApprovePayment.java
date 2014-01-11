@@ -10,6 +10,7 @@ import com.g5.types.Account;
 import com.g5.types.Payment;
 import com.g5.types.Transaction;
 import java.math.BigDecimal;
+import javax.annotation.security.RolesAllowed;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
 import javax.ejb.TransactionAttributeType;
@@ -35,6 +36,7 @@ public class ApprovePayment implements ApprovePaymentLocal {
 
     @Override
     @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+    @RolesAllowed({"Customers"})
     public Transaction execute(@Id long paymentId, @Id long senderAccountId,
             @PositiveDecimal BigDecimal value) throws NotEnoughFundsException {
         Payment payment = entityManager.

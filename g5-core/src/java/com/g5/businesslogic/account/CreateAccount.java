@@ -8,6 +8,7 @@ import com.g5.types.Account;
 import com.g5.types.Customer;
 import java.math.BigDecimal;
 import java.util.Date;
+import javax.annotation.security.RolesAllowed;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
 import javax.ejb.TransactionAttributeType;
@@ -29,6 +30,7 @@ public class CreateAccount implements CreateAccountLocal {
 
     @Override
     @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+    @RolesAllowed({"Administrators"})
     public Account execute(@Id long customerId) {
         Customer customer = entityManager.find(entityClassHelper.
                 getCustomerClass(), customerId);

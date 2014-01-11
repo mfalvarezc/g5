@@ -6,6 +6,7 @@ import com.g5.entities.EntityClassHelperLocal;
 import com.g5.types.Account;
 import com.g5.types.Transaction;
 import java.math.BigDecimal;
+import javax.annotation.security.RolesAllowed;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
 import javax.ejb.TransactionAttributeType;
@@ -31,6 +32,7 @@ public class RollbackTransaction implements RollbackTransactionLocal {
 
     @Override
     @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+    @RolesAllowed({"Administrators"})
     public void execute(@Id long transactionId) {
         Transaction transaction = entityManager.find(entityClassHelper.
                 getTransactionClass(), transactionId);

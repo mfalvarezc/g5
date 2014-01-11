@@ -7,6 +7,7 @@ import com.g5.security.HashGenerator;
 import com.g5.security.SaltGenerator;
 import com.g5.types.Customer;
 import com.g5.types.User;
+import javax.annotation.security.RolesAllowed;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
 import javax.ejb.TransactionAttributeType;
@@ -26,6 +27,7 @@ public class ChangeCustomerPassword implements ChangeCustomerPasswordLocal {
 
     @Override
     @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+    @RolesAllowed({"Administrators", "Customers"})
     public void execute(@Id long customerId, @Password String password) {
         Customer customer = entityManager.find(entityClassHelper.
                 getCustomerClass(), customerId);

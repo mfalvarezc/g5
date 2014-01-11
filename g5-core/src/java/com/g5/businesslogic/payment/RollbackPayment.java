@@ -6,6 +6,7 @@ import com.g5.businesslogic.account.AccountValidatorLocal;
 import com.g5.businesslogic.constraints.Id;
 import com.g5.types.Account;
 import com.g5.types.Payment;
+import javax.annotation.security.RolesAllowed;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
 import javax.ejb.TransactionAttributeType;
@@ -31,6 +32,7 @@ public class RollbackPayment implements RollbackPaymentLocal {
 
     @Override
     @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+    @RolesAllowed({"Administrators"})
     public void execute(@Id long paymentId) {
         Payment payment = entityManager.
                 find(entityClassHelper.getPaymentClass(), paymentId);

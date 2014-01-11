@@ -5,6 +5,7 @@ import com.g5.entities.EntityClassHelperLocal;
 import com.g5.types.Account;
 import com.g5.types.Customer;
 import java.util.List;
+import javax.annotation.security.RolesAllowed;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
 import javax.ejb.TransactionAttributeType;
@@ -25,6 +26,7 @@ public class DisableCustomer implements DisableCustomerLocal {
 
     @Override
     @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+    @RolesAllowed({"Administrators"})
     public void execute(@Id long customerId) {
         Customer customer = entityManager.find(entityClassHelper.
                 getCustomerClass(), customerId, LockModeType.PESSIMISTIC_WRITE);

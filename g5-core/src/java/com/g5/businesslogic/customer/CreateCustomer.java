@@ -10,6 +10,7 @@ import com.g5.security.SaltGenerator;
 import com.g5.types.Customer;
 import com.g5.types.Group;
 import com.g5.types.User;
+import javax.annotation.security.RolesAllowed;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
 import javax.ejb.TransactionAttributeType;
@@ -29,6 +30,7 @@ public class CreateCustomer implements CreateCustomerLocal {
 
     @Override
     @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+    @RolesAllowed({"Administrators"})
     public Customer execute(@Username String username, @Password String password) {
         Group group = entityManager.createNamedQuery("Group.findByName",
                 entityClassHelper.getGroupClass()).setParameter("name",

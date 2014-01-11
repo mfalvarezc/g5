@@ -6,6 +6,7 @@ import com.g5.businesslogic.constraints.Id;
 import com.g5.types.Account;
 import com.g5.types.Transaction;
 import java.util.List;
+import javax.annotation.security.RolesAllowed;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
@@ -23,6 +24,7 @@ public class FindTransactionsByAccountId implements
     private AccountValidatorLocal accountValidator;
 
     @Override
+    @RolesAllowed({"Administrators", "Customers"})
     public List<Transaction> execute(@Id long accountId) {
         Account account = entityManager.
                 find(entityClassHelper.getAccountClass(), accountId);

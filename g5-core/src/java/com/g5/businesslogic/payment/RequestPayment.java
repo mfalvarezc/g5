@@ -9,6 +9,7 @@ import com.g5.businesslogic.constraints.PositiveDecimal;
 import com.g5.types.Account;
 import com.g5.types.Payment;
 import java.math.BigDecimal;
+import javax.annotation.security.RolesAllowed;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
 import javax.ejb.TransactionAttributeType;
@@ -30,6 +31,7 @@ public class RequestPayment implements RequestPaymentLocal {
 
     @Override
     @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+    @RolesAllowed({"Customers"})
     public long execute(@Id long receiverAccountId,
             @Description String description, @PositiveDecimal BigDecimal value) {
         Account receiverAccount = entityManager.find(entityClassHelper.
