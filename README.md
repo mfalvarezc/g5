@@ -1,7 +1,35 @@
 g5 - Payment system
 ===================
 
-- - -
+Structure
+---------
+
+The g5 payment system is contains the following projects:
+
+* **g5-common**. NetBeans Java library project to define basic types and exceptions. The types defined are:
+
+    - **User**
+    - **Group**
+    - **Customer**
+    - **Account** 
+    - **Transaction**
+    - **Payment**
+
+    And there is only one exception: NotEnoughFundsException.
+
+* **g5-security**. NetBeans Java Library project to define salt generation and hash generation used in the authentication process.
+
+* **g5-core**. NetBeans EJB module project to define the system business logic. Uses JPA, and maps the types defined in *g5-common* to JPA entities. The business logic is implemented using the command pattern. Every command represents a business logic unit (e.g. create customer, create account, deposit, withdraw, etc.). These commands are exposed using sesion facades (AccountFacade, CustomerFacade, PaymentFacade and TransactionFacade). The commands and session facades are implemented using stateless session beans.
+
+    This project uses a JTA (Java Transaction API) data source, CMT (container managed transactions) and Bean Validation 1.1.
+
+* **g5-web-services**. NetBeans Java web application project to expose the session facade beans of the *g5-core* project as web-services. These web services require TLS (Transport Layer Security) and WS-Security (Username authentication with symmetric key). The WS-Security is built on the Metro web service stack and uses the Basic128 algorithm suite. The key store and trust store used are the default stores provided by a Glassfish domain.
+
+* **g5-ear**. NetBeans entreprise application project to package the *g5-core* and *g5-web-services* projects as an enterprise application. Defines the application security realm and group-to-security-role mappings.
+
+* **g5-glassfish-realm**. Maven project to define a custom Glassfish realm and login module to authenticate users against the model of users and groups used by the system.
+
+* **g5-web-service-client**. NetBeans Java application to test the web services provided by *g5-web-services* and their security features.
 
 Persistence configuration
 -------------------------
