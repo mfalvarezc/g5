@@ -1,8 +1,14 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
 package com.g5.businesslogic.transaction;
 
-import com.g5.entities.EntityClassHelperLocal;
 import com.g5.businesslogic.account.AccountValidatorLocal;
 import com.g5.businesslogic.constraints.Id;
+import com.g5.entities.EntityClassHelperLocal;
 import com.g5.types.Account;
 import com.g5.types.Transaction;
 import java.util.List;
@@ -12,9 +18,12 @@ import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
+/**
+ *
+ * @author Juancho
+ */
 @Stateless
-public class FindTransactionsByAccountId implements
-        FindTransactionsByAccountIdLocal {
+public class FindMyTransactions implements FindMyTransactionsLocal {
 
     @PersistenceContext(unitName = "g5-jta")
     private EntityManager entityManager;
@@ -24,7 +33,7 @@ public class FindTransactionsByAccountId implements
     private AccountValidatorLocal accountValidator;
 
     @Override
-    @RolesAllowed({"Administrators"})
+    @RolesAllowed({"Customers"})
     public List<Transaction> execute(@Id long accountId) {
         Account account = entityManager.
                 find(entityClassHelper.getAccountClass(), accountId);
@@ -36,5 +45,4 @@ public class FindTransactionsByAccountId implements
                 getTransactionClass()).setParameter("account", account).
                 getResultList();
     }
-
 }
